@@ -1,4 +1,4 @@
-# Desafíos surgidos durante el trabajo de tesis {#cap:desafios}
+# Desafíos que surgieron durante el trabajo de tesis {#cap:desafios}
 
 ## Eficiencia computacional del algoritmo `mGSZ`
 
