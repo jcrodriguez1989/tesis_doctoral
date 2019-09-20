@@ -4,5 +4,10 @@
 
 \par Para cumplir con el objetivo principal de esta tesis, presentamos la herramienta `MIGSA` (del inglés _Massive and Integrative Gene Set Analysis_). Gracias a esta herramienta, es ahora posible llevar a cabo un análisis funcional masivo e integrador de grandes cantidades de bases de datos biológicas que provienen tanto de distintas poblaciones como de distintas fuentes biológicas (genes, proteínas, etc.). Además, `MIGSA` proveé diversas herramientas que permiten explorar y visualizar fácilmente los resultados, y de esta manera, validar y generar nuevas hipótesis de estudio. La utilidad de nuestra herramienta fue comprobada ya que permitió, para sub-grupos de cáncer de mama -con pronósticos bien distintivos-, detectar genes y procesos biológicos que los caracterizan. `MIGSA` representa una herramienta que permite detectar efectivamente aspectos biológicos que podrían ser blancos de drogas, y así contrarrestar la condición bajo estudio.
 
+**Clasificación (ACM CCS 2012):**
+
+  * _Applied computing ~> Life and medical sciences ~> Computational biology_
+  * _Applied computing ~> Life and medical sciences ~> Bioinformatics_
+
 **Palabras claves:** _Minería de datos - Ciencia de datos - Integración de información - Bioinformática_
 

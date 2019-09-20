@@ -307,14 +307,15 @@
     \vfil
     % A Thesis \\
     Presentado ante la \@division \\
-    como parte de los requerimientos para la obtención del grado de Doctor en Ciencias de la Computación de la\\
+    para obtener el grado de 
+    \vfil
+    Doctor en Ciencias de la Computación
+    \vfil
+    de la\\
     \vfil
     \@institution
     \vfil
     \vfil
-    % In Partial Fulfillment \\
-    % of the Requirements for the Degree \\
-    % \@degree
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \bigskip
@@ -325,8 +326,14 @@
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
-    {\textcopyright FAMAF - UNC 2019 \par}
-    {\fontsize{12}{14}\selectfont \@advisor \par}
+    {FAMAF - UNC 2019 \par}
+    {\fontsize{12}{14}\selectfont Director: \@advisor \par}
+    \vfil
+    \vfil
+    \vfil
+    {\includegraphics{images/license.png}}
+    \vfil
+    {\fontsize{12}{14}\selectfont Esta obra está bajo una \href{http://creativecommons.org/licenses/by-sa/4.0/}{Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional}.\par}
   \end{center}\par
   \end{titlepage}
 

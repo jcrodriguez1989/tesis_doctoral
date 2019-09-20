@@ -1,76 +1,33 @@
 ---
 author: 'Juan Cruz Rodriguez'
-date: 'Septiembre, 2019'
+date: 'Septiembre 2019'
 institution: 'UNIVERSIDAD NACIONAL DE CÓRDOBA'
 division: 'Facultad de Matemática, Astronomía, Física y Computación'
 advisor: 'Elmer Andrés Fernández'
-# altadvisor: 'Your Other Advisor'
-# Delete line 6 if you only have one advisor
 department: 'Ciencias de la Computación'
 degree: 'Doctor en Ciencias de la Computación'
 title: 'Análisis e integración de información de datos biológicos mediante análisis funcional'
-knit: bookdown::render_book
+knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
   thesisdown::thesis_pdf: default
-  # thesisdown::thesis_word: default
   # thesisdown::thesis_gitbook: default
+  # thesisdown::thesis_word: default
   # thesisdown::thesis_epub: default
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("resumen.Rmd"), collapse = '\n  ')`
-# If you'd rather include the preliminary content in files instead of inline
-# like below, use a command like that for the abstract above.  Note that a tab is 
-# needed on the line after the |.
-# acknowledgements: |
-#   Mis agradecimientos.
-# dedication: |
-#   Mi dedicatoria. 
+acknowledgements: |
+  Mis agradecimientos.
+dedication: |
+  _Va Castro, va Castro, va Castro, sacó el centro pasado, Riggio, ..._
+  
+  _Aquella felicidad vuelve a atravesar mi cuerpo al defender esta tesis._
 # preface: |
 #   This is an example of a thesis setup to use the reed thesis document class
 #   (for LaTeX) and the R bookdown package, in general.
 bibliography: bib/thesis.bib
 # Download your specific bibliography database file and refer to it in the line above.
 csl: csl/apa.csl
-# Download your specific csl file and refer to it in the line above.
 lot: false
 lof: false
-#space_between_paragraphs: true
-# Delete the # at the beginning of the previous line if you'd like
-# to have a blank new line between each paragraph
-#header-includes:
-#- \usepackage{tikz}
 ---
-
-<!--
-Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
-
-If you'd prefer to not include a Dedication, for example, simply delete lines 17 and 18 above or add a # before them to comment them out.  If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
-
-If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
--->
-
-<!--
-If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
--->
-
-```{r echo=FALSE}
-# knitr::opts_chunk$set(
-#   comment = "#>",
-#   collapse = TRUE,
-#   cache = TRUE,
-#   fig.retina = 0.8, # figures are either vectors or 300 dpi diagrams
-#   dpi = 300,
-#   out.width = "70%",
-#   fig.align = 'center',
-#   fig.width = 6,
-#   fig.asp = 0.618,  # 1 / phi
-#   fig.show = "hold"
-# )
-# 
-# if (knitr::is_latex_output()) {
-#   knitr::opts_chunk$set(width = 69)
-#   options(width = 69)
-#   options(crayon.enabled = FALSE)
-#   options(cli.unicode = TRUE)
-# }
-```
