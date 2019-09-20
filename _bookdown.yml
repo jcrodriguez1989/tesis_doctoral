@@ -1,0 +1,19 @@
+new_session: yes
+delete_merged_file: yes
+
+rmd_files:
+  [
+    "index.Rmd",
+    "prefacio.Rmd",
+    "af.Rmd",
+    "ngs.Rmd",
+    "ifa.Rmd",
+    "migsa.Rmd",
+    "desafios.Rmd",
+    "conclusiones.Rmd",
+    "bibliografia.Rmd"
+  ]
+
+language:
+  ui:
+    chapter_name: "Capítulo "
