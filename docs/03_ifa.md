@@ -163,10 +163,14 @@ Primera columna: Los Nombres de las bases de datos, con el umbral de valor absol
 
 \par Como se puede observar en los boxplot de la Figura \@ref(fig:ifa1), se aprecia una alta variabilidad tanto entre los métodos como para las diversas parametrizaciones de un mismo método. Teniendo en cuenta solo aquellos datasets que presentaron almenos un término enriquecido, se encontró una mediana de 284 términos enriquecidos. El SM parece ser muy sensible a diferentes parametrizaciones, así como a la forma en que se le proveen los datos, es decir, a través de la matriz de expresión de genes o mediante una lista pre-rankeada. Curiosamente, para SMpr cualquier valor del factor de ponderación $w$ devolvió casi cero términos enriquecidos. Además, para SMgp y SMpp, la selección de $w$ podría producir enriquecimientos muy diferentes, que van desde cero términos en SMpp0 para Nki o 59 términos en SMgp2 para Vdx hasta valores extremos como 1.019 en SMpp2 para Nki o 474 términos en SMgp0 para Vdx. En particular, el método SMpp presenta comportamientos muy diferentes dependiendo del valor $w$. Por ejemplo, no se encontró enriquecimiento para $w=0$, gran variabilidad resultó con $w=1$ con un Rango InterCuartil (RIC) de 257,57, y se obtuvieron resultados concordantes con $w=2$, es decir, pequeña dispersión sobre bases de datos (con un RIC de 83,25). Sin embargo, SMpp2 mostró un número extremo de enriquecimientos para una base de datos (1.019 para Nki) y un número muy bajo para otro (101 para Mainz), resultando en dos valores atípicos. Esto podría plantear un problema cuando se analiza un único dataset. Para el SMgp, el enriquecimiento es bastante estable en todos los datasets, con RICs de 105, 91,25 y 98,5 para SMgp0, SMgp1 y SMgp2, respectivamente, pero se obtuvo un número decreciente de enriquecimientos a medida que $w$ aumentaba de 0 a 2, lo que arroja una mediana de 611,5, 293 y 121, respectivamente. Para $w=1$ el número de términos enriquecidos es similar a la mediana general (284 términos enriquecidos) de los diferentes métodos, lo que sugiere que el SMgp1 se podría considerar una configuración más apropiada.
 
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG1_es.PDF" alt="(ref:captionIfa1)" width="100%" />
-<p class="caption">(\#fig:ifa1)(ref:captionIfa1)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG1_es} 
+
+}
+
+\caption{(ref:captionIfa1)}(\#fig:ifa1)
+\end{figure}
 (ref:captionIfa1) Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección \@ref(sec:algosComparados). Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos.
 
 \par En el caso de mGSZ, los resultados mostraron una estabilidad adecuada entre los datasets (RICs de 26,5 para mGSZ$[15,500)$ y 73 para mGSZ$[5,\infty)$), produciendo un número muy similar de términos enriquecidos entre las bases de datos. Este método resultó sensible al tamaño de los CG analizados. Cuando el filtro de CG a analizar se estableció entre $[15,500)$, se logró un número bastante conservador de términos enriquecidos, es decir, número menor de CG enriquecidos. Estos resultados fueron más estables en comparación con el valor obtenido con los límites de filtro de CG de $[5,\infty)$. Vale la pena mencionar que los términos enriquecidos obtenidos con filtro $[15,500)$ fueron contenidos en su mayoría (93% en promedio) por el método con el filtro de CG por defecto. Estos términos enriquecidos adicionales generalmente contenían un menor número de genes, es decir, términos más específicos que pueden ser mucho más útiles para descifrar el fenómeno biológico bajo estudio. Basándonos en este concepto, en adelante, hemos seguido las recomendaciones del autor de mGSZ en cuanto al filtrado de conjuntos de genes de $[5,\infty)$.
@@ -185,10 +189,14 @@ Primera columna: Los Nombres de las bases de datos, con el umbral de valor absol
 
 \par Para cada método de ASR, excepto dEnricher, BRI enriqueció un número mayor de términos que BRIII. Sin embargo, como se mencionó anteriormente, tanto en WD, RD - como en GOstats - la mayoría de los términos enriquecidos por BRIII también fueron enriquecidos por BRI. Como se discutió en Fresno et al., usar BRIII, estadísticamente, tiene más sentido que usar BRI; por lo tanto, su uso se sugiere y se usa de aquí en adelante.
 
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG2_es.PDF" alt="(ref:captionIfa2)" width="100%" />
-<p class="caption">(\#fig:ifa2)(ref:captionIfa2)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG2_es} 
+
+}
+
+\caption{(ref:captionIfa2)}(\#fig:ifa2)
+\end{figure}
 (ref:captionIfa2) Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE_F_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos.
 
 ### Análisis de consenso {#sec:consensusSection}
@@ -208,10 +216,14 @@ donde $m$ = {$1,\ldots,M$} combinación de método/parámetros; $t$ = {$1,\ldots
 
 \par Dado que todos los experimentos comparan los mismos fenotipos de cáncer de mama, se esperaba encontrar resultados concordantes entre los conjuntos de datos para cada combinación de método/parámetros. Así, el número de términos enriquecidos en casi todos los conjuntos de datos (Frecuencia de Consenso en Enriquecimiento; $FCE$), así como los términos que no se enriquecieron en casi todos los conjuntos de datos (Frecuencia de Consenso en No Enriquecimiento; $FCNE$), se utilizaron como indicador de la estabilidad del método. Basado en este supuesto, definimos las métricas de comparación listadas en la Tabla \@ref(tab:comparisonMetrics). La concordancia entre los conjuntos de datos para cada método mostró que mGSZ supera con un 45% de términos enriquecidos concordantes ($FCE$), seguido de dE_F_none, RD y WD con un 39%, SMgp1 con un 36%, SMpp2 con un 30%, y GOstats con un 29%. La concordancia entre los términos no enriquecidos ($FCNE$) obtuvo 91% para dE_F_none, RD y GOstats, 89% para WD, 85% para mGSZ, 83% para SMgp1, y 82% para SMpp2. Por lo tanto, todos los métodos parecen tener un alto consenso para los términos no enriquecidos y un bajo consenso para los enriquecidos. Ambos conceptos son importantes a la hora de enfrentarse al AF, ya que no debe perderse ningún término biológicamente significativo, ni debe haber términos enriquecidos incorrectamente. De aquí se desprende que el análisis de PFC utilizando mGSZ demostró ser el método más consensuado, mientras que dE_F_none y RD para la contraparte de ASR.
 
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG3.PDF" alt="(ref:captionIfa3)" width="90%" />
-<p class="caption">(\#fig:ifa3)(ref:captionIfa3)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{images/IFA_FIG3} 
+
+}
+
+\caption{(ref:captionIfa3)}(\#fig:ifa3)
+\end{figure}
 (ref:captionIfa3) Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (**A**), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; **E**). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz.
 
 Table: Métricas de comparación.\label{tab:comparisonMetrics}
@@ -261,10 +273,14 @@ GOstats & & 1 (0) & & & 1 (0) \\
 
 \par Como resultado de este estudio exhaustivo [@rodriguezciarp; @rodrigueziscb; @rodriguez2016improving; @rodriguezsabi], en la Figura \@ref(fig:ifa4) se presenta el pipeline del análisis funcional integrador (IFA; del inglés _Integrative Functional Analysis_). El IFA proporciona como una herramienta de software, cuyo código R se encuentra en el repositorio [https://github.com/jcrodriguez1989/IFA](https://github.com/jcrodriguez1989/IFA). Para utilizar la función principal del IFA, el usuario debe proporcionar la matriz de expresión, y la especificación de los fenotipos de cada sujeto. En caso que no se proporcionen los CG, IFA utilizará los CG de GO más actualizados provistos por la librería R `org.Hs.eg.db`. La lista de genes DE y su rankeo son calculados por la herramienta IFA mediante un modelo lineal utilizando la librería de R `limma`, con los cuales se llevan a cabo los análisis mGSZ y de dE_F_none. De este modo, IFA proporciona un enfoque sencillo, unificado y global para el AF.
 
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG4_es.pdf" alt="(ref:captionIfa4)" width="100%" />
-<p class="caption">(\#fig:ifa4)(ref:captionIfa4)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG4_es} 
+
+}
+
+\caption{(ref:captionIfa4)}(\#fig:ifa4)
+\end{figure}
 (ref:captionIfa4) Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC.
 
 ### IFA sobre TCGA
@@ -273,10 +289,14 @@ GOstats & & 1 (0) & & & 1 (0) \\
 
 \par Los términos relacionados con la hormona y el receptor de estrógeno, la transición G1/S del ciclo celular mitótico, la replicación del ADN, la organización del huso mitótico, el desenrollado dual del ADN, la actividad de la histona cinasa, la actividad de la helicasa de hibridación, entre otros, se encontraron enriquecidos, en común, en todos los conjuntos de datos (marca **A** en la Figura \@ref(fig:ifa5)), lo que respalda las diferencias de proliferación entre los subtipos de cáncer de mama de tipo Basal y Luminal A. Además, términos como la actividad de la proteína de señalización del receptor tirosina cinasa, la diferenciación de células madre y otros relacionados con la diferenciación celular, sólo se encontraron en los conjuntos de datos de TCGA (marca **E$^*$** en la Figura \@ref(fig:ifa5)).
 
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG5.PDF" alt="(ref:captionIfa5)" width="100%" />
-<p class="caption">(\#fig:ifa5)(ref:captionIfa5)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG5} 
+
+}
+
+\caption{(ref:captionIfa5)}(\#fig:ifa5)
+\end{figure}
 (ref:captionIfa5) Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (**A**) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (**E**).
 
 ### IFA sobre datasets de cáncer de próstata
@@ -286,10 +306,14 @@ GOstats & & 1 (0) & & & 1 (0) \\
 \par La matriz de consenso resultante se muestra en la Figura \@ref(fig:ifa5), en la que 163 términos fueron enriquecidos en al menos el 80% de los conjuntos de datos, de los cuales 99 (61%) están relacionados con el cáncer de próstata según la BDTC. En particular, la proporción media de términos exclusivamente enriquecidos presentes en la BDTC en cada conjunto de datos fue del 44%, con Taylor primero con 448 términos exclusivos (194 en la BDTC) y Varambally último con 212 términos (98 en la BDTC).
 
 \newpage
-<div class="figure" style="text-align: center">
-<img src="images/IFA_FIG6.PDF" alt="(ref:captionIfa6)" width="100%" />
-<p class="caption">(\#fig:ifa6)(ref:captionIfa6)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG6} 
+
+}
+
+\caption{(ref:captionIfa6)}(\#fig:ifa6)
+\end{figure}
 (ref:captionIfa6) Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (**A**) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (**E**).
 
 ## Conclusiones
