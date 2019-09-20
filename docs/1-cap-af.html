@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 1 Análisis funcional | _main.utf8</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 1 Análisis funcional | _main.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 1 Análisis funcional | _main.utf8" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="prefacio.html"/>
+<link rel="next" href="2-cap-ngs.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="1" data-path="1-cap-af.html"><a href="1-cap-af.html"><i class="fa fa-check"></i><b>1</b> Análisis funcional</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:ontologias"><i class="fa fa-check"></i><b>1.1</b> Ontologías</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#gene-ontology"><i class="fa fa-check"></i><b>1.1.1</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#otras-ontologias"><i class="fa fa-check"></i><b>1.1.2</b> Otras ontologías</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:af"><i class="fa fa-check"></i><b>1.2</b> Metodologías de Análisis Funcional (AF)</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:asr"><i class="fa fa-check"></i><b>1.2.1</b> Análisis de Sobre-Representación (ASR)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-cap-af.html"><a href="1-cap-af.html#puntuacion-funcional-de-clase-pfc"><i class="fa fa-check"></i><b>1.2.2</b> Puntuación Funcional de Clase (PFC)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-cap-af.html"><a href="1-cap-af.html#analisis-de-enriquecimiento-modular"><i class="fa fa-check"></i><b>1.2.3</b> Análisis de Enriquecimiento Modular</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-cap-af.html"><a href="1-cap-af.html#comentarios-finales"><i class="fa fa-check"></i><b>1.3</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html"><i class="fa fa-check"></i><b>2</b> Fuentes de datos biológicas</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:technols"><i class="fa fa-check"></i><b>2.1</b> Tecnologías de obtención de expresión biológica</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#microarreglos-de-adn"><i class="fa fa-check"></i><b>2.1.1</b> Microarreglos de ADN</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#itraq"><i class="fa fa-check"></i><b>2.1.2</b> iTRAQ</a></li>
+<li class="chapter" data-level="2.1.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#secuenciacion-de-arn"><i class="fa fa-check"></i><b>2.1.3</b> Secuenciación de ARN</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:repos"><i class="fa fa-check"></i><b>2.2</b> Repositorios de datos de expresión</a></li>
+<li class="chapter" data-level="2.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#condiciones-experimentales"><i class="fa fa-check"></i><b>2.3</b> Condiciones experimentales</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:bcSubt"><i class="fa fa-check"></i><b>2.3.1</b> Cáncer de mama</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#cancer-de-prostata"><i class="fa fa-check"></i><b>2.3.2</b> Cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#comentarios-finales-1"><i class="fa fa-check"></i><b>2.4</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html"><i class="fa fa-check"></i><b>3</b> Análisis Funcional Integrador</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#motivacion"><i class="fa fa-check"></i><b>3.1</b> Motivación</a></li>
+<li class="chapter" data-level="3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#validacion-de-resultados"><i class="fa fa-check"></i><b>3.2</b> Validación de resultados</a></li>
+<li class="chapter" data-level="3.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#datos-de-entrada"><i class="fa fa-check"></i><b>3.3</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#matrices-de-expresion"><i class="fa fa-check"></i><b>3.3.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conjuntos-de-genes"><i class="fa fa-check"></i><b>3.3.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:algosComparados"><i class="fa fa-check"></i><b>3.4</b> Algoritmos y parámetros comparados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#analisis-de-sobre-representacion"><i class="fa fa-check"></i><b>3.4.1</b> Análisis de Sobre-Representación</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#puntuacion-funcional-de-clase"><i class="fa fa-check"></i><b>3.4.2</b> Puntuación Funcional de Clase</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#resultados"><i class="fa fa-check"></i><b>3.5</b> Resultados</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#genes-diferencialmente-expresados-por-base-de-datos"><i class="fa fa-check"></i><b>3.5.1</b> Genes diferencialmente expresados por base de datos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#analisis-de-estabilidad-de-enriquecimiento"><i class="fa fa-check"></i><b>3.5.2</b> Análisis de estabilidad de enriquecimiento</a></li>
+<li class="chapter" data-level="3.5.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#analisis-de-profundidad-en-gene-ontology"><i class="fa fa-check"></i><b>3.5.3</b> Análisis de profundidad en Gene Ontology</a></li>
+<li class="chapter" data-level="3.5.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:consensusSection"><i class="fa fa-check"></i><b>3.5.4</b> Análisis de consenso</a></li>
+<li class="chapter" data-level="3.5.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#enriquecimiento-exclusivo-y-relevancia-de-terminos"><i class="fa fa-check"></i><b>3.5.5</b> Enriquecimiento exclusivo y relevancia de términos</a></li>
+<li class="chapter" data-level="3.5.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:ifa"><i class="fa fa-check"></i><b>3.5.6</b> Análisis Funcional Integrador</a></li>
+<li class="chapter" data-level="3.5.7" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-tcga"><i class="fa fa-check"></i><b>3.5.7</b> IFA sobre TCGA</a></li>
+<li class="chapter" data-level="3.5.8" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-datasets-de-cancer-de-prostata"><i class="fa fa-check"></i><b>3.5.8</b> IFA sobre datasets de cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conclusiones"><i class="fa fa-check"></i><b>3.6</b> Conclusiones</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#comparacion-de-metodos"><i class="fa fa-check"></i><b>3.6.1</b> Comparación de métodos</a></li>
+<li class="chapter" data-level="3.6.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#aplicacion-del-ifa"><i class="fa fa-check"></i><b>3.6.2</b> Aplicación del IFA</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html"><i class="fa fa-check"></i><b>4</b> Análisis masivo e integrador de conjuntos de genes</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#motivacion-1"><i class="fa fa-check"></i><b>4.1</b> Motivación</a></li>
+<li class="chapter" data-level="4.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#sec:voom"><i class="fa fa-check"></i><b>4.2</b> Adaptación del IFA a otras fuentes de datos</a></li>
+<li class="chapter" data-level="4.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#herramienta-desarrollada"><i class="fa fa-check"></i><b>4.3</b> Herramienta desarrollada</a></li>
+<li class="chapter" data-level="4.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#validacion-de-la-herramienta"><i class="fa fa-check"></i><b>4.4</b> Validación de la herramienta</a></li>
+<li class="chapter" data-level="4.5" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#datos-de-entrada-1"><i class="fa fa-check"></i><b>4.5</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#matrices-de-expresion-1"><i class="fa fa-check"></i><b>4.5.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="4.5.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conjuntos-de-genes-1"><i class="fa fa-check"></i><b>4.5.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#estrategias-para-el-analisis-de-eficiencia"><i class="fa fa-check"></i><b>4.6</b> Estrategias para el análisis de eficiencia</a></li>
+<li class="chapter" data-level="4.7" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#resultados-1"><i class="fa fa-check"></i><b>4.7</b> Resultados</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#migsa-sobre-datasets-de-microarreglos"><i class="fa fa-check"></i><b>4.7.1</b> MIGSA sobre datasets de microarreglos</a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploracion-de-los-ptf-de-los-subtipos-de-cancer-de-mama"><i class="fa fa-check"></i><b>4.7.2</b> Exploración de los PTF de los subtipos de cáncer de mama</a></li>
+<li class="chapter" data-level="4.7.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#integracion-de-resultados-de-migsa-de-tcga-y-haibe-kains"><i class="fa fa-check"></i><b>4.7.3</b> Integración de resultados de MIGSA de TCGA y Haibe-Kains</a></li>
+<li class="chapter" data-level="4.7.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploracion-de-los-resultados-de-tcga-en-conjunto-con-los-ptf"><i class="fa fa-check"></i><b>4.7.4</b> Exploración de los resultados de TCGA en conjunto con los PTF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conclusiones-1"><i class="fa fa-check"></i><b>4.8</b> Conclusiones</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html"><i class="fa fa-check"></i><b>5</b> Desafíos que surgieron durante el trabajo de tesis</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#eficiencia-computacional-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1</b> Eficiencia computacional del algoritmo <code>mGSZ</code></a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#optimizacion-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1.1</b> Optimización del algoritmo <code>mGSZ</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-cap-conclusiones.html"><a href="6-cap-conclusiones.html"><i class="fa fa-check"></i><b>6</b> Conclusiones y trabajo futuro</a></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap:af" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Análisis funcional</h1>
+<p>El desarrollo de las tecnologías de obtención de niveles de expresión biológica, dio lugar a grandes avances en la biología, permitiendo así pasar del análisis individual de genes o proteínas a obtener información de todo el genoma y el proteoma. Con esta información, principalmente se lleva a cabo lo que se conoce como análisis de expresión diferencial, el cual permite obtener listas de genes ó proteínas que se encuentran expresadas diferencialmente en distintas condiciones de estudio, por ejemplo, tejido tumoral vs. tejido normal.</p>
+
+<p>Sin embargo, resulta de un gran interés biológico evaluar la interacción de todo el conjunto de genes sobre diversos mecanismos o funciones biológicas. Esta tarea se lleva a cabo consultando grandes bases de datos, conocidas como ontologías, las cuales almacenan información biológica funcional a nivel de genes. Cada ontología codifica dicha información en conjuntos de genes, cada uno, asociado a una función, localización, enfermedad particular. Cada conjunto de genes tiene un nombre o descripción del evento, y los genes específicos que se sabe interactúan para llevar a cabo ese evento.</p>
+
+<p>Una vez determinada la información ontológica a utilizar, se aplican técnicas estadísticas para evaluar si la relación que se observa en el experimento es un evento azaroso o no, al compararlo con un comportamiento de referencia <span class="citation">(<span class="citeproc-not-found" data-reference-id="rivals2006enrichment"><strong>???</strong></span>)</span>. De esta manera se obtiene para cada conjunto de genes, una probabilidad que determina si dicha función biológica está desregulada según la condición experimental bajo estudio. Este conjunto de métodos estadísticos permiten realizar el Análisis Funcional (AF) partiendo de la matriz, con niveles de expresión de cada gen (filas) para cada muestra (columnas), y la ontología a evaluar.</p>
+<div id="sec:ontologias" class="section level2">
+<h2><span class="header-section-number">1.1</span> Ontologías</h2>
+<p>En biología, las ontologías son grandes bases de datos de anotación, las cuales mediante vocabulario controlado permiten almacenar, de una manera estructurada, la información conocida. Por ejemplo, las ontologías utilizadas para el AF contienen información conocida sobre grupos de genes, que al interactuar desencadenan algún concepto o término biológico.</p>
+<div id="gene-ontology" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Gene Ontology</h3>
+<p>Existen grandes cantidades de ontologías, cada una con hasta decenas de miles de mecanismos biológicos descriptos. En la presente tesis se analizaron las categorías de una de las ontologías de mayor difusión en la comunidad científica: Gene Ontology (GO) <span class="citation">(<span class="citeproc-not-found" data-reference-id="ashburner2000gene"><strong>???</strong></span>)</span>. En esta ontología, la información se encuentra estructurada en tres categorías:</p>
+<ul>
+<li><p><strong>Funciones moleculares (FM)</strong> describen actividades que ocurren a nivel molecular. Sin especificar dónde, cuándo, o en qué contexto, tiene lugar la acción. Las FM pueden ser tan generales como “actividad catalítica”, “actividad del transportador” o “binding”; o específicas como “actividad de la adenilatociclasa”.</p></li>
+<li><p><strong>Procesos biológicos (PB)</strong> refieren a una serie de eventos realizados por uno o más conjuntos ordenados de FM. Un proceso biológico se lleva a cabo mediante un conjunto particular de FM, de una manera altamente regulada y en una secuencia temporal particular. Ejemplos de términos de PB generales son “apoptosis” o “transducción de señales”. Ejemplos más específicos son “proceso metabólico de la pirimidina” o “transporte de alfa-glucósidos”.</p></li>
+<li><p><strong>Componentes celulares (CC)</strong> describen un componente de una célula, con la condición de que forme parte de un objeto más grande; puede ser una estructura anatómica (por ejemplo, un núcleo o retículo endoplásmico rugoso) o un grupo de productos génicos (por ejemplo, un ribosoma, un proteasoma o un dímero proteico). Ejemplos de CC son “parte citoplasmática de la membrana plasmática”, “mitocondria” o “ribosoma”. A diferencia de las otras dos categorías de GO, los conceptos de CC no se refieren a procesos sino a la anatomía celular.</p></li>
+</ul>
+<p>En resumen, en GO se tiene la información de qué genes participan en un PB o FM, y en que CC actúan. Un ejemplo de término de GO es “apoptosis”, el cual pertenece a la categoría PB, y se conforma por los genes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">conj_genes[<span class="st">&quot;apoptosis (GO:0006915)&quot;</span>]</a></code></pre></div>
+<pre><code>## $`apoptosis (GO:0006915)`
+##  [1] &quot;ZBTB16&quot;   &quot;DNAJB13&quot;  &quot;SFRP5&quot;    &quot;RRAGC&quot;    &quot;IAPP&quot;     &quot;ELMO1&quot;   
+##  [7] &quot;BAX&quot;      &quot;PDCD4&quot;    &quot;TNFSF9&quot;   &quot;PDCD2&quot;    &quot;PDCD1&quot;    &quot;PTPN6&quot;   
+## [13] &quot;RAF1&quot;     &quot;CYFIP2&quot;   &quot;PPP1R15A&quot; &quot;GPR65&quot;    &quot;AHR&quot;      &quot;TNF&quot;     
+## [19] &quot;CIB1&quot;     &quot;FOXO3&quot;    &quot;KIAA1967&quot; &quot;E2F1&quot;     &quot;AKT1&quot;     &quot;CSE1L&quot;   
+## [25] &quot;NLRP1&quot;    &quot;PHLDA2&quot;   &quot;FIS1&quot;     &quot;SIAH1&quot;    &quot;YARS&quot;     &quot;SEMA6A&quot;  
+## [31] &quot;DAXX&quot;     &quot;GML&quot;      &quot;GADD45B&quot;  &quot;GADD45A&quot;  &quot;LY86&quot;     &quot;...&quot;</code></pre>
+<p>Vale la pena aclarar que un gen particular puede participar en más de un término y categoría particular. Cada una de las tres categorías de GO está estructurada como un grafo acíclico dirigido (árbol), donde cada término tiene relaciones definidas con uno o más términos del mismo dominio. Cada nodo del grafo tiene asociados los genes que participan en dicho término. Cada grafo se encuentra organizado de una manera jerárquica, donde a mayor profundidad, se representa un concepto biológico más específico, y por ende, disminuye la cantidad de genes en cada término. En este sentido, un gen que se encuentra anotado en un nodo dado, también se encuentra anotado en sus nodos ancestros. En la Figura <a href="#fig:goApopttree"><strong>??</strong></a> se puede observar el subárbol con el PB “apoptosis” y sus términos ancestros.</p>
+<div class="figure" style="text-align: center">
+<img src="images/go_apoptosis_tree.png" alt="Subárbol de Gene Ontology, donde se presenta el término “apoptosis” (apoptotic process) y sus términos ancestros. Imagen extraída de https://www.ebi.ac.uk/QuickGO/term/GO:0006915." width="159" />
+<p class="caption">
+Subárbol de Gene Ontology, donde se presenta el término “apoptosis” (apoptotic process) y sus términos ancestros. Imagen extraída de <a href="https://www.ebi.ac.uk/QuickGO/term/GO:0006915">https://www.ebi.ac.uk/QuickGO/term/GO:0006915</a>.
+</p>
+</div>
+
+<p>El vocabulario de GO está diseñado para ser agnóstico a las especies, e incluye términos aplicables a procariotas, eucariotas, organismos unicelulares y multicelulares. Las revisiones continuas de la ontología están a cargo de un equipo de editores de ontología con amplia experiencia en biología y representación de conocimientos computacionales.</p>
+</div>
+<div id="otras-ontologias" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Otras ontologías</h3>
+<p>Si bien en la presente tesis se analizó la ontología GO, existen cientos de otras ontologías que pueden ser indagadas mediante AF. Entre estas otras ontologías existentes, debido a su gran popularidad en la comunidad científica, vale la pena mencionar:</p>
+<div id="kegg" class="section level4">
+<h4><span class="header-section-number">1.1.2.1</span> KEGG</h4>
+<p>La ontología provista por el KEGG <span class="citation">(<span class="citeproc-not-found" data-reference-id="kanehisa2000kegg"><strong>???</strong></span>)</span> contiene, para cada término o vía metabólica, además de los genes que lo influencian, un diagrama visual que representa el conocimiento experimental sobre el mismo y varias otras funciones que interactúan. Cada diagrama contiene una red de interacciones y reacciones moleculares y está diseñado para vincular los genes del genoma con los productos génicos (principalmente proteínas) de la vía. Esto ha permitido examinar qué vías y funciones asociadas, es probable que estén codificadas en el genoma.</p>
+
+<p>Ejemplos de términos presentes en esta ontología son “apoptosis” o “ciclo celular” (Figura <a href="#fig:keggCellCyclePathw"><strong>??</strong></a>). En estos diagramas se identifican tres tipos de elementos: cajas rectangulares para representar productos de genes, flechas para el flujo de las reacciones, y cajas con bordes redondeados para vincular a otras vías involucradas en el proceso. A su vez, esta base de datos se complementa con un conjunto de tablas de grupos ortólogos, donde se encuentra la información de subvías conservadas, que son especialmente útiles para la predicción de funciones de genes.</p>
+<div class="figure" style="text-align: center">
+<img src="images/kegg_cell_cycle_pathway.png" alt="Diagrama de KEGG del “ciclo celular” (cell cycle). Imagen extraída de www.genome.jp/kegg-bin/show_pathway?hsa04110." width="100%" />
+<p class="caption">
+Diagrama de KEGG del “ciclo celular” (cell cycle). Imagen extraída de <a href="www.genome.jp/kegg-bin/show_pathway?hsa04110">www.genome.jp/kegg-bin/show_pathway?hsa04110</a>.
+</p>
+</div>
+
+
+<p>Según los desarrolladores, es una “representación informática” del sistema biológico, formada por bloques de construcción y diagramas de cableado, más específicamente, bloques de construcción de genes o proteínas, bloques de construcción de químicos de pequeñas moléculas y reacciones, y diagramas de cableado de interacción molecular y redes de reacción.</p>
+</div>
+<div id="biocarta" class="section level4">
+<h4><span class="header-section-number">1.1.2.2</span> BioCarta</h4>
+<p>BioCarta <span class="citation">(<span class="citeproc-not-found" data-reference-id="nishimura2001biocarta"><strong>???</strong></span>)</span> fue creado por un grupo de científicos e ingenieros que reconocieron las limitaciones y obsolescencia de la literatura científica de la época. Es muy similar a la ontología del KEGG en el sentido que cada conjunto de genes viene acompañado de un diagrama de las interacciones. Sin embargo, en esta ontología, los diagramas presentan un mayor detalle gráfico como se puede observar en la Figura <a href="#fig:biocartaCorticosPathw"><strong>??</strong></a>, donde se presenta el diagrama del término “corticosteroides y cardioprotección”.</p>
+<div class="figure" style="text-align: center">
+<img src="images/biocarta_corticosteroids_pathway.png" alt="Diagrama de BioCarta del término “corticosteroides y cardioprotección”. Imagen extraída de https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection&amp;termId=30000124." width="100%" />
+<p class="caption">
+Diagrama de BioCarta del término “corticosteroides y cardioprotección”. Imagen extraída de <a href="https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection&amp;termId=30000124">https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection&amp;termId=30000124</a>.
+</p>
+</div>
+
+
+<p>La principal diferencia de BioCarta con KEGG, es que BioCarta fue diseñado para proporcionar un foro para la difusión de información, así como para promover la colaboración entre investigadores, educadores y estudiantes. BioCarta alienta a los científicos a contribuir con contenidos relacionados con sus áreas específicas de especialización. De esta manera, se espera que la contribución de un gran número de especialistas en ciencias de la vida en muchos campos diferentes permita la construcción de modelos detallados y precisos de las interacciones de los productos génicos que superen los esfuerzos de un solo grupo.</p>
+</div>
+<div id="reactome" class="section level4">
+<h4><span class="header-section-number">1.1.2.3</span> Reactome</h4>
+<p>Reactome: una base de datos de reacciones, vías y procesos biológicos. Reactome <span class="citation">(<span class="citeproc-not-found" data-reference-id="joshi2005reactome"><strong>???</strong></span>)</span> está desarrollado por biólogos expertos, en colaboración con un equipo editorial, todos ellos biólogos con nivel de doctorado. El contenido tiene referencias cruzadas a muchas bases de datos bioinformáticas. El objetivo principal de Reactome es representar visualmente las vías biológicas con todo detalle mecanicista, a la vez que se ponen a disposición los datos de la fuente en un formato computacionalmente accesible.</p>
+
+<p>La unidad central del modelo de datos de Reactome es la reacción. Las entidades (genes, proteínas, complejos y pequeñas moléculas) que participan en las reacciones forman una red de interacciones biológicas y se agrupan en vías. Ejemplos de vías biológicas en Reactome incluyen la “función inmune innata y adquirida”, la “regulación transcripcional”, y como se detalla en la Figura <a href="#fig:reactomeApoptPathw"><strong>??</strong></a>, la “apoptosis”.</p>
+<div class="figure" style="text-align: center">
+<img src="images/reactome_apoptosis.png" alt="Diagrama de Reactome del término “apoptosis”. Imagen extraída de https://www.reactome.org/content/detail/R-HSA-109581." width="100%" />
+<p class="caption">
+Diagrama de Reactome del término “apoptosis”. Imagen extraída de <a href="https://www.reactome.org/content/detail/R-HSA-109581">https://www.reactome.org/content/detail/R-HSA-109581</a>.
+</p>
+</div>
+
+
+<p>Las vías representadas en Reactome son específicas para cada especie, y cada paso de la vía está respaldado por citas bibliográficas que contienen una verificación experimental del proceso representado. Si no existe una verificación experimental, las vías pueden contener pasos inferidos, pero sólo si un biólogo experto, nombrado como <em>autor de la vía</em>, y un segundo biólogo, nombrado como <em>revisor</em>, están de acuerdo en que esto es una inferencia válida a hacer. Las vías humanas se utilizan para generar computacionalmente, mediante un proceso basado en la ortología, las vías derivadas de otros organismos.</p>
+</div>
+<div id="msigdb" class="section level4">
+<h4><span class="header-section-number">1.1.2.4</span> MSigDB</h4>
+<p>MSigDB <span class="citation">(<span class="citeproc-not-found" data-reference-id="liberzon2011molecular"><strong>???</strong></span>)</span> es la ontología desarrollada por el Broad Institute (<a href="https://www.broadinstitute.org/">https://www.broadinstitute.org/</a>), esta ontología es un compilado de ciertos conjuntos de genes provenientes de otras ontologías, entre ellas las descriptas previamente. MSigDB agrupa todos sus conjuntos de genes dentro de ocho categorías:</p>
+<ul>
+<li><strong>Conjuntos de genes distintivos</strong>: resumen y representan estados o procesos biológicos específicos bien definidos. Estos conjuntos de genes fueron generados por una metodología computacional basada en la identificación de superposiciones entre conjuntos de genes en MSigDB y la retención de genes que muestran detalles de expresión coordinada.</li>
+<li><strong>Conjuntos de genes posicionales</strong>: correspondientes a cada cromosoma humano y a cada banda citogenética que tenga al menos un gen.</li>
+<li><strong>Conjuntos de genes curados</strong>: obtenidos y curados a partir de diversas fuentes, como bases de datos de ontologías (KEGG, BioCarta y Reactome), literatura biomédica y el conocimiento de expertos en la materia.</li>
+<li><strong>Conjuntos de genes del motivo</strong>: representan objetivos potenciales de regulación por factores de transcripción o microARNs. Los conjuntos consisten en genes agrupados por contener motivos de secuencia corta en común, pertenecientes a regiones codificadoras no proteicas. Los motivos representan elementos de regulación cis conocidos o probables en promotores y 3’-UTRs.</li>
+<li><strong>Conjuntos de genes computacionales</strong>: definidos por la minería de grandes colecciones de datos orientados al cáncer.</li>
+<li><strong>Conjuntos de genes de GO</strong>: contienen conjuntos de genes seleccionados de GO.</li>
+<li><strong>Firmas oncogénicas</strong>: representan firmas de vías celulares que a menudo están desreguladas en el cáncer. La mayoría de las firmas se generaron directamente a partir de datos de genes que implicaban la perturbación de genes cancerígenos conocidos.</li>
+<li><strong>Firmas inmunológicas</strong>: representan estados celulares y perturbaciones dentro del sistema inmunológico. Las firmas fueron generadas por la curación manual de estudios publicados en inmunología humana y de ratones.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="sec:af" class="section level2">
+<h2><span class="header-section-number">1.2</span> Metodologías de Análisis Funcional (AF)</h2>
+<p>El análisis funcional refiere a técnicas que permiten, dado un experimento, evaluar el impacto de la interacción de grupos de genes sobre características biológicas. Partiendo de una matriz de expresión de genes con muestras pertenecientes a una de dos condiciones, los algoritmos de AF buscan detectar aquellos términos biológicos que se encuentran desregulados entre ambas condiciones. Una vez determinada la base de datos ontológica de interés, el investigador debe seleccionar cuál técnica de AF utilizar.</p>
+
+<p>Se diferencian dos categorías de algoritmos para llevar a cabo el AF <span class="citation">(<span class="citeproc-not-found" data-reference-id="huang2008bioinformatics"><strong>???</strong></span>)</span>. La principal diferencia entre estas categorías es la estrategia que llevan a cabo para el análisis:</p>
+<div id="sec:asr" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Análisis de Sobre-Representación (ASR)</h3>
+<p>Esta metodología requiere definir la lista de genes de interés o <strong>candidatos</strong>, generalmente aquellos que se encuentran diferencialmente expresados en el experimento, es decir, un vector con los nombres de los genes. Adicionalmente requiere de una segunda lista de genes, que utiliza para especificar lo que es esperable como comportamiento de <strong>referencia</strong> del modelo biológico, generalmente todos los genes presentes en el experimento. Luego, para cada término, realiza de forma independiente un test de hipótesis comparando las proporciones observadas sobre los candidatos con respecto a la referencia. De este modo, para cada término se obtiene un p-valor asociado que denota si existe evidencia de que las proporciones son diferentes.</p>
+
+<p>En la Figura <a href="#fig:diagramaORA"><strong>??</strong></a> se puede apreciar un diagrama de lo que sería el proceso completo para llevar a cabo un ASR. De este diagrama se desprenden varios aspectos que resultan variables. Diversos autores han propuesto diferentes test de hipótesis <span class="citation">(<span class="citeproc-not-found" data-reference-id="huang2008systematic"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fang2014thednet"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fresno2013rdavidwebservice"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="falcon2006using"><strong>???</strong></span>)</span>, y principalmente de allí es que surgen grandes cantidades de alternativas de ASR. Más aún, la elección de la lista de referencia no queda del todo clara, y se desprenden dos sugerencias con gran validez estadística: utilizar todos los genes del experimento (como en la Figura <a href="#fig:diagramaORA"><strong>??</strong></a>), o utilizar todo el genoma de la especie en cuestión <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>.</p>
+
+<div class="figure" style="text-align: center">
+<img src="images/diagrama_ORA.png" alt="Diagrama clásico del proceso completo de Análisis de Sobre-Representación (ASR). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de condición de cada muestra (C1 y C2). Mediante un algoritmo de Detección de Genes Diferenciales (DGD) se obtiene para cada gen un p-valor asociado (p-vals). Aplicando un nivel de corte \(\alpha\) a estos p-valores (\(&lt; \alpha\)), se obtiene cuáles son Genes Diferenciales (GD) y cuáles no. Aquí es donde efectivamente comienza el ASR, los algoritmos de ASR requieren de dos listas: la de genes candidatos (usualmente los GD), y la Lista de Referencia (LR; usualmente todos los genes detectados en el experimento). A partir de estas listas de genes, para cada Conjunto de Genes (CG\(_i\)) se genera una tabla de contingencia, a la cual se le aplica un Test de Hipótesis (TH) del cual resulta un p-valor asociado al CG\(_i\) (p-val\(_i\))." width="100%" />
+<p class="caption">
+Diagrama clásico del proceso completo de Análisis de Sobre-Representación (ASR). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de condición de cada muestra (C1 y C2). Mediante un algoritmo de Detección de Genes Diferenciales (DGD) se obtiene para cada gen un p-valor asociado (p-vals). Aplicando un nivel de corte <span class="math inline">\(\alpha\)</span> a estos p-valores (<span class="math inline">\(&lt; \alpha\)</span>), se obtiene cuáles son Genes Diferenciales (GD) y cuáles no. Aquí es donde efectivamente comienza el ASR, los algoritmos de ASR requieren de dos listas: la de genes candidatos (usualmente los GD), y la Lista de Referencia (LR; usualmente todos los genes detectados en el experimento). A partir de estas listas de genes, para cada Conjunto de Genes (CG<span class="math inline">\(_i\)</span>) se genera una tabla de contingencia, a la cual se le aplica un Test de Hipótesis (TH) del cual resulta un p-valor asociado al CG<span class="math inline">\(_i\)</span> (p-val<span class="math inline">\(_i\)</span>).
+</p>
+</div>
+
+</div>
+<div id="puntuacion-funcional-de-clase-pfc" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Puntuación Funcional de Clase (PFC)</h3>
+<p>Esta metodología construye un ordenamiento de los genes a partir de la totalidad del perfil de expresión. El objetivo es determinar si todos los miembros de una característica biológica de interés, están distribuidos aleatoriamente o no (en algún extremo) a lo largo del ordenamiento generado <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span>. Para ello, los genes se organizan mediante algún criterio de ordenamiento que refleje la diferencia entre ambas condiciones bajo estudio, por ejemplo, para cada gen obtener la diferencia de medias entre ambas condiciones. Luego, para un término biológico en particular, se recorre este ordenamiento para calcular el máximo del enriquecimiento inducido, lo cual se conoce como <strong>Enrichment Score</strong> (ES) del término. Para ello, a cada gen se le aplica una función de coste que aumenta (o disminuye) proporcionalmente a la correlación de su nivel de expresión con el fenotipo de las condiciones, cada vez que encuentra un gen que pertenece (o no) a la lista de miembros de la categoría de interés. Este ES se compara con la distribución nula generada por las permutaciones en las etiquetas de las condiciones, con el fin de evaluar si el ordenamiento original es esperable o generado por azar. En caso de que difiera del azar, existen diferentes criterios para definir, para el experimento dado, cuáles son los genes más influyentes en el término. Normalmente se utilizan los genes más cercanos al máximo del ES, o los genes pertenecientes al segmento más pequeño entre el coste máximo y el principio o el final de la lista ordenada.</p>
+
+<p>En la Figura <a href="#fig:diagramaFCS"><strong>??</strong></a> se observa el diagrama de lo que sería un proceso completo de PFC. De este diagrama, diversos aspectos difieren dependiendo del algoritmo de PFC a utilizar. Por ejemplo, ciertos algoritmos sugieren hacer permutación en las etiquetas de los genes, otros en las etiquetas de las muestras, y finalmente otros, en las etiquetas de genes del ordenamiento generado. Más aún, la principal diferencia entre uno y otro algoritmo de PFC reside en la función de ES, si bien la idea por detrás resulta similar, las ponderaciones de cada gen varían. Finalmente, vale la pena mencionar que ciertos algoritmos fijan diferentes filtros de los conjuntos de genes a analizar ya que suponen que fuera de esos límites el algoritmo pierde potencia estadística.</p>
+<div class="figure" style="text-align: center">
+<img src="images/diagrama_FCS.png" alt="Diagrama clásico del proceso completo de Puntuación Funcional de Clase (PFC). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de de condición de cada muestra (C1 y C2). Mediante alguna función particular (f) se obtiene un ordenamiento real (o\(^r\)) para los genes, es decir, para cada gen un valor numérico que le asigna una posición de orden. Luego, mediante una función llamada Enrichment Score (ES), partiendo de un conjunto de genes particular (CG\(_i\)) y el ordenamiento, se obtiene un valor de enriquecimiento real para el conjunto de genes (ES\(^r_i\)). Esta función ES es diferente dependiendo del algoritmo de PFC utilizado. Luego, mediante permutaciones sobre las condiciones, las etiquetas de los genes, ó del ordenamiento, se generan nuevos vectores de ordenamiento (o\(^*_1\), o\(^*_2\), …, o\(^*_n\)). Con cada uno de estos ordenamientos permutados, se genera un valor de enriquecimiento permutado para el conjunto de genes (ES\(^{*1}_i\), ES\(^{*2}_i\), …, ES\(^{*n}_i\)). Dado que se cuenta con n muestras permutadas de valores de enriquecimiento, se procede a realizar una distribución nula, con la cual se compara contra el valor de enriquecimiento real ES\(^r_i\), y por ende se obtiene un p-valor asociado al conjunto de genes dado (p-val\(_i\))." width="100%" />
+<p class="caption">
+Diagrama clásico del proceso completo de Puntuación Funcional de Clase (PFC). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de de condición de cada muestra (C1 y C2). Mediante alguna función particular (f) se obtiene un ordenamiento real (o<span class="math inline">\(^r\)</span>) para los genes, es decir, para cada gen un valor numérico que le asigna una posición de orden. Luego, mediante una función llamada Enrichment Score (ES), partiendo de un conjunto de genes particular (CG<span class="math inline">\(_i\)</span>) y el ordenamiento, se obtiene un valor de enriquecimiento real para el conjunto de genes (ES<span class="math inline">\(^r_i\)</span>). Esta función ES es diferente dependiendo del algoritmo de PFC utilizado. Luego, mediante permutaciones sobre las condiciones, las etiquetas de los genes, ó del ordenamiento, se generan nuevos vectores de ordenamiento (o<span class="math inline">\(^*_1\)</span>, o<span class="math inline">\(^*_2\)</span>, …, o<span class="math inline">\(^*_n\)</span>). Con cada uno de estos ordenamientos permutados, se genera un valor de enriquecimiento permutado para el conjunto de genes (ES<span class="math inline">\(^{*1}_i\)</span>, ES<span class="math inline">\(^{*2}_i\)</span>, …, ES<span class="math inline">\(^{*n}_i\)</span>). Dado que se cuenta con n muestras permutadas de valores de enriquecimiento, se procede a realizar una distribución nula, con la cual se compara contra el valor de enriquecimiento real ES<span class="math inline">\(^r_i\)</span>, y por ende se obtiene un p-valor asociado al conjunto de genes dado (p-val<span class="math inline">\(_i\)</span>).
+</p>
+</div>
+
+</div>
+<div id="analisis-de-enriquecimiento-modular" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Análisis de Enriquecimiento Modular</h3>
+<p>Vale la pena mencionar que en la literatura se suele encontrar una tercer alternativa de AF, llamada Análisis de Enriquecimiento Modular. Esta metodología requiere, adicionalmente, que los CG presenten alguna relación entre ellos. En la presente tesis no se tiene en cuenta esta metodología ya que en el común de las bases de datos de CG no existe relación entre sus términos, lo cual resulta en un gran limitante para el análisis.</p>
+</div>
+</div>
+<div id="comentarios-finales" class="section level2">
+<h2><span class="header-section-number">1.3</span> Comentarios finales</h2>
+<p>Tanto el ASR como PFC se utilizan para saber si un término se enriquece (o no) en la comparación de las condiciones estudiadas. Sin embargo, la formulación del problema es diferente para cada caso. Para realizar el análisis a través del ASR es necesario proporcionar dos listas, una de ellas de referencia y la otra de los genes candidatos. Este último suele estar formado por aquellos genes que se han identificado como expresados de forma diferencial entre dos condiciones experimentales (por ejemplo, tumor vs. normal) para un umbral definido. En PFC, se utiliza una matriz de expresión única que contiene todos los genes detectados por el experimento y, a continuación, se utiliza el criterio de ordenación propuesto para medir el enriquecimiento. En este sentido, PFC en comparación al ASR, no utiliza un umbral para definir la lista de candidatos, y por ende PFC utiliza toda la información presente en el experimento.</p>
+
+<p>Si bien, existen principalmente dos metodologías para realizar el AF, tanto para ASR como para PFC, existen grandes cantidades de diferentes algoritmos desarrollados, cada uno con sus propios supuestos, test, y parametrizaciones. En este sentido, no fue evaluado qué beneficios trae un algoritmo frente al resto. Por consiguiente, para el investigador, la elección del algoritmo de AF a utilizar termina siendo más una cuestión de elección aleatoria, que una elección adaptada al experimento en cuestión, de la hipótesis bajo estudio, o del enfoque de la investigación.</p>
+
+<!-- Hablamos sobre las diversas ómicas. Sobre la cantidad de experimentos públicos. -->
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prefacio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-cap-ngs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
