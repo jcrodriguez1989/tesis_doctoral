@@ -7,12 +7,12 @@ rmd_files:
   [
     "index.Rmd",
     "prefacio.Rmd",
-    "af.Rmd",
-    "ngs.Rmd",
-    "ifa.Rmd",
-    "migsa.Rmd",
-    "desafios.Rmd",
-    "conclusiones.Rmd",
+    "01_af.Rmd",
+    "02_fuentes_datos.Rmd",
+    "03_ifa.Rmd",
+    "04_migsa.Rmd",
+    "05_desafios.Rmd",
+    "06_conclusiones.Rmd",
     "bibliografia.Rmd"
   ]
 
