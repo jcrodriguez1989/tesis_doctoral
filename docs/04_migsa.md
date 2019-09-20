@@ -28,7 +28,7 @@
 
 <div class="figure" style="text-align: center">
 <img src="images/MIGSA_FIG1_es.pdf" alt="(ref:captionMigsa1)" width="100%" />
-<p class="caption">(ref:captionMigsa1)</p>
+<p class="caption">(\#fig:migsa1)(ref:captionMigsa1)</p>
 </div>
 (ref:captionMigsa1) Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión $L=\{M_1,....,M_D\}$, cada matriz con la identificación del fenotipo (por ejemplo $a$, $b$, $c$, $d$) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo $E_{1}^{a,b}$ contrasta los fenotipos $a$ y $b$ para la matriz de expresión $M_1$). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función $f$ diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE).
 
@@ -87,7 +87,7 @@
 
 <div class="figure" style="text-align: center">
 <img src="images/MIGSA_FIG2.pdf" alt="(ref:captionMigsa2)" width="100%" />
-<p class="caption">(ref:captionMigsa2)</p>
+<p class="caption">(\#fig:migsa2)(ref:captionMigsa2)</p>
 </div>
 (ref:captionMigsa2) Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste.
 
@@ -126,7 +126,7 @@ Table: Conjuntos de genes en consenso. Número de Términos Enriquecidos en Cons
 
 <div class="figure" style="text-align: center">
 <img src="images/MIGSA_FIG3.pdf" alt="(ref:captionMigsa3)" width="100%" />
-<p class="caption">(ref:captionMigsa3)</p>
+<p class="caption">(\#fig:migsa3)(ref:captionMigsa3)</p>
 </div>
 (ref:captionMigsa3) Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es "términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains", en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba$^T$) y de Luminal A (LA$^T$), y para experimentos transcriptómicos específicos por contraste (T). 
 

@@ -16,6 +16,8 @@ rmd_files:
     "bibliografia.Rmd"
   ]
 
+download: [["RodriguezJC_tesis_doctoral.pdf", "PDF"]]
+
 language:
   ui:
     chapter_name: "Capítulo "

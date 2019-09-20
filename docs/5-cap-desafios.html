@@ -249,11 +249,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb7-9" data-line-number="9">expresion &lt;-<span class="st"> </span>tcgaMAdata<span class="op">$</span>geneExpr</a>
 <a class="sourceLine" id="cb7-10" data-line-number="10"></a>
 <a class="sourceLine" id="cb7-11" data-line-number="11"><span class="kw">dim</span>(expresion) <span class="co"># #genes y #sujetos</span></a></code></pre></div>
-<pre><code>## [1] 16207   237</code></pre>
+<pre><code>[1] 16207   237</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">table</span>(subtipos) <span class="co"># #sujetos de cada subtipo</span></a></code></pre></div>
-<pre><code>## subtipos
-## Basal  LumA 
-##    95   142</code></pre>
+<pre><code>subtipos
+Basal  LumA 
+   95   142 </code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co"># Cargamos los conjuntos de genes de KEGG y Gene Ontology</span></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"><span class="co"># utilizando funciones de MIGSA</span></a>
 <a class="sourceLine" id="cb11-3" data-line-number="3">conj_genes &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
@@ -282,8 +282,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb14-6" data-line-number="6">  <span class="dt">MIGSAmGSZ =</span> MIGSAmGSZ_tiempo <span class="op">/</span><span class="st"> </span><span class="dv">60</span> <span class="op">/</span><span class="st"> </span><span class="dv">60</span>,  <span class="co"># en horas</span></a>
 <a class="sourceLine" id="cb14-7" data-line-number="7">  <span class="dt">Speedup =</span> mGSZ_tiempo <span class="op">/</span><span class="st"> </span>MIGSAmGSZ_tiempo</a>
 <a class="sourceLine" id="cb14-8" data-line-number="8">)</a></code></pre></div>
-<pre><code>##      mGSZ MIGSAmGSZ   Speedup 
-##  2.461000  1.553534  1.584130</code></pre>
+<pre><code>     mGSZ MIGSAmGSZ   Speedup 
+ 2.461000  1.553534  1.584130 </code></pre>
 <p>Como se observa, la versión optimizada, <code>MIGSAmGSZ</code>, presenta un <em>speedup</em> de 1,6X sobre el algoritmo original -de demorar 2,46 horas, la nueva versión pasó a demorar 1,55 horas-.</p>
 
 <p>Por otra parte, la implementación original de <code>mGSZ</code> se ejecuta, exclusivamente, de modo secuencial. En la actualidad, siendo tan fácil el acceso a computadores multi-procesador, el algoritmo <code>mGSZ</code> deja de lado una alternativa muy favorable en cuanto a la eficiencia en el tiempo de ejecución.</p>
@@ -319,10 +319,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb17-10" data-line-number="10">  <span class="dt">Eficiencia =</span> (mGSZ_tiempo <span class="op">/</span><span class="st"> </span>tiempos_segs) <span class="op">/</span><span class="st"> </span>nucleos</a>
 <a class="sourceLine" id="cb17-11" data-line-number="11">)</a>
 <a class="sourceLine" id="cb17-12" data-line-number="12"><span class="kw">round</span>(metricas, <span class="dv">2</span>)</a></code></pre></div>
-<pre><code>##                   1     2     4     8    10    12    14
-## Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
-## Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
-## Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37</code></pre>
+<pre><code>                  1     2     4     8    10    12    14
+Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
+Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
+Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37</code></pre>
 
 <p>Como puede observarse en la tabla superior, sin importar el número de núcleos en los que se haya corrido <code>MIGSAmGSZ</code>, su rendimiento fue superior al de <code>mGSZ</code>. Ejecutándose en un núcleo muestra un <em>speedup</em> de 1,6X, alcanzando un máximo de 10,8X con diez núcleos. Gracias a la optimización desarrollada, es posible obtener en 14 minutos los mismos resultados que se obtenían en 2,46 horas de ejecución con el <code>mGSZ</code> original. Extrapolando a 118 experimentos, pasaríamos de una demora de 12,09 días, a tan solo 27,53 horas.</p>
 
@@ -374,7 +374,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf"],
+"download": [["RodriguezJC_tesis_doctoral.pdf", "PDF"]],
 "toc": {
 "collapse": "section"
 }
