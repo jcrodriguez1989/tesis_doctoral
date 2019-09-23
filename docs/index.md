@@ -10,23 +10,11 @@ title: 'Análisis e integración de información de datos biológicos mediante a
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  thesisdown::thesis_pdf: default
-  # thesisdown::thesis_gitbook: default
+  # thesisdown::thesis_pdf: default
+  thesisdown::thesis_gitbook: default
   # thesisdown::thesis_word: default
   # thesisdown::thesis_epub: default
 abstract: |
-  \par El análisis funcional refiere a un conjunto de técnicas que tienen como fin detectar aquellas funciones o procesos que se encuentran desregulados en un experimento biológico. Con el continuo avance en las tecnologías de obtención de expresión de muestras biológicas, la cantidad de bases de datos de libre disponibilidad aumenta constantemente. Las técnicas de análisis funcional se basan en el estudio de un único experimento, en la era del _Big Data_ resulta natural notar la necesidad de explotar esta gran cantidad de bases de datos para su integración, y así, generar nuevas fuentes de información.
-  
-  \par Esta tesis propone, como objetivo principal, brindar una metodología que permita integrar grandes cantidades de bases de datos de expresión biológica. Integrando información de diversas poblaciones, fenotipos, enfermedades, entre otros, se podrá detectar patrones que caractericen cada grupo. Como primer instancia de tesis, se realizó una comparación exhaustiva de diversas alternativas para llevar a cabo el análisis funcional. Con tantas alternativas existentes, que siguen diversos supuestos e ideas, esta evaluación nos llevó a la creación del pipeline de _Análisis Funcional Integrador_: `IFA` (del inglés _Integrative Functional Analysis_). El `IFA` realiza su análisis tomando alternativas que otorgaron los mejores resultados desde un punto de vista biológico y estadístico.
-  
-  \par Para cumplir con el objetivo principal de esta tesis, presentamos la herramienta `MIGSA` (del inglés _Massive and Integrative Gene Set Analysis_). Gracias a esta herramienta, es ahora posible llevar a cabo un análisis funcional masivo e integrador de grandes cantidades de bases de datos biológicas que provienen tanto de distintas poblaciones como de distintas fuentes biológicas (genes, proteínas, etc.). Además, `MIGSA` proveé diversas herramientas que permiten explorar y visualizar fácilmente los resultados, y de esta manera, validar y generar nuevas hipótesis de estudio. La utilidad de nuestra herramienta fue comprobada ya que permitió, para sub-grupos de cáncer de mama -con pronósticos bien distintivos-, detectar genes y procesos biológicos que los caracterizan. `MIGSA` representa una herramienta que permite detectar efectivamente aspectos biológicos que podrían ser blancos de drogas, y así contrarrestar la condición bajo estudio.
-  
-  **Clasificación (ACM CCS 2012):**
-  
-    * _Applied computing ~> Life and medical sciences ~> Computational biology_
-    * _Applied computing ~> Life and medical sciences ~> Bioinformatics_
-  
-  **Palabras claves:** _Minería de datos - Ciencia de datos - Integración de información - Bioinformática_
   
 acknowledgements: |
   Mis agradecimientos.
@@ -43,3 +31,5 @@ csl: csl/apa.csl
 lot: false
 lof: false
 ---
+
+

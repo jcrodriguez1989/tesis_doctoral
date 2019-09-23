@@ -185,7 +185,7 @@ Como se mencionó en la Sección \@ref(sec:af), para llevar a cabo el AF, es nec
 
 ### Cáncer de mama {#sec:bcSubt}
 
-Para cáncer de mama, Perou et al. [@parker2009supervised] desarrolló un clasificador que, a partir de datos de microarreglos de ADN, asigna a cada sujeto en uno de 5 subtipos: Luminal A, Luminal B, Her2, Basal ó Normal. Contrastar de a pares estos grupos resulta de un alto interés biológico ya que se sabe que cada grupo es diferente al resto en aspectos como tiempo de sobrevida, reacción a distintas drogas, entre otros. Y por ende, los términos biológicos característicos de cada grupo, PAM50, son los que determinan su comportamiento. Para cada sujeto se obtuvo su clasificación PAM50 mediante el paquete de R `genefu` [@gendoo2015genefu].
+Para cáncer de mama, Perou et al. [@parker2009supervised] desarrolló un clasificador - PAM50 - que, a partir de datos de microarreglos de ADN, asigna a cada sujeto en uno de 5 subtipos: Luminal A, Luminal B, Her2, Basal ó Normal. Dicha clasificación se basa en los niveles de expresión detectados, para cada sujeto, en 50 genes específicos [@parker2009supervised]. Contrastar de a pares estos grupos resulta de un alto interés biológico ya que se sabe que cada grupo es diferente al resto en aspectos como tiempo de sobrevida, reacción a distintas drogas, entre otros. Y por ende, los términos biológicos característicos de cada grupo PAM50 son los que determinan su comportamiento. Para cada sujeto se obtuvo su clasificación PAM50 mediante el paquete de R `genefu` [@gendoo2015genefu].
 
 ### Cáncer de próstata
 
