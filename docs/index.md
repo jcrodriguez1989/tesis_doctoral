@@ -17,7 +17,7 @@ output:
 abstract: |
   
 acknowledgements: |
-  Mis agradecimientos.
+  
 dedication: |
   _Va Castro, va Castro, va Castro, sacó el centro pasado, Riggio, ..._
   

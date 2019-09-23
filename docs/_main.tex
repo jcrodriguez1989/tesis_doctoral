@@ -31,6 +31,7 @@
 % Check out CTAN to see: http://www.ctan.org/
 %%
 
+\usepackage[normalem]{ulem}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{setspace}\doublespacing
 \usepackage{float}
@@ -163,7 +164,25 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \Acknowledgements{
-Mis agradecimientos.
+\par
+
+Llega el tan ansiado día de defender mi tesis doctoral, luego de más de 5 años de investigación sin duda hay miles de agradecimientos que mencionar. Antes que nada, me siento bendecido y afortunado de haber nacido en la República Argentina. Le agradezco a mi país no solo por haberme brindado educación gratuita de excelencia, si no que además la beca con la cual pude preocuparme exclusivamente en mi investigación durante estos años de estudios doctorales.
+
+\par
+
+En segundo lugar, creo que el mayor agradecimiento se lo debo al Dr.~Elmer A. Fernández, mi director, quien me inició, guió y formó en el universo de la investigación científica. Con todas las concordancias y discusiones que haya pasado con él, todo aprendizaje resulta positivo para la vida. Asimismo agradezco a mis compañeros de trabajo de la UCC, sus comentarios y sugerencias fueron un pilar fundamental para la calidad de este trabajo de tesis -sin contar el gran aporte de amistad y cerveceadas-.
+
+\par
+
+Obviamente, este trabajo no hubiera sido posible sin momentos de esparcimiento de quien escribe. Aquí es donde debo principalmente agradecer a toda mi familia: má, pá, sin saber mucho de ciencia o investigación, siempre me apoyaron en lo que me hiciera feliz. A mi abuelito, que cada vez que me preguntaba sobre la facu, me daba ánimos a seguir más y más. Por otra parte mis grupos de amigos, los del barrio, los de la facu, los de la cancha, grupos bien distintos, pero que siempre brindaron toneladas de cariño \sout{y asados y escabio}. Y si a esparcimiento me refiero, no puedo no incluir al Instituto Atlético Central Córdoba, fuente de gran parte de mis alegrías.
+
+\par
+
+Finalmente, imposible cerrar esta sección sin agradecer al Whisky, no, no soy alcohólico, me refiero a mi amigo de cuatro patas. El ser más cariñoso que conozco, el que mayor parte de tiempo estuvo presente durante mi doctorado -ahora mismo está acá mirándome con cara de ir a pasear-. Esas pausas de 15 minutos que me exigía, fueron fundamentales para despejar el cerebro y remontar con mejores ideas.
+
+\par
+
+Gracias, gracias a todos, les dedico este trabajo, y esta parte de mi vida.
 }
 
 \Dedication{
@@ -218,7 +237,25 @@ Para cumplir con el objetivo principal de esta tesis, presentamos la herramienta
     \emph{Aquella felicidad vuelve a atravesar mi cuerpo al defender esta tesis.}
   \end{dedication}
   \begin{acknowledgements}
-    Mis agradecimientos.
+    \par
+    
+    Llega el tan ansiado día de defender mi tesis doctoral, luego de más de 5 años de investigación sin duda hay miles de agradecimientos que mencionar. Antes que nada, me siento bendecido y afortunado de haber nacido en la República Argentina. Le agradezco a mi país no solo por haberme brindado educación gratuita de excelencia, si no que además la beca con la cual pude preocuparme exclusivamente en mi investigación durante estos años de estudios doctorales.
+    
+    \par
+    
+    En segundo lugar, creo que el mayor agradecimiento se lo debo al Dr.~Elmer A. Fernández, mi director, quien me inició, guió y formó en el universo de la investigación científica. Con todas las concordancias y discusiones que haya pasado con él, todo aprendizaje resulta positivo para la vida. Asimismo agradezco a mis compañeros de trabajo de la UCC, sus comentarios y sugerencias fueron un pilar fundamental para la calidad de este trabajo de tesis -sin contar el gran aporte de amistad y cerveceadas-.
+    
+    \par
+    
+    Obviamente, este trabajo no hubiera sido posible sin momentos de esparcimiento de quien escribe. Aquí es donde debo principalmente agradecer a toda mi familia: má, pá, sin saber mucho de ciencia o investigación, siempre me apoyaron en lo que me hiciera feliz. A mi abuelito, que cada vez que me preguntaba sobre la facu, me daba ánimos a seguir más y más. Por otra parte mis grupos de amigos, los del barrio, los de la facu, los de la cancha, grupos bien distintos, pero que siempre brindaron toneladas de cariño \sout{y asados y escabio}. Y si a esparcimiento me refiero, no puedo no incluir al Instituto Atlético Central Córdoba, fuente de gran parte de mis alegrías.
+    
+    \par
+    
+    Finalmente, imposible cerrar esta sección sin agradecer al Whisky, no, no soy alcohólico, me refiero a mi amigo de cuatro patas. El ser más cariñoso que conozco, el que mayor parte de tiempo estuvo presente durante mi doctorado -ahora mismo está acá mirándome con cara de ir a pasear-. Esas pausas de 15 minutos que me exigía, fueron fundamentales para despejar el cerebro y remontar con mejores ideas.
+    
+    \par
+    
+    Gracias, gracias a todos, les dedico este trabajo, y esta parte de mi vida.
   \end{acknowledgements}
   \begin{abstract}
     \par
@@ -602,11 +639,11 @@ Dado que los valores de expresión provienen de niveles de señales, los datos s
 \hypertarget{secuenciacion-de-arn}{%
 \subsection{Secuenciación de ARN}\label{secuenciacion-de-arn}}
 
-Este tipo de tecnologías se basa en poder obtener para una muestra biológica, las secuencias de \textbf{nucleótidos} leídos. En este sentido se obtienen millones de cadenas de nucleótidos, que al mapearlos (unirlos) permiten obtener el conteo de la cantidad de veces que subcadenas del genoma aparecen en la muestra.
+Este tipo de tecnologías se basa en poder obtener para una muestra biológica, las secuencias de \textbf{nucleótidos} detectadas. En este sentido se obtienen millones de cadenas de nucleótidos, que al mapearlos (unirlos) permiten obtener la cantidad de veces que subcadenas del genoma aparecen en la muestra. Al poseer información a nivel de nucleótidos, surgen ventajas con respecto a los microarreglos de ADN, por ejemplo, poder detectar mutaciones de nucleótidos, e incluso estudiar la muestra a niveles más detallados que genes (transcriptos, exones, intrones, etc.).
 
 \par
 
-Una vez obtenido el ARN de la muestra biológica, se comienza con un proceso de fragmentación en donde, mediante cortes en secciones aleatorias, se llevan estas grandes cadenas de ARN a fragmentos de entre 300 y 1000 nucleótidos. Cada uno de estos fragmentos es posteriormente clonado varias veces, produciendo millones de copias de cada fragmento. Todos estos fragmentos se ponen en un pool que contiene nucleótidos individuales marcados con fluoróforos, cada una de las cuatro bases con un color diferente. Al entrar en contacto el ARN con estos nucleótidos libres, se incorporan como segunda hélice del ARN, de esta manera se logra incorporar un color a cada una de las bases de los fragmentos de ARN. Luego, cada fragmento pasa por un sistema que permite leer el color incorporado a cada nucleótido. Es así que traduciendo los colores, se logra detectar los nucleótidos que componen cada fragmento. Al finalizar el proceso de secuenciación de ARN, se cuenta con un archivo con millones de lecturas, una por cada fragmento. Cada lectura se representa con 4 líneas en el archivo, como la que se muestra a continuación:
+Una vez obtenido el ARN de la muestra biológica, se retrotranscribe para obtener ADN complementario (ADNc) a estas cadenas. El proceso siguiente es la fragmentación en donde, mediante cortes en secciones aleatorias, se llevan estas grandes cadenas de ADNc a fragmentos de entre 300 y 1000 nucleótidos. Cada uno de estos fragmentos es posteriormente clonado varias veces, produciendo millones de copias de cada fragmento. Aquí es cuando comienza el proceso de secuenciación propiamente dicho. En el caso de la secuenciación por síntesis, por ejemplo de las plataformas de \emph{Illumina}, los fragmentos de ADNc se ponen en un pool que contiene nucleótidos individuales marcados con fluoróforos, cada una de las cuatro bases con un color diferente. Al entrar en contacto el ADNc con estos nucleótidos libres, se incorporan como hebra complementaria del ADNc, de esta manera se logra incorporar un color a cada una de las bases de los fragmentos de ADNc. Luego, cada fragmento pasa por un sistema que permite leer el color incorporado a cada nucleótido. Es así que traduciendo los colores, se logra detectar los nucleótidos que componen cada fragmento. Al finalizar el proceso de secuenciación de ARN, se cuenta con un archivo con millones de lecturas, una por cada fragmento. Cada lectura se representa con 4 líneas en el archivo, como la que se muestra a continuación:
 \begin{verbatim}
 @SEQ_ID
 GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
@@ -711,7 +748,7 @@ Como se mencionó en la Sección \ref{sec:af}, para llevar a cabo el AF, es nece
 \hypertarget{sec:bcSubt}{%
 \subsection{Cáncer de mama}\label{sec:bcSubt}}
 
-Para cáncer de mama, Perou et al. (Parker et al., 2009) desarrolló un clasificador que, a partir de datos de microarreglos de ADN, asigna a cada sujeto en uno de 5 subtipos: Luminal A, Luminal B, Her2, Basal ó Normal. Contrastar de a pares estos grupos resulta de un alto interés biológico ya que se sabe que cada grupo es diferente al resto en aspectos como tiempo de sobrevida, reacción a distintas drogas, entre otros. Y por ende, los términos biológicos característicos de cada grupo, PAM50, son los que determinan su comportamiento. Para cada sujeto se obtuvo su clasificación PAM50 mediante el paquete de R \texttt{genefu} (Gendoo et al., 2015).
+Para cáncer de mama, Perou et al. (Parker et al., 2009) desarrolló un clasificador - PAM50 - que, a partir de datos de microarreglos de ADN, asigna a cada sujeto en uno de 5 subtipos: Luminal A, Luminal B, Her2, Basal ó Normal. Dicha clasificación se basa en los niveles de expresión detectados, para cada sujeto, en 50 genes específicos (Parker et al., 2009). Contrastar de a pares estos grupos resulta de un alto interés biológico ya que se sabe que cada grupo es diferente al resto en aspectos como tiempo de sobrevida, reacción a distintas drogas, entre otros. Y por ende, los términos biológicos característicos de cada grupo PAM50 son los que determinan su comportamiento. Para cada sujeto se obtuvo su clasificación PAM50 mediante el paquete de R \texttt{genefu} (Gendoo et al., 2015).
 
 \hypertarget{cancer-de-prostata}{%
 \subsection{Cáncer de próstata}\label{cancer-de-prostata}}

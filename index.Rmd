@@ -17,7 +17,7 @@ output:
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("resumen.Rmd"), collapse = '\n  ')`
 acknowledgements: |
-  Mis agradecimientos.
+  `r if(knitr:::is_latex_output()) paste(readLines("agradecimientos.Rmd"), collapse = '\n  ')`
 dedication: |
   _Va Castro, va Castro, va Castro, sacó el centro pasado, Riggio, ..._
   

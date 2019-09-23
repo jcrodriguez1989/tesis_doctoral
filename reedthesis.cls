@@ -326,7 +326,7 @@
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
-    {FAMAF - UNC 2019 \par}
+    {FAMAF - UNC \par}
     {\fontsize{12}{14}\selectfont Director: \@advisor \par}
     \vfil
     \vfil
