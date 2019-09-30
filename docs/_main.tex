@@ -810,11 +810,11 @@ Para determinar si un CG se encontraba enriquecido por un método dado, se utili
 \hypertarget{analisis-de-sobre-representacion}{%
 \subsection{Análisis de Sobre-Representación}\label{analisis-de-sobre-representacion}}
 
-Dentro de los algoritmos de ASR, una de las herramientas más utilizadas es la plataforma web DAVID (Huang, Sherman, \& Lempicki, 2009) -del inglés \emph{Database for Annotation, Visualization and Integrated Discovery}-. La lista de genes DE de cada base de datos fue enviada a la plataforma Web DAVID (en adelante llamado \textbf{WD}) a través del paquete R \texttt{RDAVIDWebService} (Fresno \& Fernández, 2013). Uno de los principales inconvenientes de la plataforma DAVID es que no permite evaluar CG provistos por el usuario, y al momento de realizar este análisis, la versión estable (\emph{v6.7}) contaba con una base de conocimiento actualizada por última vez en el año 2010. Para superar este inconveniente, desarrollamos \textbf{RD}, una versión en lenguaje R del algoritmo de DAVID, que nos permite analizar cualquier CG de interés. Además, a diferencia de DAVID y RDAVIDWebService, RD no requiere de comunicación a través de internet. El tercer algoritmo de ASR evaluado es \textbf{GOstats} (Falcon \& Gentleman, 2007), que fue diseñado específicamente para realizar análisis de enriquecimiento de GO. GOstats penaliza el enriquecimiento de los CG (penalización \emph{elim}) teniendo en cuenta la estructura de grafos de GO. Finalmente, también se evaluó el método \textbf{dEnricher} (Fang \& Gough, 2014). Este último método posee una representación interna de GO, y ofrece otro método de penalización adicional al provisto por GOstats (penalización \emph{lea}). Además dEnricher permite seleccionar el test estadístico a utilizar: \emph{Hipergeométrico}, \emph{Binomial} ó \emph{Fisher}.
+Dentro de los algoritmos de ASR, una de las herramientas más utilizadas es la plataforma web DAVID (Huang et al., 2008b) -del inglés \emph{Database for Annotation, Visualization and Integrated Discovery}-. La lista de genes DE de cada base de datos fue enviada a la plataforma Web DAVID (en adelante llamado \textbf{WD}) a través del paquete R \texttt{RDAVIDWebService} (Fresno \& Fernández, 2013). Uno de los principales inconvenientes de la plataforma DAVID es que no permite evaluar CG provistos por el usuario, y al momento de realizar este análisis, la versión estable (\emph{v6.7}) contaba con una base de conocimiento actualizada por última vez en el año 2010. Para superar este inconveniente, desarrollamos \textbf{RD}, una versión en lenguaje R del algoritmo de DAVID, que nos permite analizar cualquier CG de interés. Además, a diferencia de DAVID y RDAVIDWebService, RD no requiere de comunicación a través de internet. El tercer algoritmo de ASR evaluado es \textbf{GOstats} (Falcon \& Gentleman, 2006), que fue diseñado específicamente para realizar análisis de enriquecimiento de GO. GOstats penaliza el enriquecimiento de los CG (penalización \emph{elim}) teniendo en cuenta la estructura de grafos de GO. Finalmente, también se evaluó el método \textbf{dEnricher} (Fang \& Gough, 2014). Este último método posee una representación interna de GO, y ofrece otro método de penalización adicional al provisto por GOstats (penalización \emph{lea}). Además dEnricher permite seleccionar el test estadístico a utilizar: \emph{Hipergeométrico}, \emph{Binomial} ó \emph{Fisher}.
 
 \par
 
-Como se mencionó en la Sección \ref{sec:af}, los métodos de ASR requieren, además de los CG y la lista de genes candidatos, la lista de genes de referencia (BR; del inglés \emph{Background Reference}). Utilizar diferentes listas de referencia pueden dar lugar a resultados diferentes del método de ASR (Fresno et al., 2012; Rivals, Personnaz, Taing, \& Potier, 2007). Por ello, para cada opción de ASR propuesta, a excepción de dEnricher que no lo permite, se evaluaron listas de referencia propuestas por Fresno et al. (Fresno et al., 2012). Las listas de referencia evaluadas fueron: el genoma completo (BRI) y aquellos genes detectados en el experimento (BRIII).
+Como se mencionó en la Sección \ref{sec:af}, los métodos de ASR requieren, además de los CG y la lista de genes candidatos, la lista de genes de referencia (BR; del inglés \emph{Background Reference}). Utilizar diferentes listas de referencia pueden dar lugar a resultados diferentes del método de ASR (Fresno et al., 2012; Rivals et al., 2006). Por ello, para cada opción de ASR propuesta, a excepción de dEnricher que no lo permite, se evaluaron listas de referencia propuestas por Fresno et al. (Fresno et al., 2012). Las listas de referencia evaluadas fueron: el genoma completo (BRI) y aquellos genes detectados en el experimento (BRIII).
 
 \par
 
@@ -1810,9 +1810,6 @@ Ein-Dor, L., Zuk, O., \& Domany, E. (2006). Thousands of samples are needed to g
 \leavevmode\hypertarget{ref-falcon2006using}{}%
 Falcon, S., \& Gentleman, R. (2006). Using gostats to test gene lists for go term association. \emph{Bioinformatics}, \emph{23}(2), 257--258.
 
-\leavevmode\hypertarget{ref-falcon2007using}{}%
-Falcon, S., \& Gentleman, R. (2007). Using gostats to test gene lists for go term association. \emph{Bioinformatics}, \emph{23}(2), 257--258.
-
 \leavevmode\hypertarget{ref-fang2014thednet}{}%
 Fang, H., \& Gough, J. (2014). Thednet'approach promotes emerging research on cancer patient survival. \emph{Genome Medicine}, \emph{6}(8), 64.
 
@@ -1875,9 +1872,6 @@ Huang, D. W., Sherman, B. T., \& Lempicki, R. A. (2008a). Bioinformatics enrichm
 
 \leavevmode\hypertarget{ref-huang2008systematic}{}%
 Huang, D. W., Sherman, B. T., \& Lempicki, R. A. (2008b). Systematic and integrative analysis of large gene lists using david bioinformatics resources. \emph{Nature Protocols}, \emph{4}(1), 44.
-
-\leavevmode\hypertarget{ref-huang2009systematic}{}%
-Huang, D. W., Sherman, B. T., \& Lempicki, R. A. (2009). Systematic and integrative analysis of large gene lists using david bioinformatics resources. \emph{Nature Protocols}, \emph{4}(1), 44--57.
 
 \leavevmode\hypertarget{ref-joshi2005reactome}{}%
 Joshi-Tope, G., Gillespie, M., Vastrik, I., D'Eustachio, P., Schmidt, E., Bono, B. de, \ldots{} others. (2005). Reactome: A knowledgebase of biological pathways. \emph{Nucleic Acids Research}, \emph{33}(suppl\_1), D428--D432.
@@ -1986,9 +1980,6 @@ Richardson, A. L., Wang, Z. C., De Nicolo, A., Lu, X., Brown, M., Miron, A., \ld
 
 \leavevmode\hypertarget{ref-rivals2006enrichment}{}%
 Rivals, I., Personnaz, L., Taing, L., \& Potier, M.-C. (2006). Enrichment or depletion of a go category within a class of genes: Which test? \emph{Bioinformatics}, \emph{23}(4), 401--407.
-
-\leavevmode\hypertarget{ref-rivals2007enrichment}{}%
-Rivals, I., Personnaz, L., Taing, L., \& Potier, M.-C. (2007). Enrichment or depletion of a go category within a class of genes: Which test? \emph{Bioinformatics}, \emph{23}(4), 401--407.
 
 \leavevmode\hypertarget{ref-robinson2010edger}{}%
 Robinson, M. D., McCarthy, D. J., \& Smyth, G. K. (2010). EdgeR: A bioconductor package for differential expression analysis of digital gene expression data. \emph{Bioinformatics}, \emph{26}(1), 139--140.
