@@ -26,10 +26,14 @@
 
 \par Como se explica esquemáticamente en la Figura \@ref(fig:migsa1), MIGSA toma como entrada una lista de matrices de expresión ($L=\{M_d\}; d \in \{1,\ldots,D\}$). Cada matriz contiene datos del $d$-ésimo dataset, con $S_d$ sujetos medidos a través de cualquier tecnología ómica (por ejemplo, genes, proteínas, etc.) que pueda ser anotada con identificadores _Entrez_. Para el $d$-ésimo conjunto de datos, MIGSA requiere la identificación del fenotipo de cada sujeto $F_d=[f_{d1},...,f_{dS_d}]$, con $f_{di} \in \{a,b,...\}$ $(i\in \{1,...,S_d\})$, para identificar cada experimento $E_{d}^{a,b}$ que resulta de la matriz de expresión $M_d$ y el contraste de fenotipo _a vs. b_. Luego, en paralelo, MIGSA aplica individualmente a cada experimento el Análisis Funcional Integrador (IFA) descrito en el Cápitulo [3](#cap:ifa). Vale la pena mencionar que el IFA aplicado por MIGSA presenta dos novedades respecto a su publicación original [@rodriguez2016improving]: ahora permite analizar datos de conteos (como los de secuenciación de ARN), microarreglos de ADN, y proteómicos de iTRAQ; e identifica los genes específicos que contribuyeron al enriquecimiento de cada CG.
 
-<div class="figure" style="text-align: center">
-<img src="images/MIGSA_FIG1_es.pdf" alt="(ref:captionMigsa1)" width="100%" />
-<p class="caption">(\#fig:migsa1)(ref:captionMigsa1)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG1_es} 
+
+}
+
+\caption{(ref:captionMigsa1)}(\#fig:migsa1)
+\end{figure}
 (ref:captionMigsa1) Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión $L=\{M_1,....,M_D\}$, cada matriz con la identificación del fenotipo (por ejemplo $a$, $b$, $c$, $d$) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo $E_{1}^{a,b}$ contrasta los fenotipos $a$ y $b$ para la matriz de expresión $M_1$). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función $f$ diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE).
 
 \par Los resultados de MIGSA se resumen en un cubo de datos tridimensional, $Q^{Es,CGE,GIE}$, con tres ejes o niveles de abstracción: Experimentos (Es; es decir, contrastes de fenotipos), Conjuntos de Genes Enriquecidos (CGE; CG estadísticamente desregulados para un umbral de significancia), y la lista de Genes Importantes para el Enriquecimiento (GIE; es decir, para cada CG, los genes que fueron los principales responsables de su desregulación en un experimento específico). Así, para el experimento $E_{d}^{a,b}$, MIGSA proporciona la lista de conjuntos de genes enriquecidos $CGE_{d}^{a,b}$, y la lista de genes importantes de enriquecimiento $GIE_{d}^{a,b}$ (ver Figura \@ref(fig:migsa1)). Nótese que en el cubo $Q$ los ejes son: $Es=\cup_d\cup_{a,b}E_{d}^{a,b}$, $CGE=\cup_d\cup_{a,b}CGE_{d}^{a,b}$, y $GIE=\cup_d\cup_{a,b}GIE_{d}^{a,b}$.
@@ -85,10 +89,14 @@
 
 \par El segundo gran cluster divisable en la Figura \@ref(fig:migsa2) incluye todos los experimentos que contrastan los subtipos Basal con Luminal B ó Her2+ (marca Ba). En este cluster, se identificaron dos sub-clusters, uno con 15 de 20 (75%) experimentos contrastando Basal con Luminal B (marca Ba-LB), y otro con 12 de 18 (67%) experimentos contrastando Basal con Her2+ (marca Ba-H). Además de estos dos grandes sub-clusters, se diferencia uno con experimentos que contrastan Luminal B con Her2+ (marca LB-H), con 14 de 17 (82%) experimentos. En particular, este último cluster tiene la menor cantidad de términos enriquecidos, lo que sugiere una gran similitud entre estos dos subtipos.
 
-<div class="figure" style="text-align: center">
-<img src="images/MIGSA_FIG2.pdf" alt="(ref:captionMigsa2)" width="100%" />
-<p class="caption">(\#fig:migsa2)(ref:captionMigsa2)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG2} 
+
+}
+
+\caption{(ref:captionMigsa2)}(\#fig:migsa2)
+\end{figure}
 (ref:captionMigsa2) Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste.
 
 \par El _heatmap_ de la Figura \@ref(fig:migsa2) también reveló patrones de enriquecimiento comunes específicos de subtipos para todos los subtipos contrastados. Por ejemplo, las cajas S1 muestran CGE que se encuentran comúnmente en los contrastes con el subtipo Basal, mientras que la caja S2 indica patrones de enriquecimiento de Luminal A. Además, también se observan patrones de enriquecimiento específicos de contrastes, es decir, conjuntos de términos que denotan diferencias entre dos subtipos determinados. Por ejemplo, la caja C1 contiene aquellos CG que diferencian Luminal A de Luminal B, la caja C2 para Luminal A vs. Her2+, C3 para Basal vs. Luminal B, y C4 para Luminal B vs. Her2+.
@@ -124,10 +132,14 @@ Table: Conjuntos de genes en consenso. Número de Términos Enriquecidos en Cons
 
 \par Para cada subtipo, se obtuvieron los **TET** y los **TEP**, y los correspondientes GIE, y se analizaron en conjunto con los correspondientes **PTF** encontrados previamente. En la Tabla \@ref(tab:migsa2), para cada subtipo, se presenta el número de términos que se encuentran exclusivamente en **PTF**, **TET** y **TEP**, y los que se encuentran exclusivamente en cada intersección. Analizando estos los resultados, encontramos que la concordancia entre los **PTF** y su contraparte del TCGA es notable. Por ejemplo, de los 680 términos que pertenecen a los **PTF** (suma de celdas de la fila Total para columnas que involucran los **PTF**), el 38% también se encontró en **TEP** o **TET** de los datos del TCGA. En particular, los subtipos Basal y Luminal A fueron los únicos que exhibieron términos en común entre transcriptómica (**PTF** y **TET**) y proteómica (**TEP**). También se encontró que casi el 80% de esos términos en los **TET** también se encontraron en los **PTF**, evidenciando la alta consistencia de MIGSA para analizar los conjuntos de datos de transcriptómica de los HKds y TCGA. Por el contrario, y para todos los subtipos de CM, esos términos enriquecidos con datos proteómicos no se encontraron frecuentemente entre los **TET**. Este hallazgo sugiere que los **TEP** proporcionan información complementaria a la contraparte transcriptómica, como se reportó previamente [@meng2014multivariate]. Sin embargo, será necesaria una investigación más profunda que incluya un mayor número de datasets proteómicos para poder definir un Perfil **Proteómico** Funcional.
 
-<div class="figure" style="text-align: center">
-<img src="images/MIGSA_FIG3.pdf" alt="(ref:captionMigsa3)" width="100%" />
-<p class="caption">(\#fig:migsa3)(ref:captionMigsa3)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG3} 
+
+}
+
+\caption{(ref:captionMigsa3)}(\#fig:migsa3)
+\end{figure}
 (ref:captionMigsa3) Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es "términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains", en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba$^T$) y de Luminal A (LA$^T$), y para experimentos transcriptómicos específicos por contraste (T). 
 
 \begin{table}[!h]
