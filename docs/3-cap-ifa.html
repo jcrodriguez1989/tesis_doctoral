@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Análisis Funcional Integrador | _main.utf8</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Análisis Funcional Integrador | _main.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Análisis Funcional Integrador | _main.utf8" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-cap-ngs.html"/>
+<link rel="next" href="4-cap-migsa.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="1" data-path="1-cap-af.html"><a href="1-cap-af.html"><i class="fa fa-check"></i><b>1</b> Análisis funcional</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:ontologias"><i class="fa fa-check"></i><b>1.1</b> Ontologías</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#gene-ontology"><i class="fa fa-check"></i><b>1.1.1</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#otras-ontologías"><i class="fa fa-check"></i><b>1.1.2</b> Otras ontologías</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:af"><i class="fa fa-check"></i><b>1.2</b> Metodologías de Análisis Funcional (AF)</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:asr"><i class="fa fa-check"></i><b>1.2.1</b> Análisis de Sobre-Representación (ASR)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-cap-af.html"><a href="1-cap-af.html#puntuación-funcional-de-clase-pfc"><i class="fa fa-check"></i><b>1.2.2</b> Puntuación Funcional de Clase (PFC)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-cap-af.html"><a href="1-cap-af.html#análisis-de-enriquecimiento-modular"><i class="fa fa-check"></i><b>1.2.3</b> Análisis de Enriquecimiento Modular</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-cap-af.html"><a href="1-cap-af.html#comentarios-finales"><i class="fa fa-check"></i><b>1.3</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html"><i class="fa fa-check"></i><b>2</b> Fuentes de datos biológicas</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:technols"><i class="fa fa-check"></i><b>2.1</b> Tecnologías de obtención de expresión biológica</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#microarreglos-de-adn"><i class="fa fa-check"></i><b>2.1.1</b> Microarreglos de ADN</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#itraq"><i class="fa fa-check"></i><b>2.1.2</b> iTRAQ</a></li>
+<li class="chapter" data-level="2.1.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#secuenciación-de-arn"><i class="fa fa-check"></i><b>2.1.3</b> Secuenciación de ARN</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:repos"><i class="fa fa-check"></i><b>2.2</b> Repositorios de datos de expresión</a></li>
+<li class="chapter" data-level="2.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#condiciones-experimentales"><i class="fa fa-check"></i><b>2.3</b> Condiciones experimentales</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:bcSubt"><i class="fa fa-check"></i><b>2.3.1</b> Cáncer de mama</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#cáncer-de-próstata"><i class="fa fa-check"></i><b>2.3.2</b> Cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#comentarios-finales-1"><i class="fa fa-check"></i><b>2.4</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html"><i class="fa fa-check"></i><b>3</b> Análisis Funcional Integrador</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#motivación"><i class="fa fa-check"></i><b>3.1</b> Motivación</a></li>
+<li class="chapter" data-level="3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#validación-de-resultados"><i class="fa fa-check"></i><b>3.2</b> Validación de resultados</a></li>
+<li class="chapter" data-level="3.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#datos-de-entrada"><i class="fa fa-check"></i><b>3.3</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#matrices-de-expresión"><i class="fa fa-check"></i><b>3.3.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conjuntos-de-genes"><i class="fa fa-check"></i><b>3.3.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:algosComparados"><i class="fa fa-check"></i><b>3.4</b> Algoritmos y parámetros comparados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-sobre-representación"><i class="fa fa-check"></i><b>3.4.1</b> Análisis de Sobre-Representación</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#puntuación-funcional-de-clase"><i class="fa fa-check"></i><b>3.4.2</b> Puntuación Funcional de Clase</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#resultados"><i class="fa fa-check"></i><b>3.5</b> Resultados</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#genes-diferencialmente-expresados-por-base-de-datos"><i class="fa fa-check"></i><b>3.5.1</b> Genes diferencialmente expresados por base de datos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-estabilidad-de-enriquecimiento"><i class="fa fa-check"></i><b>3.5.2</b> Análisis de estabilidad de enriquecimiento</a></li>
+<li class="chapter" data-level="3.5.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-profundidad-en-gene-ontology"><i class="fa fa-check"></i><b>3.5.3</b> Análisis de profundidad en Gene Ontology</a></li>
+<li class="chapter" data-level="3.5.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:consensusSection"><i class="fa fa-check"></i><b>3.5.4</b> Análisis de consenso</a></li>
+<li class="chapter" data-level="3.5.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#enriquecimiento-exclusivo-y-relevancia-de-términos"><i class="fa fa-check"></i><b>3.5.5</b> Enriquecimiento exclusivo y relevancia de términos</a></li>
+<li class="chapter" data-level="3.5.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:ifa"><i class="fa fa-check"></i><b>3.5.6</b> Análisis Funcional Integrador</a></li>
+<li class="chapter" data-level="3.5.7" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-tcga"><i class="fa fa-check"></i><b>3.5.7</b> IFA sobre TCGA</a></li>
+<li class="chapter" data-level="3.5.8" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-datasets-de-cáncer-de-próstata"><i class="fa fa-check"></i><b>3.5.8</b> IFA sobre datasets de cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conclusiones"><i class="fa fa-check"></i><b>3.6</b> Conclusiones</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#comparación-de-métodos"><i class="fa fa-check"></i><b>3.6.1</b> Comparación de métodos</a></li>
+<li class="chapter" data-level="3.6.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#aplicación-del-ifa"><i class="fa fa-check"></i><b>3.6.2</b> Aplicación del IFA</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html"><i class="fa fa-check"></i><b>4</b> Análisis masivo e integrador de conjuntos de genes</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#motivación-1"><i class="fa fa-check"></i><b>4.1</b> Motivación</a></li>
+<li class="chapter" data-level="4.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#sec:voom"><i class="fa fa-check"></i><b>4.2</b> Adaptación del IFA a otras fuentes de datos</a></li>
+<li class="chapter" data-level="4.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#herramienta-desarrollada"><i class="fa fa-check"></i><b>4.3</b> Herramienta desarrollada</a></li>
+<li class="chapter" data-level="4.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#validación-de-la-herramienta"><i class="fa fa-check"></i><b>4.4</b> Validación de la herramienta</a></li>
+<li class="chapter" data-level="4.5" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#datos-de-entrada-1"><i class="fa fa-check"></i><b>4.5</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#matrices-de-expresión-1"><i class="fa fa-check"></i><b>4.5.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="4.5.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conjuntos-de-genes-1"><i class="fa fa-check"></i><b>4.5.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#estrategias-para-el-análisis-de-eficiencia"><i class="fa fa-check"></i><b>4.6</b> Estrategias para el análisis de eficiencia</a></li>
+<li class="chapter" data-level="4.7" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#resultados-1"><i class="fa fa-check"></i><b>4.7</b> Resultados</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#migsa-sobre-datasets-de-microarreglos"><i class="fa fa-check"></i><b>4.7.1</b> MIGSA sobre datasets de microarreglos</a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploración-de-los-ptf-de-los-subtipos-de-cáncer-de-mama"><i class="fa fa-check"></i><b>4.7.2</b> Exploración de los PTF de los subtipos de cáncer de mama</a></li>
+<li class="chapter" data-level="4.7.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#integración-de-resultados-de-migsa-de-tcga-y-haibe-kains"><i class="fa fa-check"></i><b>4.7.3</b> Integración de resultados de MIGSA de TCGA y Haibe-Kains</a></li>
+<li class="chapter" data-level="4.7.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploración-de-los-resultados-de-tcga-en-conjunto-con-los-ptf"><i class="fa fa-check"></i><b>4.7.4</b> Exploración de los resultados de TCGA en conjunto con los PTF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conclusiones-1"><i class="fa fa-check"></i><b>4.8</b> Conclusiones</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html"><i class="fa fa-check"></i><b>5</b> Desafíos que surgieron durante el trabajo de tesis</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#eficiencia-computacional-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1</b> Eficiencia computacional del algoritmo <code>mGSZ</code></a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#optimización-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1.1</b> Optimización del algoritmo <code>mGSZ</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-cap-conclusiones.html"><a href="6-cap-conclusiones.html"><i class="fa fa-check"></i><b>6</b> Conclusiones y trabajo futuro</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap:ifa" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Análisis Funcional Integrador</h1>
+<div id="motivación" class="section level2">
+<h2><span class="header-section-number">3.1</span> Motivación</h2>
+
+<p>La complejidad y heterogeneidad de ciertas enfermedades, como el cancer, demuestran que el análisis de los genes Diferencialmente Expresados (DE) no resulta suficiente para descrifrar el fenómeno biológico subyacente <span class="citation">(<span class="citeproc-not-found" data-reference-id="reis2011gene"><strong>???</strong></span>)</span>. Por el contrario, resulta solo el punto de partida de un proceso de exploración en el que se buscan patrones utilizando diversas fuentes de información <span class="citation">(<span class="citeproc-not-found" data-reference-id="goeman2007analyzing"><strong>???</strong></span>)</span>, un proceso conocido como Análisis Funcional (AF), el cuál fue descripto en el Capítulo <a href="1-cap-af.html#cap:af">1</a>. Existen principalmente dos enfoques para llevar a cabo el AF: el Análisis de Sobre-Representación (ASR), y la Puntuación Funcional de Clase (PFC) <span class="citation">(<span class="citeproc-not-found" data-reference-id="manoli2006group"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="pavlidis2004using"><strong>???</strong></span>)</span>. Una de las principales críticas al ASR es que requiere de una lista de genes candidatos definida por el usuario, generalmente estableciendo un umbral de corte de los genes DE <span class="citation">(<span class="citeproc-not-found" data-reference-id="goeman2007analyzing"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="manoli2006group"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="pavlidis2004using"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="tian2005discovering"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="khatri2012ten"><strong>???</strong></span>)</span>. Es por ello que los métodos de PFC emergen como una alternativa que supera esa limitación utilizando no solo todos los genes presentes en el experimento, sino que también sus niveles de expresión, donde los genes son ponderados de acuerdo a alguna métrica relacionada con el fenotipo analizado <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span>.</p>
+
+<p>Se han propuesto varios algoritmos tanto de ASR como de PFC <span class="citation">(<span class="citeproc-not-found" data-reference-id="khatri2012ten"><strong>???</strong></span>)</span>, cada uno con supuestos y parámetros de entrada diferentes, los cuales pueden conducir a resultados muy diferentes. Adicionalmente, algunas ontologías, como Gene Ontology <span class="citation">(<span class="citeproc-not-found" data-reference-id="ashburner2000gene"><strong>???</strong></span>)</span>, organizan sus conjuntos de genes en alguna estructura particular que permite considerar estrategias de penalización adicionales para el AF. Por lo tanto, la selección del algoritmo apropiado y sus parámetros no resulta una decisión trivial para el investigador, y es una problemática que no ha sido abordada analíticamente. Por otra parte, no está claro qué se obtiene con cada método desde un punto de vista de recuperación de la información, si los resultados son independientes del método y sus parámetros o si los métodos son complementarios o igualmente útiles.</p>
+
+<p>Manoli et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="manoli2006group"><strong>???</strong></span>)</span> realizó una comparación de ambos enfoques: ASR y PFC. Sin embargo, dicha comparación fue teniendo en cuenta solo 20 conjuntos de genes enriquecidos de los 227 que evaluó, y solo tres bases de datos con 160 sujetos en total. Por otra parte, Pavlidis et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="pavlidis2004using"><strong>???</strong></span>)</span> también comparó ambos enfoques, en ese trabajo se utilizaron 41 muestras apareadas de cerebro, y consideró sólo 10 de los conjuntos de genes de los 965 que analizó. Sin embargo, tanto Manoli como Pavlidis obtuvieron resultados inesperados de PFC, ya que evaluaron sólo un algoritmo y con una única parametrización posible, la cual no es comúnmente recomendada por la literatura para el algoritmo utilizado. Es por ello que, para lograr diseñar un mejor enfoque del AF, resulta fundamental un análisis exhaustivo que tenga en cuenta una variedad de algoritmos, de parametrizaciones, una gran cantidad de conjuntos de genes, así como más bases de datos y sujetos.</p>
+</div>
+<div id="validación-de-resultados" class="section level2">
+<h2><span class="header-section-number">3.2</span> Validación de resultados</h2>
+
+<p>Uno de los principales inconvenientes en la comparación de métodos de AF es la falta de <em>gold standards</em> o de un conjunto de datos de referencia. Como lo establece Khatri y colaboradores <span class="citation">(<span class="citeproc-not-found" data-reference-id="khatri2012ten"><strong>???</strong></span>)</span>; para esta situación, el uso de conjuntos de datos biológicos reales es preferible a datos simulados, ya que estos últimos carecen de factores biológicos importantes <span class="citation">(<span class="citeproc-not-found" data-reference-id="khatri2012ten"><strong>???</strong></span>)</span>. Para superar este problema, en el presente trabajo proponemos el uso de varios experimentos para evaluar los mismos (y muy contrastantes) fenotipos de cáncer, asumiendo que deberían exhibir perfiles funcionales similares a través de los experimentos. Nuestra hipótesis es que en un meta-análisis que contrasta dos fenotipos con diferencias conocidas, los patrones de enriquecimiento funcional deben encontrarse en consenso compartidos entre todos los conjuntos de datos, independientemente del método utilizado. Por otra parte, las diferencias entre cohortes podrían considerarse como particularidades biológicas que pueden explorarse más a fondo. Por ejemplo, aunque se encontró poca o ninguna superposición de genes entre varias firmas moleculares en diferentes cohortes de pacientes con el mismo fenotipo <span class="citation">(<span class="citeproc-not-found" data-reference-id="ein2006thousands"><strong>???</strong></span>)</span>, se han reportado funcionalidades comunes en términos de funciones biológicas <span class="citation">(<span class="citeproc-not-found" data-reference-id="reis2011gene"><strong>???</strong></span>)</span>. Por lo tanto, los resultados del AF deberían ser similares, mostrando un alto consenso entre los conjuntos de datos a pesar de los genes expresados diferencialmente en cada caso.</p>
+<p>Adicionalmente, para determinar si los resultados de enriquecimiento están realmente relacionados con la condición bajo estudio, se requerirá una validación manual de la literatura, lo cual suele ser una tarea tediosa para el investigador, por lo que a modo de validación automática, resulta de extrema utilidad la Base de Datos de Toxicogenómica Comparada (BDTC). Utilizando la BDTC <span class="citation">(<span class="citeproc-not-found" data-reference-id="davis2014comparative"><strong>???</strong></span>)</span>, es posible consultar para un término biológico dado, si el mismo está relacionado o no con una determinada enfermedad. La BDTC se utilizó para, programáticamente, consultar y verificar si los términos enriquecidos por cada método están relacionados o no con la enfermedad bajo estudio: “cáncer de mama”.</p>
+</div>
+<div id="datos-de-entrada" class="section level2">
+<h2><span class="header-section-number">3.3</span> Datos de entrada</h2>
+<div id="matrices-de-expresión" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Matrices de expresión</h3>
+<p>Para el presente trabajo, se analizaron seis bases de datos de cáncer de mama, seleccionadas debido a su fácil acceso ya que se encuentran presentes en el repositorio R <strong>Bioconductor</strong>. Estas bases de datos fueron medidas mediante la tecnología de microarreglos de ADN y son: Mainz, Nki, Transbig, Unt, Upp y Vdx; ver la Tabla <a href="#tab:databases"><strong>??</strong></a>. Para cada una de las bases de datos, se obtuvo el subtipo intrínseco de cáncer de mama de cada sujeto mediante el método PAM50 <span class="citation">(<span class="citeproc-not-found" data-reference-id="parker2009supervised"><strong>???</strong></span>)</span> utilizando la librería de R <code>genefu</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="gendoo2015genefu"><strong>???</strong></span>)</span> y siendo procesados como sugiere Sørlie et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="sorlie2010importance"><strong>???</strong></span>)</span>. Se mantuvieron únicamente aquellos sujetos clasificados como tipo Basal o Luminal A, obteniendo un total de 741 sujetos, ya que es sabido que ambos subtipos son muy contrastantes. Al comparar sobrevida de sujetos de ambos subtipos, Luminal A suele presentar un mejor pronóstico que Basal <span class="citation">(<span class="citeproc-not-found" data-reference-id="parker2009supervised"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="dai2015breast"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="ein2005outcome"><strong>???</strong></span>)</span>. Por ende, se espera identificar muchos genes que se comporten contrariamente, es decir, desregulados entre ambas condiciones, y que impacten en varios términos (enriquecidos) que se detecten en común a través de las bases de datos. Para cada una de las seis matrices de expresión, se mantuvieron solo aquellos genes que contaban con identificador de genes <em>Entrez id</em> válido, y valores de expresión detectados en al menos el 50% de las muestras de cada subtipo.</p>
+</div>
+<div id="conjuntos-de-genes" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Conjuntos de genes</h3>
+<p>Como Conjuntos de Genes (CG) se utilizaron las tres categorías de GO. Para descargar los CG se utilizó la versión <em>v3.0.0</em> del paquete R <code>org.Hs.eg.db</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="carlson2013org"><strong>???</strong></span>)</span>, obteniendo un total de 19.693 CG.</p>
+</div>
+</div>
+<div id="sec:algosComparados" class="section level2">
+<h2><span class="header-section-number">3.4</span> Algoritmos y parámetros comparados</h2>
+<p>Para determinar si un CG se encontraba enriquecido por un método dado, se utilizaron los criterios por defecto o recomendados de cada método.</p>
+<div id="análisis-de-sobre-representación" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Análisis de Sobre-Representación</h3>
+<p>Dentro de los algoritmos de ASR, una de las herramientas más utilizadas es la plataforma web DAVID <span class="citation">(<span class="citeproc-not-found" data-reference-id="huang2008systematic"><strong>???</strong></span>)</span> -del inglés <em>Database for Annotation, Visualization and Integrated Discovery</em>-. La lista de genes DE de cada base de datos fue enviada a la plataforma Web DAVID (en adelante llamado <strong>WD</strong>) a través del paquete R <code>RDAVIDWebService</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2013rdavidwebservice"><strong>???</strong></span>)</span>. Uno de los principales inconvenientes de la plataforma DAVID es que no permite evaluar CG provistos por el usuario, y al momento de realizar este análisis, la versión estable (<em>v6.7</em>) contaba con una base de conocimiento actualizada por última vez en el año 2010. Para superar este inconveniente, desarrollamos <strong>RD</strong>, una versión en lenguaje R del algoritmo de DAVID, que nos permite analizar cualquier CG de interés. Además, a diferencia de DAVID y RDAVIDWebService, RD no requiere de comunicación a través de internet. El tercer algoritmo de ASR evaluado es <strong>GOstats</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="falcon2006using"><strong>???</strong></span>)</span>, que fue diseñado específicamente para realizar análisis de enriquecimiento de GO. GOstats penaliza el enriquecimiento de los CG (penalización <em>elim</em>) teniendo en cuenta la estructura de grafos de GO. Finalmente, también se evaluó el método <strong>dEnricher</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="fang2014thednet"><strong>???</strong></span>)</span>. Este último método posee una representación interna de GO, y ofrece otro método de penalización adicional al provisto por GOstats (penalización <em>lea</em>). Además dEnricher permite seleccionar el test estadístico a utilizar: <em>Hipergeométrico</em>, <em>Binomial</em> ó <em>Fisher</em>.</p>
+
+<p>Como se mencionó en la Sección <a href="1-cap-af.html#sec:af">1.2</a>, los métodos de ASR requieren, además de los CG y la lista de genes candidatos, la lista de genes de referencia (BR; del inglés <em>Background Reference</em>). Utilizar diferentes listas de referencia pueden dar lugar a resultados diferentes del método de ASR <span class="citation">(<span class="citeproc-not-found" data-reference-id="rivals2006enrichment"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>. Por ello, para cada opción de ASR propuesta, a excepción de dEnricher que no lo permite, se evaluaron listas de referencia propuestas por Fresno et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>. Las listas de referencia evaluadas fueron: el genoma completo (BRI) y aquellos genes detectados en el experimento (BRIII).</p>
+
+<p>Para cada base de datos, como lista de genes candidatos, se utilizaron los genes DE del experimento. Para obtener los genes DE de cada experimento se utilizó la función <code>treat</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="mccarthy2009testing"><strong>???</strong></span>)</span> del paquete R <code>limma</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="berkeley2004linear"><strong>???</strong></span>)</span>, esta función tiene en cuenta aquellos genes que presentan un valor absoluto de Fold-Change mayor a un valor de corte llamado <em>treatLfc</em>. Los genes DE fueron aquellos que obtuvieron un p-valor ajustado por FDR <span class="math inline">\(\leq\)</span> 0,01. Para obtener resultados comparables entre los experimentos, para cada base de datos, se seleccionó un valor <em>treatLfc</em> que obtuviera una cantidad de genes DE de alrededor el 5% de la longitud de su BRIII.</p>
+
+<p>En resumen, los métodos y parámetros analizados de ASR, junto con el identificador a utilizar (en negrita), se listan a continuación:</p>
+
+</div>
+<div id="puntuación-funcional-de-clase" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Puntuación Funcional de Clase</h3>
+<p>El método <em>Gene Set Enrichment Analysis</em> propuesto por Subramanian et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span> fue de los primeros algoritmos de PFC. El método Subramanian (SM; del inglés de <em>Subramanian Method</em>) se incluyó entre los analizados, se utilizó su implementación en lenguaje Java (<em>v2-2.2.1.1</em>), ya que la implementación R se encuentra deprecada. El SM puede ser alimentado con un vector de genes pre-rankeados (<strong>SMpr</strong>) obtenidos a través de alguna métrica adecuada, ó con la matriz de expresión de genes. Para esta última alternativa, la significancia del estadístico <em>Enrichment Score</em> (ES) se estima a través de una estrategia de permutaciones sobre las etiquetas de los genes (<strong>SMgp</strong>) o de las condiciones a las que pertenece cada muestra (<strong>SMpp</strong>), generando rankeos permutados de los genes. Para determinar a cada conjunto de genes un p-valor asociado, el SM calcula los ESs aplicando un estadístico de <em>Kolmogorov-Smirnov</em> ponderado <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span>. Esta ponderación está determinada por un peso <span class="math inline">\(w\)</span> que, por defecto, se establece en 1, pero que también puede sustituirse por 0 ó 2. Sin embargo, el efecto del peso <span class="math inline">\(w\)</span> no queda claro ya que los autores sugieren diferentes parametrizaciones de acuerdo con el tipo de dato de entrada (matriz de expresión ó genes pre-rankeados). En el presente trabajo se evaluaron las combinaciones de las diferentes estrategias de permutación con las diferentes alternativas de pesos <em>w</em>. Para el caso de SMpr, ya que debe contarse con un vector de rankeo de los genes, se aplicó la función <code>eBayes</code> de la librería R <code>limma</code>, obteniendo así para cada gen, el estadístico <em>t</em> y p-valor asociados. Se analizaron tres métodos de rankeo: <span class="math inline">\(t\)</span>, <span class="math inline">\(1-p\)</span>-<span class="math inline">\(valor\)</span>, y <span class="math inline">\(-log(p\)</span>-<span class="math inline">\(valor)\)</span>. Los métodos de PFC suelen filtrar conjuntos de genes previo a realizar el análisis. Este filtrado suele darse dependiendo de la cantidad de genes que componen cada CG. Al evaluar el SM se utilizaron los parámetros de filtrado de CG por defecto, que analiza CG que incluyen entre 15 y 500 genes.</p>
+
+<p>Otra alternativa de PFC evaluada fue la librería R <code>mGSZ</code>, la cual se basa en la función de <em>Z-score</em> para el cálculo del ES, y en estimación asintótica del p-valor de cada CG, mediante permutaciones de muestras e (implícitamente) de genes <span class="citation">(<span class="citeproc-not-found" data-reference-id="mishra2014gene"><strong>???</strong></span>)</span>. El método mGSZ como entrada requiere la matriz de expresión, y rankea los genes mediante el estadístico <em>t</em> moderado <span class="citation">(<span class="citeproc-not-found" data-reference-id="berkeley2004linear"><strong>???</strong></span>)</span>, obtenido utilizando la función <code>eBayes</code> de la librería R <code>limma</code>. El método mGSZ limita el tamaño de los CG, por defecto, usando un mínimo de 5 genes (sin filtrar por máximo). Adicionalmente, se analizó filtrando CG entre 15 y 500, como en el SM, para obtener una comparación más robusta.</p>
+
+<p>En resumen, los métodos y parámetros analizados de PFC, junto con el identificador a utilizar (en negrita), se listan a continuación:</p>
+
+</div>
+</div>
+<div id="resultados" class="section level2">
+<h2><span class="header-section-number">3.5</span> Resultados</h2>
+<div id="genes-diferencialmente-expresados-por-base-de-datos" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Genes diferencialmente expresados por base de datos</h3>
+
+<p>El número de genes DE para cada base de datos analizada se presenta en la Tabla <a href="#tab:deGenes"><strong>??</strong></a>. Aunque para cada matriz de expresión se contrastaron los mismos subtipos de cáncer de mama, se observa muy poca superposición entre pares de experimentos. Por ejemplo, los datasets Unt y Nki sólo presentan 383 genes DE en común, siendo que Unt tiene 1.059 genes DE en total (sólo el 36% se superponen). En general, se encontró que sólo el 12% (195 genes) de los genes DE en común entre todas los bases de datos (la intersección) se superponen entre la unión (1.678 genes) de los genes DE de todos los datasets evaluados.</p>
+<table>
+<caption>Genes diferencialmente expresados entre bases de datos.
+Primera columna: Los Nombres de las bases de datos, con el umbral de valor absoluto de Fold-Change entre paréntesis. Diagonal principal: Número de genes Diferencialmente Expresados (DE) para cada base de datos (FDR <span class="math inline">\(\leq\)</span> 0,01) y porcentaje del total de genes en el experimento entre paréntesis. Triangular superior: Número de genes DE intersectados por cada par de bases de datos. Nótese que la intersección global de genes DE es sólo 195 de una unión total de 1.678 genes DE.</caption>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th align="center">Vdx</th>
+<th align="center">Nki</th>
+<th align="center">Transbig</th>
+<th align="center">Upp</th>
+<th align="center">Unt</th>
+<th align="center">Mainz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vdx (0,75)</td>
+<td align="center">611 (4,7)</td>
+<td align="center">292</td>
+<td align="center">465</td>
+<td align="center">430</td>
+<td align="center">425</td>
+<td align="center">412</td>
+</tr>
+<tr class="even">
+<td>Nki (0,2)</td>
+<td align="center"></td>
+<td align="center">568 (4,3)</td>
+<td align="center">310</td>
+<td align="center">374</td>
+<td align="center">383</td>
+<td align="center">286</td>
+</tr>
+<tr class="odd">
+<td>Transbig (0,6)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">628 (4,8)</td>
+<td align="center">448</td>
+<td align="center">461</td>
+<td align="center">433</td>
+</tr>
+<tr class="even">
+<td>Upp (0,3)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">932 (5)</td>
+<td align="center">632</td>
+<td align="center">428</td>
+</tr>
+<tr class="odd">
+<td>Unt (0,25)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1.059 (5,7)</td>
+<td align="center">437</td>
+</tr>
+<tr class="even">
+<td>Mainz (0,45)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">605 (4,6)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Intersección:</td>
+<td align="center">195</td>
+<td align="center"></td>
+<td align="center">Unión:</td>
+<td align="center">1.678</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="análisis-de-estabilidad-de-enriquecimiento" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Análisis de estabilidad de enriquecimiento</h3>
+
+<p>Para evaluar la estabilidad de detección de CG enriquecidos a través de las diversas bases de datos, para cada combinación de método/parámetros, se generó un boxplot con el número de CG enriquecidos. La integración de resultados de diversas bases de datos nos permite proporcionar validación inter-estudios tal y como se indica en el análisis de Edelman et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="edelman2006analysis"><strong>???</strong></span>)</span>.</p>
+
+<p>Como se puede observar en los boxplot de la Figura <a href="3-cap-ifa.html#fig:ifa1">3.1</a>, se aprecia una alta variabilidad tanto entre los métodos como para las diversas parametrizaciones de un mismo método. Teniendo en cuenta solo aquellos datasets que presentaron almenos un término enriquecido, se encontró una mediana de 284 términos enriquecidos. El SM parece ser muy sensible a diferentes parametrizaciones, así como a la forma en que se le proveen los datos, es decir, a través de la matriz de expresión de genes o mediante una lista pre-rankeada. Curiosamente, para SMpr cualquier valor del factor de ponderación <span class="math inline">\(w\)</span> devolvió casi cero términos enriquecidos. Además, para SMgp y SMpp, la selección de <span class="math inline">\(w\)</span> podría producir enriquecimientos muy diferentes, que van desde cero términos en SMpp0 para Nki o 59 términos en SMgp2 para Vdx hasta valores extremos como 1.019 en SMpp2 para Nki o 474 términos en SMgp0 para Vdx. En particular, el método SMpp presenta comportamientos muy diferentes dependiendo del valor <span class="math inline">\(w\)</span>. Por ejemplo, no se encontró enriquecimiento para <span class="math inline">\(w=0\)</span>, gran variabilidad resultó con <span class="math inline">\(w=1\)</span> con un Rango InterCuartil (RIC) de 257,57, y se obtuvieron resultados concordantes con <span class="math inline">\(w=2\)</span>, es decir, pequeña dispersión sobre bases de datos (con un RIC de 83,25). Sin embargo, SMpp2 mostró un número extremo de enriquecimientos para una base de datos (1.019 para Nki) y un número muy bajo para otro (101 para Mainz), resultando en dos valores atípicos. Esto podría plantear un problema cuando se analiza un único dataset. Para el SMgp, el enriquecimiento es bastante estable en todos los datasets, con RICs de 105, 91,25 y 98,5 para SMgp0, SMgp1 y SMgp2, respectivamente, pero se obtuvo un número decreciente de enriquecimientos a medida que <span class="math inline">\(w\)</span> aumentaba de 0 a 2, lo que arroja una mediana de 611,5, 293 y 121, respectivamente. Para <span class="math inline">\(w=1\)</span> el número de términos enriquecidos es similar a la mediana general (284 términos enriquecidos) de los diferentes métodos, lo que sugiere que el SMgp1 se podría considerar una configuración más apropiada.</p>
+<div class="figure" style="text-align: center"><span id="fig:ifa1"></span>
+<img src="images/IFA_FIG1_es.PDF" alt="Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección 3.4. Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos." width="100%" />
+<p class="caption">
+Figure 3.1: Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección <a href="3-cap-ifa.html#sec:algosComparados">3.4</a>. Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos.
+</p>
+</div>
+
+
+<p>En el caso de mGSZ, los resultados mostraron una estabilidad adecuada entre los datasets (RICs de 26,5 para mGSZ<span class="math inline">\([15,500)\)</span> y 73 para mGSZ<span class="math inline">\([5,\infty)\)</span>), produciendo un número muy similar de términos enriquecidos entre las bases de datos. Este método resultó sensible al tamaño de los CG analizados. Cuando el filtro de CG a analizar se estableció entre <span class="math inline">\([15,500)\)</span>, se logró un número bastante conservador de términos enriquecidos, es decir, número menor de CG enriquecidos. Estos resultados fueron más estables en comparación con el valor obtenido con los límites de filtro de CG de <span class="math inline">\([5,\infty)\)</span>. Vale la pena mencionar que los términos enriquecidos obtenidos con filtro <span class="math inline">\([15,500)\)</span> fueron contenidos en su mayoría (93% en promedio) por el método con el filtro de CG por defecto. Estos términos enriquecidos adicionales generalmente contenían un menor número de genes, es decir, términos más específicos que pueden ser mucho más útiles para descifrar el fenómeno biológico bajo estudio. Basándonos en este concepto, en adelante, hemos seguido las recomendaciones del autor de mGSZ en cuanto al filtrado de conjuntos de genes de <span class="math inline">\([5,\infty)\)</span>.</p>
+
+<p>A excepción de las diversas parametrizaciones de dEnricher, los resultados de las alternativas de ASR fueron bastante similares entre sí, produciendo enriquecimientos bastante estables en todos los datasets: RICs de 6,25 para RD BRI; 115,75 RD BRIII; 8,75 WD BRI; 58 WD BRIII; 21,75 GOstats BRI; y 45,5 GOstats BRIII. La configuración RD BRIII mostró una mayor variabilidad que su contraparte de WD BRIII, probablemente porque se analizó un mayor número de CG (76% más CG en promedio). Para cada alternativa de ASR, los enriquecimientos obtenidos con BRIII estaban en general contenidos en los obtenidos utilizando BRI (99% de los términos en promedio para RD y WD; y 86% para GOstats) en concordancia con la observación de Fresno et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>.</p>
+
+<p>En el caso de dEnricher, las pruebas Hipergeométrica y Binomial arrojaron un número extremo de términos enriquecidos en comparación con la mediana general de los demás métodos, obteniendo más de 1.168 términos enriquecidos, independientemente del algoritmo de penalización aplicado. Por otra parte, la prueba de Fisher arrojó resultados bastante estables, en comparación con los otros métodos de ASR, con valores medios de 210, 195,5 y 191,5 para dE_F_none, dE_F_lea y dE_F_elim, respectivamente; con RICs inferiores a 13,75. Los términos enriquecidos obtenidos con los algoritmos dE_F_lea y dE_F_elim fueron 100% contenidos en los obtenidos con dE_F_none; más aún, el 86% de estos términos enriquecidos adicionales encontrados por dE_F_none estaban relacionados con el cáncer de mama cuando fueron consultados en la BDTC. Para los siguientes análisis se descartaron las combinaciones de parámetros de dEnricher, excepto dE_F_none.</p>
+
+<p>Sólo aquellos métodos y configuraciones que devolvieron un número concordante de términos enriquecidos entre datasets, y alrededor de la mediana general de los métodos (284 términos enriquecidos) fueron considerados para los siguientes análisis, es decir, SMgp1, SMpp2, mGSZ<span class="math inline">\([5,\infty)\)</span>, RD BRI, RD BRIII, WD BRI, WD BRIII, GOstats BRI, GOstats BRIII y dE_F_none.</p>
+</div>
+<div id="análisis-de-profundidad-en-gene-ontology" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Análisis de profundidad en Gene Ontology</h3>
+
+<p>Gene Ontology está organizado en tres grafos acíclicos dirigidos (árboles: “funciones moleculares”, “procesos biológicos” y “componentes celulares”), donde un nodo hijo representa un término más específico biológicamente que su padre. Para explorar la especificidad biológica sobre la estructura de GO, se calculó el número mínimo de ramas entre el nodo y la raíz (la profundidad) de cada término enriquecido. Luego, se calculó una tabla de frecuencias del número de términos enriquecidos por profundidad (agrupando los resultados para cada base de datos).</p>
+
+<p>El porcentaje de términos enriquecidos agrupados por profundidad para cada método se muestra en la Figura <a href="3-cap-ifa.html#fig:ifa2">3.2</a>. Todos los métodos tienden a explorar profundidades en su mayoría entre tres y seis. Los métodos mGSZ, dE_F_none, SMpp2 y GOstats BRIII enriquecieron el mayor número de términos específicos, es decir, nodos más profundos u hojas, con profundidades <span class="math inline">\(&gt;\)</span> 6: 13%, 12,8%, 10,7% y 9,8% del enriquecimiento total, respectivamente. Además, WD y RD proporcionaron mayor enriquecimiento de términos generales, es decir, en profundidades <span class="math inline">\(&lt;\)</span> 3, nodos más cercanos al nodo raíz de cada árbol de GO: 13,7% para RD BRI, 11,9% para WD BRI, 9,7% para WD BRIII y 8,8% para RD BRIII. Dentro de los métodos de ASR, proporcionalmente se enriquecen más términos cerca de la raíz cuando se usa BRI que BRIII.</p>
+
+<p>Para cada método de ASR, excepto dEnricher, BRI enriqueció un número mayor de términos que BRIII. Sin embargo, como se mencionó anteriormente, tanto en WD, RD - como en GOstats - la mayoría de los términos enriquecidos por BRIII también fueron enriquecidos por BRI. Como se discutió en Fresno et al., usar BRIII, estadísticamente, tiene más sentido que usar BRI; por lo tanto, su uso se sugiere y se usa de aquí en adelante.</p>
+<div class="figure" style="text-align: center"><span id="fig:ifa2"></span>
+<img src="images/IFA_FIG2_es.PDF" alt="Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE_F_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos." width="100%" />
+<p class="caption">
+Figure 3.2: Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE_F_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos.
+</p>
+</div>
+
+</div>
+<div id="sec:consensusSection" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> Análisis de consenso</h3>
+
+<p>Para evaluar la hipótesis de que los fenotipos comparados deberían presentar perfiles de enriquecimiento similares en todas las bases de datos, se construyó una matriz de enriquecimiento <span class="math inline">\(E=e_{mdt}\)</span>. En esta matriz, cada fila contiene un término GO y cada columna contiene una combinación de método/parámetros por base de datos. Donde cada celda <span class="math inline">\(e_{mdt}\)</span> de la matriz se definió como sigue:</p>
+<p><span class="math display">\[
+e_{mdt}=\left\{\begin{matrix}
+1 &amp; si\:m\:\mathbf{enriqueció}\:t\:en\:la\:base\:de\:datos\:d \\
+0 &amp; si\:m\:\mathbf{no\:enriqueció}\:t\:en\:la\:base\:de\:datos\:d \\
+NA &amp; si\:m\:\mathbf{no\:analizó}\:t\:en\:la\:base\:de\:datos\:d
+\end{matrix}\right.
+\]</span>
+donde <span class="math inline">\(m\)</span> = {<span class="math inline">\(1,\ldots,M\)</span>} combinación de método/parámetros; <span class="math inline">\(t\)</span> = {<span class="math inline">\(1,\ldots,T\)</span>} un conjunto de genes; <span class="math inline">\(d\)</span> = {<span class="math inline">\(1,\ldots,D\)</span>} una base de datos.</p>
+
+<p>Aquellos términos que no fueron enriquecidos en ningún conjunto de datos fueron eliminados. Usando la librería R <code>vegan</code>, se aplicó un agrupamiento jerárquico a las filas y columnas de <span class="math inline">\(E\)</span> a través de la distancia Jaccard y enlace promedio para agrupar automáticamente perfiles de enriquecimiento similares. En la Figura <a href="3-cap-ifa.html#fig:ifa3">3.3</a> se observa el <em>heatmap</em> resultante de la matriz <span class="math inline">\(E\)</span>. El dendrograma superior muestra que los conjuntos de datos analizados tienden a agruparse según el método aplicado, excepto para SMpp2, GOstats y RD, que presentan un conjunto de datos disperso. También puede observarse una diferenciación entre los resultados obtenidos por ASR y PFC, es decir, los métodos de PFC forman un cluster separado, mientras que los métodos de ASR se dividen en dos sub-clusters principales: el de RD/WD y el de GOstats/dE_F_none. Como era esperado, puede verse un subconjunto de términos enriquecidos por casi todos los métodos a través de los conjuntos de datos (filas etiquetadas como <strong>A</strong>). El 64% de términos enriquecidos en al menos el 80% de los conjuntos de datos para cada método también fueron enriquecidos por mGSZ en la misma proporción. Esto sugiere que, hasta cierto punto, todos los métodos tienden a proporcionar la misma información. Sin embargo, cada método también proporciona términos exclusivamente enriquecidos (filas etiquetadas como <strong>E</strong>). La comparación de los métodos de PFC y ASR muestra que RD y WD tienden a enriquecer algunos términos que no se enriquecen por ningún otro método; lo mismo sucede con dE_F_none y con mGSZ, lo que sugiere que PFC y ASR se complementan entre sí. Los métodos dE_F_none, GOstats y RD, así como mGSZ, analizan más términos que los demás métodos (un número menor de <span class="math inline">\(e_{mdt}=NA\)</span>). Además, el 63% de los términos enriquecidos en al menos el 80% de los conjuntos de datos por los SM también fueron enriquecidos por mGSZ en la misma proporción, mientras que el 47% de los términos enriquecidos por GOstats, RD y WD fueron enriquecidos por dE_F_none, lo que sugiere que mGSZ y dE_F_none pueden ser utilizados como métodos de referencia para PFC y ASR, respectivamente.</p>
+
+<p>Dado que todos los experimentos comparan los mismos fenotipos de cáncer de mama, se esperaba encontrar resultados concordantes entre los conjuntos de datos para cada combinación de método/parámetros. Así, el número de términos enriquecidos en casi todos los conjuntos de datos (Frecuencia de Consenso en Enriquecimiento; <span class="math inline">\(FCE\)</span>), así como los términos que no se enriquecieron en casi todos los conjuntos de datos (Frecuencia de Consenso en No Enriquecimiento; <span class="math inline">\(FCNE\)</span>), se utilizaron como indicador de la estabilidad del método. Basado en este supuesto, definimos las métricas de comparación listadas en la Tabla <a href="#tab:comparisonMetrics"><strong>??</strong></a>. La concordancia entre los conjuntos de datos para cada método mostró que mGSZ supera con un 45% de términos enriquecidos concordantes (<span class="math inline">\(FCE\)</span>), seguido de dE_F_none, RD y WD con un 39%, SMgp1 con un 36%, SMpp2 con un 30%, y GOstats con un 29%. La concordancia entre los términos no enriquecidos (<span class="math inline">\(FCNE\)</span>) obtuvo 91% para dE_F_none, RD y GOstats, 89% para WD, 85% para mGSZ, 83% para SMgp1, y 82% para SMpp2. Por lo tanto, todos los métodos parecen tener un alto consenso para los términos no enriquecidos y un bajo consenso para los enriquecidos. Ambos conceptos son importantes a la hora de enfrentarse al AF, ya que no debe perderse ningún término biológicamente significativo, ni debe haber términos enriquecidos incorrectamente. De aquí se desprende que el análisis de PFC utilizando mGSZ demostró ser el método más consensuado, mientras que dE_F_none y RD para la contraparte de ASR.</p>
+<div class="figure" style="text-align: center"><span id="fig:ifa3"></span>
+<img src="images/IFA_FIG3.PDF" alt="Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (A), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; E). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz." width="90%" />
+<p class="caption">
+Figure 3.3: Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (<strong>A</strong>), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; <strong>E</strong>). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz.
+</p>
+</div>
+
+<table>
+<caption>Métricas de comparación.
+<span class="math inline">\(d\)</span> = {<span class="math inline">\(1,\ldots,D\)</span>} base de datos seleccionada; <span class="math inline">\(t\)</span> = {<span class="math inline">\(1,\ldots T\)</span>} conjunto de genes seleccionado; <span class="math inline">\(m\)</span>: combinación de método/parámetros utilizada; <span class="math inline">\(t_e=0.8\)</span> y <span class="math inline">\(t_n=0.2\)</span> umbrales para el enriquecimiento y el no enriquecimiento, respectivamente; <span class="math inline">\(I\)</span> función indicadora.</caption>
+<colgroup>
+<col width="46%" />
+<col width="53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th align="center">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frecuencia de enriquecimiento inter-método</td>
+<td align="center"><span class="math inline">\(F_{mt}=\frac{1}{D}\sum_{d=1}^{D}e_{mdt}\)</span></td>
+</tr>
+<tr class="even">
+<td>Consenso en Enriquecimiento</td>
+<td align="center"><span class="math inline">\(CE_m=\sum_{t=1}^{T}I(F_{mt} &gt; t_e)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Consenso en No Enriquecimiento</td>
+<td align="center"><span class="math inline">\(CNE_m=\sum_{t=1}^{T}I(F_{mt} &lt; t_n)\)</span></td>
+</tr>
+<tr class="even">
+<td>No Consenso</td>
+<td align="center"><span class="math inline">\(NC_m=\sum_{t=1}^{T}I(t_n \leq F_{mt} \leq t_e)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Frecuencia de <span class="math inline">\(CE\)</span></td>
+<td align="center"><span class="math inline">\(FCE_m=\frac{CE_m}{CE_m+NC_m}\)</span></td>
+</tr>
+<tr class="even">
+<td>Frecuencia de <span class="math inline">\(CNE\)</span></td>
+<td align="center"><span class="math inline">\(FCNE_m=\frac{CNE_m}{CNE_m+NC_m}\)</span></td>
+</tr>
+</tbody>
+</table>
+
+<p>Dado que RD fue capaz de analizar más CG que WD, que puede ser utilizado con CG provistos por el usuario, y no depende de una conexión a Internet, se prefirió sobre WD. Por lo tanto, este último fue excluido de los análisis siguientes.</p>
+</div>
+<div id="enriquecimiento-exclusivo-y-relevancia-de-términos" class="section level3">
+<h3><span class="header-section-number">3.5.5</span> Enriquecimiento exclusivo y relevancia de términos</h3>
+
+<p>Para determinar si los métodos pueden considerarse complementarios o no desde la perspectiva de la información obtenida, se analizaron los términos exclusivamente enriquecidos (TEE) para cada método, es decir, los términos enriquecidos por el método <span class="math inline">\(m\)</span> en el 80% de los datasets, pero en menos del 20% de los demás <span class="math inline">\(m&#39; \neq m\)</span>, es decir:</p>
+<p><span class="math inline">\(TEE_m=\{t|F_{mt}&gt;t_e \wedge \forall m&#39; \neq m : F_{m&#39;t} &lt; t_n \}\)</span>
+donde <span class="math inline">\(t\)</span> es cualquier conjunto de genes; <span class="math inline">\(m\)</span> alguna combinación de método/parámetros; <span class="math inline">\(t_e=0.8\)</span> y <span class="math inline">\(t_n=0.2\)</span> umbrales para el enriquecimiento y el no enriquecimiento, respectivamente.</p>
+
+<p>Para evaluar la asociación de los términos exclusivamente enriquecidos con el fenotipo bajo estudio, se evaluó la relación de cada término perteneciente a cada <span class="math inline">\(TEE_m\)</span> utilizando la base de datos dla BDTC <span class="citation">(<span class="citeproc-not-found" data-reference-id="davis2014comparative"><strong>???</strong></span>)</span>. Utilizando la BDTC, para cada término se pudo determinar su condición patológica en relación con el concepto de “cáncer de mama”.</p>
+
+<p>Considerando los términos enriquecidos exclusivamente por cada método (<span class="math inline">\(TEE_m\)</span>), encontramos que mGSZ y dE_F_none fueron los que obtuvieron más <span class="math inline">\(TEE_m\)</span> para PFC y ASR, respectivamente (ver Tabla <a href="#tab:eet"><strong>??</strong></a>). Adicionalmente, mGSZ proporcionó más términos relacionados con el cáncer de mama de acuerdo con la BDTC, así como términos mucho más específicos (profundidad <span class="math inline">\(&gt;\)</span> 6). En el caso del ASR, dE_F_none obtuvo más <span class="math inline">\(TEE_m\)</span>, también relacionados con el cáncer de mama.</p>
+
+</div>
+<div id="sec:ifa" class="section level3">
+<h3><span class="header-section-number">3.5.6</span> Análisis Funcional Integrador</h3>
+
+<p>Como resultado de este estudio exhaustivo <span class="citation">(<span class="citeproc-not-found" data-reference-id="rodriguezciarp"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="rodrigueziscb"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="rodriguez2016improving"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="rodriguezsabi"><strong>???</strong></span>)</span>, en la Figura <a href="3-cap-ifa.html#fig:ifa4">3.4</a> se presenta el pipeline del análisis funcional integrador (IFA; del inglés <em>Integrative Functional Analysis</em>). El IFA proporciona como una herramienta de software, cuyo código R se encuentra en el repositorio <a href="https://github.com/jcrodriguez1989/IFA">https://github.com/jcrodriguez1989/IFA</a>. Para utilizar la función principal del IFA, el usuario debe proporcionar la matriz de expresión, y la especificación de los fenotipos de cada sujeto. En caso que no se proporcionen los CG, IFA utilizará los CG de GO más actualizados provistos por la librería R <code>org.Hs.eg.db</code>. La lista de genes DE y su rankeo son calculados por la herramienta IFA mediante un modelo lineal utilizando la librería de R <code>limma</code>, con los cuales se llevan a cabo los análisis mGSZ y de dE_F_none. De este modo, IFA proporciona un enfoque sencillo, unificado y global para el AF.</p>
+<div class="figure" style="text-align: center"><span id="fig:ifa4"></span>
+<img src="images/IFA_FIG4_es.pdf" alt="Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC." width="100%" />
+<p class="caption">
+Figure 3.4: Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC.
+</p>
+</div>
+
+</div>
+<div id="ifa-sobre-tcga" class="section level3">
+<h3><span class="header-section-number">3.5.7</span> IFA sobre TCGA</h3>
+
+<p>Para demostrar la utilidad del pipeline del IFA, se obtuvo el dataset proveniente de microarreglos de ADN de cáncer de mama del reconocido proyecto TCGA. En este dataset, 86 sujetos resultaron clasificados como tipo Basal y 198 como Luminal A. Se utilizó un valor <span class="math inline">\(treatLfc=1\)</span> de manera de obtener alrededor del 5% de los genes DE. Los resultados del IFA para este conjunto de datos se utilizaron como caso de prueba y, por lo tanto, se evaluaron y compararon con los conjuntos de datos analizados previamente (Tabla <a href="#tab:deGenes"><strong>??</strong></a>). Como en la Sección <a href="3-cap-ifa.html#sec:consensusSection">3.5.4</a>, la matriz de consenso de resultados del IFA se presentó mediante un <em>heatmap</em> que se puede observar en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>, donde 812 términos resultaron enriquecidos para el conjunto de datos de TCGA. El treinta y tres por ciento de los términos (270) se encontraron enriquecidos también en todos los demás conjuntos de datos (marca <strong>A</strong> en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>), el 43% (352 términos) se encontraron enriquecidos en más del 80% de los otros conjuntos de datos, y el 15% (123 términos) se encontraron enriquecidos exclusivamente en TCGA (marca <strong>E<span class="math inline">\(^*\)</span></strong> en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>). En esta matriz de consenso, 445 términos resultaron enriquecidos en al menos el 80% de todos los conjuntos de datos, de los cuales 232 (52%) estaban relacionados con el cáncer de mama según la BDTC. En particular, la proporción media de términos exclusivamente enriquecidos presentes en la BDTC en cada conjunto de datos fue del 42%, con Nki primero con 170 términos exclusivos (84 en la BDTC), y con Mainz último con 58 términos (30 en la BDTC).</p>
+
+<p>Los términos relacionados con la hormona y el receptor de estrógeno, la transición G1/S del ciclo celular mitótico, la replicación del ADN, la organización del huso mitótico, el desenrollado dual del ADN, la actividad de la histona cinasa, la actividad de la helicasa de hibridación, entre otros, se encontraron enriquecidos, en común, en todos los conjuntos de datos (marca <strong>A</strong> en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>), lo que respalda las diferencias de proliferación entre los subtipos de cáncer de mama de tipo Basal y Luminal A. Además, términos como la actividad de la proteína de señalización del receptor tirosina cinasa, la diferenciación de células madre y otros relacionados con la diferenciación celular, sólo se encontraron en los conjuntos de datos de TCGA (marca <strong>E<span class="math inline">\(^*\)</span></strong> en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:ifa5"></span>
+<img src="images/IFA_FIG5.PDF" alt="Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (A) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (E)." width="100%" />
+<p class="caption">
+Figure 3.5: Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (<strong>A</strong>) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (<strong>E</strong>).
+</p>
+</div>
+
+</div>
+<div id="ifa-sobre-datasets-de-cáncer-de-próstata" class="section level3">
+<h3><span class="header-section-number">3.5.8</span> IFA sobre datasets de cáncer de próstata</h3>
+
+<p>Con el fin de verificar que los resultados del IFA no dependen de la patología analizada, sino que puede extenderse a otros escenarios, el IFA se probó sobre cuatro datasets de cáncer de próstata disponibles en el repositorio R <strong>Bioconductor</strong>. En total, se obtuvieron 519 sujetos de las bases de datos: 74 sujetos con cáncer de próstata benigno y 125 con tumor para Camcap; 29 benignos y 150 tumor para Taylor; 6 vs. 13 para Varambally; y 28 vs. 94 para Grasso. Para obtener alrededor del 5% de los genes DE, se utilizaron valores de <span class="math inline">\(treatLfc\)</span> de 0,2, 0,15, 0,2, y 0,45 para Camcap, Taylor, Varambally y Grasso, respectivamente. Para el análisis de Varambally, los p-valores de los genes no fueron ajustados, ya que se no se obtuvieron genes DE bajo ningún valor de <span class="math inline">\(treatLfc\)</span> con un valor de corte de FDR fijado en 0,01.</p>
+
+<p>La matriz de consenso resultante se muestra en la Figura <a href="3-cap-ifa.html#fig:ifa5">3.5</a>, en la que 163 términos fueron enriquecidos en al menos el 80% de los conjuntos de datos, de los cuales 99 (61%) están relacionados con el cáncer de próstata según la BDTC. En particular, la proporción media de términos exclusivamente enriquecidos presentes en la BDTC en cada conjunto de datos fue del 44%, con Taylor primero con 448 términos exclusivos (194 en la BDTC) y Varambally último con 212 términos (98 en la BDTC).</p>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span id="fig:ifa6"></span>
+<img src="images/IFA_FIG6.PDF" alt="Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (A) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (E)." width="100%" />
+<p class="caption">
+Figure 3.6: Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (<strong>A</strong>) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (<strong>E</strong>).
+</p>
+</div>
+
+</div>
+</div>
+<div id="conclusiones" class="section level2">
+<h2><span class="header-section-number">3.6</span> Conclusiones</h2>
+<div id="comparación-de-métodos" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Comparación de métodos</h3>
+
+<p>En este capítulo se pudo mostrar que los resultados del AF pueden varían dependiendo del método y los parámetros utilizados. Esto podría influir negativamente en la interpretación biológica si no se aborda adecuadamente. Por ejemplo, el método de PFC Subramanian mostró una alta sensibilidad a diferentes configuraciones de parámetros y datos de entrada. Los métodos SMpp0 y SMpr, utilizando el valor de corte estadístico recomendado, casi no devolvieron términos enriquecidos para los conjuntos de datos analizados. Estos resultados fueron bastante inesperados porque la naturaleza de los subtipos de cáncer de mama considerados tienen mecanismos biológicos subyacentes muy contrastantes y se han reportado resultados de supervivencia altamente opuestos <span class="citation">(<span class="citeproc-not-found" data-reference-id="parker2009supervised"><strong>???</strong></span>)</span>. Sin embargo, cuando el usuario sólo tiene una lista ordenada de genes, no hay otra alternativa que la versión pre-rankeada (SMpr) para realizar PFC. En este caso, sugerimos utilizar el rankeo por <span class="math inline">\(1-p\)</span>-<span class="math inline">\(valor\)</span> con <span class="math inline">\(w=1\)</span>, y verificar con diversos valores de corte que devuelvan términos enriquecidos. Cuando se alimentó el SM con la matriz de expresión y sus etiquetas de fenotipo, se encontró que tanto las permutaciones de fenotipo como de genes eran muy sensibles al valor de ponderación <span class="math inline">\(w\)</span> elegido, lo que producía diferentes cantidades de términos enriquecidos, así como diferentes niveles de variabilidad de enriquecimiento entre los conjuntos de datos. La permutación del fenotipo con <span class="math inline">\(w=2\)</span> (SMpp2) parece proporcionar resultados estables, pero la aparición de conjuntos de datos con un número extremo de términos enriquecidos desalienta su uso. Además, cuando <span class="math inline">\(w=1\)</span> los resultados fueron muy inestables (RIC alto). La estrategia de permutación de genes con <span class="math inline">\(w=1\)</span> y <span class="math inline">\(w=0\)</span> (SMgp1 y SMgp0) proporcionó resultados muy estables, pero estas parametrizaciones enriquecieron casi el doble de términos que todos los demás métodos analizados. Cuando se usó <span class="math inline">\(w=2\)</span> (SMgp2), se obtuvo un número bajo de términos enriquecidos. En desacuerdo con los autores del SM, recomendamos SMgp sobre SMpp. Sin embargo, estamos de acuerdo con su recomendación sobre el valor de ponderación <span class="math inline">\(w=1\)</span>, es decir, recomendamos SMgp1 sobre cualquier otra configuración de SM.</p>
+
+<p>El método mGSZ, a comparación del SM, fue más estable entre los diversos conjuntos de datos, produciendo un alto consenso entre datasets (alto <span class="math inline">\(FCE\)</span>) y proporcionando el mayor número de términos informativos y exclusivamente enriquecidos (<span class="math inline">\(TEE\)</span>). Se observó que, cuando no se utilizaba límite superior de tamaño de CG (mGSZ<span class="math inline">\([5,\infty)\)</span>), se enriquecieron términos específicos e informativos adicionales a con el límite [15, 500). Por lo tanto, fomentamos el uso de mGSZ<span class="math inline">\([5,\infty)\)</span>. Otra ventaja de mGSZ sobre el SM es que el primero tiene una implementación R actualizada, mientras que el segundo requiere de un entorno Java.</p>
+
+<p>En cuanto a las metodologías de ASR, aunque el uso de BRI produce resultados estables y contiene los términos enriquecidos utilizando BRIII, este último es más apropiado desde un punto de vista estadístico <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>. Además, se demostró que BRIII a diferencia de BRI no presenta un número extremo de términos enriquecidos, pero tiene un rango más variable de términos enriquecidos sobre los conjuntos de datos utilizados. La versión R implementada de DAVID (RD) fue desarrollada para funcionar lo más similar posible a la plataforma web de DAVID (WD), con la ventaja de utilizar una base de datos de anotaciones GO actualizada. Aún más, cualquier CG deseado de interés puede ser analizado. Además, RD no requiere una conexión a Internet ni una cuenta registrada en el sitio web de DAVID. En el caso de GOstats, se demostró que es demasiado variable cuando se prueba el enriquecimiento a través de bases de datos (bajo <span class="math inline">\(FCE\)</span>). Esto podría volverse problemático cuando se analiza un solo conjunto de datos, es decir, daría una visión biológica muy limitada del experimento que se está analizando. Para las diversas parametrizaciones de dEnricher, se obtuvieron valores extremos de enriquecimiento cuando se utilizó test <em>Hipergeométrico</em> o <em>Binomial</em>; sin embargo, cuando se utilizó la prueba de <em>Fisher</em>, se obtuvieron resultados concordantes. Además, al no aplicar ningún algoritmo de penalización (dE_F_none) se obtuvieron términos adicionales relacionados con la enfermedad bajo estudio. El dE_F_none resultó ser el método más estable entre los conjuntos de datos para las alternativas de ASR (el más alto <span class="math inline">\(FCE\)</span>) y superó a sus competidores en cuanto al número de términos informativos enriquecidos exclusivamente (<span class="math inline">\(TEE_m\)</span>).</p>
+
+<p>En resumen, concluimos que si los parámetros se establecen correctamente, el AF obtiene información biológica consensuada y significativa a pesar del bajo nivel de genes DE en común entre diversas bases de datos. Se demostró que tanto el ASR como la PFC proporcionan resultados complementarios que pueden integrarse para obtener una visión biológica más amplia. Además, su integración nos permite abarcar una mayor profundidad de la estructura GO, una característica deseable a la hora de contrastar condiciones experimentales <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>. En consecuencia, proponemos utilizar el pipeline del IFA, que realiza análisis simultáneos de ASR y PFC a través de dE_F_none y mGSZ, que resultaron ser los métodos más efectivos respectivamente. Ambos enfoques se basan en el mismo modelo lineal a través de la conocida librería R <code>limma</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="berkeley2004linear"><strong>???</strong></span>)</span>. Por lo tanto, proporciona un marco completo y unificado que utiliza únicamente la matriz de expresión, el diseño experimental y (si no se dispone de CG) la base de datos GO de <code>org.Hs.eg.db</code> <span class="citation">(<span class="citeproc-not-found" data-reference-id="carlson2013org"><strong>???</strong></span>)</span>. Aunque este trabajo se basó en los conjuntos de genes GO, cualquier otra base de conocimiento de conjuntos de genes podría ser aplicada para el IFA.</p>
+</div>
+<div id="aplicación-del-ifa" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Aplicación del IFA</h3>
+
+<p>La aplicación del IFA para estudiar los términos regulados diferencialmente entre los subtipos de cáncer de mama Luminal A y Basal resultó en la detección de varios términos altamente relacionados con el cáncer de mama. Por ejemplo, IFA permitió detectar términos relacionados con las vías de señalización de los receptores de hormonas y estrógenos, los cuales están fuertemente relacionados con los subtipos de cáncer de mama analizados, ya que los sujetos Luminal A son dependientes de estrógeno, mientras que los sujetos Basales no lo son <span class="citation">(<span class="citeproc-not-found" data-reference-id="dai2015breast"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="goldhirsch2013personalizing"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="bastien2012pam50"><strong>???</strong></span>)</span>. A partir del IFA, los resultados concordantes revelaron términos asociados con el proceso de desenrollado del ADN, un evento asociado con el inicio de la síntesis de ADN y relacionado con la facilitación de la actividad de las helicasas. Se ha reportado que la helicasa BACH1/FANCJ está mutada en el cáncer de mama de inicio temprano, especialmente relacionado con el gen hereditario del cáncer de mama <em>BRCA1</em> <span class="citation">(<span class="citeproc-not-found" data-reference-id="cantor2001bach1"><strong>???</strong></span>)</span>. La mayoría de los cánceres de mama relacionados con el gen <em>BRCA1</em> son triplemente negativos y Basales <span class="citation">(<span class="citeproc-not-found" data-reference-id="atchley2008clinical"><strong>???</strong></span>)</span>, por lo tanto son esperadas las diferencias en los genes que regulan el proceso de desenrollado del ADN entre Luminal A y Basal. Además, el IFA reveló un grupo de términos que sólo estaban regulados de forma diferencial en el conjunto de datos de TCGA. De ellos, la actividad de la histona metiltransferasa en H3-K9 fue uno de los términos más profundos encontrados en la estructura de árbol de GO. La metilación de la histona H3-K9 se ha correlacionado con la formación de heterocromatina y la represión transcripcional, que puede regular la expresión del receptor de estrógeno <span class="citation">(<span class="citeproc-not-found" data-reference-id="sharma2005release"><strong>???</strong></span>)</span>. Además, el término de actividad de la tirosina cinasa está involucrada en la terapia de elusión en cánceres de mama triplemente negativos - Basales - <span class="citation">(<span class="citeproc-not-found" data-reference-id="scaltriti2016molecular"><strong>???</strong></span>)</span>. La evaluación de la capacidad de generalización del IFA en los conjuntos de datos sobre el cáncer de próstata también arrojó resultados concordantes e informativos. Además, como era de esperar y visto en el caso del cáncer de mama, se enriquecieron términos presentes en consenso entre los conjuntos de datos, así como términos específicos enriquecidos para cada uno de ellos.</p>
+
+<p>Estos hallazgos apoyan la utilidad de nuestra propuesta desde la perspectiva de la minería de datos biológicos. Además, el marco de análisis propuesto, IFA, supera las limitaciones de las bases de conocimiento que presentan los métodos, minimiza los parámetros a definir por el usuario, facilita el AF, permite la comparación de diferentes cohortes de pacientes, como se muestra con los resultados de TCGA y cáncer de próstata, y se proporciona gratuitamente como código abierto R en <a href="http://github.com/jcrodriguez1989/IFA">GitHub</a>.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-cap-ngs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-cap-migsa.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["RodriguezJC_tesis_doctoral.pdf", "PDF"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

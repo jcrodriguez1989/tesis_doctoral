@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Análisis masivo e integrador de conjuntos de genes | _main.utf8</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Análisis masivo e integrador de conjuntos de genes | _main.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Análisis masivo e integrador de conjuntos de genes | _main.utf8" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="3-cap-ifa.html"/>
+<link rel="next" href="5-cap-desafios.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="1" data-path="1-cap-af.html"><a href="1-cap-af.html"><i class="fa fa-check"></i><b>1</b> Análisis funcional</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:ontologias"><i class="fa fa-check"></i><b>1.1</b> Ontologías</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#gene-ontology"><i class="fa fa-check"></i><b>1.1.1</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#otras-ontologías"><i class="fa fa-check"></i><b>1.1.2</b> Otras ontologías</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:af"><i class="fa fa-check"></i><b>1.2</b> Metodologías de Análisis Funcional (AF)</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:asr"><i class="fa fa-check"></i><b>1.2.1</b> Análisis de Sobre-Representación (ASR)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-cap-af.html"><a href="1-cap-af.html#puntuación-funcional-de-clase-pfc"><i class="fa fa-check"></i><b>1.2.2</b> Puntuación Funcional de Clase (PFC)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-cap-af.html"><a href="1-cap-af.html#análisis-de-enriquecimiento-modular"><i class="fa fa-check"></i><b>1.2.3</b> Análisis de Enriquecimiento Modular</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-cap-af.html"><a href="1-cap-af.html#comentarios-finales"><i class="fa fa-check"></i><b>1.3</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html"><i class="fa fa-check"></i><b>2</b> Fuentes de datos biológicas</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:technols"><i class="fa fa-check"></i><b>2.1</b> Tecnologías de obtención de expresión biológica</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#microarreglos-de-adn"><i class="fa fa-check"></i><b>2.1.1</b> Microarreglos de ADN</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#itraq"><i class="fa fa-check"></i><b>2.1.2</b> iTRAQ</a></li>
+<li class="chapter" data-level="2.1.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#secuenciación-de-arn"><i class="fa fa-check"></i><b>2.1.3</b> Secuenciación de ARN</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:repos"><i class="fa fa-check"></i><b>2.2</b> Repositorios de datos de expresión</a></li>
+<li class="chapter" data-level="2.3" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#condiciones-experimentales"><i class="fa fa-check"></i><b>2.3</b> Condiciones experimentales</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#sec:bcSubt"><i class="fa fa-check"></i><b>2.3.1</b> Cáncer de mama</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#cáncer-de-próstata"><i class="fa fa-check"></i><b>2.3.2</b> Cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-cap-ngs.html"><a href="2-cap-ngs.html#comentarios-finales-1"><i class="fa fa-check"></i><b>2.4</b> Comentarios finales</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html"><i class="fa fa-check"></i><b>3</b> Análisis Funcional Integrador</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#motivación"><i class="fa fa-check"></i><b>3.1</b> Motivación</a></li>
+<li class="chapter" data-level="3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#validación-de-resultados"><i class="fa fa-check"></i><b>3.2</b> Validación de resultados</a></li>
+<li class="chapter" data-level="3.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#datos-de-entrada"><i class="fa fa-check"></i><b>3.3</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#matrices-de-expresión"><i class="fa fa-check"></i><b>3.3.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conjuntos-de-genes"><i class="fa fa-check"></i><b>3.3.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:algosComparados"><i class="fa fa-check"></i><b>3.4</b> Algoritmos y parámetros comparados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-sobre-representación"><i class="fa fa-check"></i><b>3.4.1</b> Análisis de Sobre-Representación</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#puntuación-funcional-de-clase"><i class="fa fa-check"></i><b>3.4.2</b> Puntuación Funcional de Clase</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#resultados"><i class="fa fa-check"></i><b>3.5</b> Resultados</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#genes-diferencialmente-expresados-por-base-de-datos"><i class="fa fa-check"></i><b>3.5.1</b> Genes diferencialmente expresados por base de datos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-estabilidad-de-enriquecimiento"><i class="fa fa-check"></i><b>3.5.2</b> Análisis de estabilidad de enriquecimiento</a></li>
+<li class="chapter" data-level="3.5.3" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#análisis-de-profundidad-en-gene-ontology"><i class="fa fa-check"></i><b>3.5.3</b> Análisis de profundidad en Gene Ontology</a></li>
+<li class="chapter" data-level="3.5.4" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:consensusSection"><i class="fa fa-check"></i><b>3.5.4</b> Análisis de consenso</a></li>
+<li class="chapter" data-level="3.5.5" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#enriquecimiento-exclusivo-y-relevancia-de-términos"><i class="fa fa-check"></i><b>3.5.5</b> Enriquecimiento exclusivo y relevancia de términos</a></li>
+<li class="chapter" data-level="3.5.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#sec:ifa"><i class="fa fa-check"></i><b>3.5.6</b> Análisis Funcional Integrador</a></li>
+<li class="chapter" data-level="3.5.7" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-tcga"><i class="fa fa-check"></i><b>3.5.7</b> IFA sobre TCGA</a></li>
+<li class="chapter" data-level="3.5.8" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#ifa-sobre-datasets-de-cáncer-de-próstata"><i class="fa fa-check"></i><b>3.5.8</b> IFA sobre datasets de cáncer de próstata</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#conclusiones"><i class="fa fa-check"></i><b>3.6</b> Conclusiones</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#comparación-de-métodos"><i class="fa fa-check"></i><b>3.6.1</b> Comparación de métodos</a></li>
+<li class="chapter" data-level="3.6.2" data-path="3-cap-ifa.html"><a href="3-cap-ifa.html#aplicación-del-ifa"><i class="fa fa-check"></i><b>3.6.2</b> Aplicación del IFA</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html"><i class="fa fa-check"></i><b>4</b> Análisis masivo e integrador de conjuntos de genes</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#motivación-1"><i class="fa fa-check"></i><b>4.1</b> Motivación</a></li>
+<li class="chapter" data-level="4.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#sec:voom"><i class="fa fa-check"></i><b>4.2</b> Adaptación del IFA a otras fuentes de datos</a></li>
+<li class="chapter" data-level="4.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#herramienta-desarrollada"><i class="fa fa-check"></i><b>4.3</b> Herramienta desarrollada</a></li>
+<li class="chapter" data-level="4.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#validación-de-la-herramienta"><i class="fa fa-check"></i><b>4.4</b> Validación de la herramienta</a></li>
+<li class="chapter" data-level="4.5" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#datos-de-entrada-1"><i class="fa fa-check"></i><b>4.5</b> Datos de entrada</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#matrices-de-expresión-1"><i class="fa fa-check"></i><b>4.5.1</b> Matrices de expresión</a></li>
+<li class="chapter" data-level="4.5.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conjuntos-de-genes-1"><i class="fa fa-check"></i><b>4.5.2</b> Conjuntos de genes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#estrategias-para-el-análisis-de-eficiencia"><i class="fa fa-check"></i><b>4.6</b> Estrategias para el análisis de eficiencia</a></li>
+<li class="chapter" data-level="4.7" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#resultados-1"><i class="fa fa-check"></i><b>4.7</b> Resultados</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#migsa-sobre-datasets-de-microarreglos"><i class="fa fa-check"></i><b>4.7.1</b> MIGSA sobre datasets de microarreglos</a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploración-de-los-ptf-de-los-subtipos-de-cáncer-de-mama"><i class="fa fa-check"></i><b>4.7.2</b> Exploración de los PTF de los subtipos de cáncer de mama</a></li>
+<li class="chapter" data-level="4.7.3" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#integración-de-resultados-de-migsa-de-tcga-y-haibe-kains"><i class="fa fa-check"></i><b>4.7.3</b> Integración de resultados de MIGSA de TCGA y Haibe-Kains</a></li>
+<li class="chapter" data-level="4.7.4" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#exploración-de-los-resultados-de-tcga-en-conjunto-con-los-ptf"><i class="fa fa-check"></i><b>4.7.4</b> Exploración de los resultados de TCGA en conjunto con los PTF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="4-cap-migsa.html"><a href="4-cap-migsa.html#conclusiones-1"><i class="fa fa-check"></i><b>4.8</b> Conclusiones</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html"><i class="fa fa-check"></i><b>5</b> Desafíos que surgieron durante el trabajo de tesis</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#eficiencia-computacional-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1</b> Eficiencia computacional del algoritmo <code>mGSZ</code></a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-cap-desafios.html"><a href="5-cap-desafios.html#optimización-del-algoritmo-mgsz"><i class="fa fa-check"></i><b>5.1.1</b> Optimización del algoritmo <code>mGSZ</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-cap-conclusiones.html"><a href="6-cap-conclusiones.html"><i class="fa fa-check"></i><b>6</b> Conclusiones y trabajo futuro</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap:migsa" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Análisis masivo e integrador de conjuntos de genes</h1>
+<div id="motivación-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Motivación</h2>
+
+<p>El surgimiento y rápido avance de las tecnologías de secuenciación de alto rendimiento han llevado a la disponibilidad de miles de experimentos en repositorios públicos como son el Gene Expression Omnibus <span class="citation">(<span class="citeproc-not-found" data-reference-id="barrett2012ncbi"><strong>???</strong></span>)</span> y Array Express <span class="citation">(<span class="citeproc-not-found" data-reference-id="kolesnikov2014arrayexpress"><strong>???</strong></span>)</span>. Más aún, se han llevado a cabo varios proyectos de gran escala, centrados en la comprensión integrada de la complejidad de las enfermedades humanas, como The Cancer Genome Atlas (TCGA) <span class="citation">(<span class="citeproc-not-found" data-reference-id="weinstein2013cancer"><strong>???</strong></span>)</span> y el US-LACRN <span class="citation">(<span class="citeproc-not-found" data-reference-id="llera2015translational"><strong>???</strong></span>)</span> para el estudio del cáncer. Comúnmente, los conjuntos de datos disponibles incluyen diferentes tipos de datos provenientes de múltiples tecnologías ómicas para los mismos sujetos, proporcionando información a diferentes niveles moleculares y creando oportunidades sin precedentes para estudiar enfermedades humanas. La integración de estos datos genéticos, genómicos y proteómicos puede conducir a una mejor identificación de grupos homogéneos de sujetos, así como de patrones biológicos comunes y distintivos entre los grupos. La caracterización de grupos de sujetos que presentan una misma condición patológica, contribuye al desarrollo de estrategias diagnósticas y de tratamiento más adecuadas <span class="citation">(<span class="citeproc-not-found" data-reference-id="chen2013promise"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="kedaigle2018turning"><strong>???</strong></span>)</span>. En este sentido, el auge de la medicina personalizada y la disponibilidad de repositorios de datos moleculares de alto rendimiento han aumentado la necesidad de herramientas adecuadas que permitan a los investigadores traslacionales gestionar y explorar estas fuentes de datos <span class="citation">(<span class="citeproc-not-found" data-reference-id="canuel2014translational"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fernandez2018current"><strong>???</strong></span>)</span>.</p>
+
+<p>La integración y el análisis de grandes conjuntos de datos provenientes de múltiples fuentes ómicas se ha convertido en una tarea cada vez más desafiante. Los primeros esfuerzos para identificar patrones distintivos relacionados con fenotipos o contrastes (comparaciones entre pares de fenotipos) específicos se han basado en el análisis de expresión diferencial. Estos esfuerzos condujeron a la identificación de diferentes listas de genes, proteínas u otras características genómicas, con una <em>ligera superposición</em> entre los conjuntos de datos <span class="citation">(<span class="citeproc-not-found" data-reference-id="weinstein2013cancer"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="creighton2018pan"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="hoadley2014multiplatform"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="metzger2011genomic"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="verhaak2010integrated"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="korkola2007identification"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="meng2014multivariate"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="rodriguez2016improving"><strong>???</strong></span>)</span>. Por el contrario, cuando la estrategia de análisis se basaba en el enriquecimiento funcional, se identificaron <em>grandes cantidades</em> de vías biológicas, funciones moleculares y procesos biológicos en común entre diferentes conjuntos de datos <span class="citation">(<span class="citeproc-not-found" data-reference-id="creighton2018pan"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="meng2014multivariate"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="rodriguez2016improving"><strong>???</strong></span>)</span>. Estos resultados denotan que, a pesar de las posibles diferencias en las características ómicas probadas en varios ensayos, la biología subyacente presenta características similares, lo que lleva a resultados fenotípicos o pronósticos similares. Por lo tanto, el análisis funcional de Conjuntos de Genes (CG) resulta en un mejor enfoque para la integración de múltiples conjuntos de datos.</p>
+
+<p>El principal inconveniete de los análisis de expresión diferencial o de enriquecimiento funcional es la falta de integración de datos de múltiples ómicas. Esto ha motivado al surgimiento de un campo de investigación, conocido como <em>Big Omics Analysis</em>, en el que la integración de tipos de datos dispares se ha vuelto cada vez más importante para capturar la heterogeneidad de los procesos biológicos <span class="citation">(<span class="citeproc-not-found" data-reference-id="liu2016integrative"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fernandez2018current"><strong>???</strong></span>)</span>. Los enfoques recientes se basan en aprendizaje automático <span class="citation">(<span class="citeproc-not-found" data-reference-id="shen2009integrative"><strong>???</strong></span>)</span>, análisis de redes <span class="citation">(<span class="citeproc-not-found" data-reference-id="wang2014similarity"><strong>???</strong></span>)</span>, o fusión de patrones <span class="citation">(<span class="citeproc-not-found" data-reference-id="shi2017pattern"><strong>???</strong></span>)</span>. Estas herramientas se basan principalmente en el análisis de expresión o patrones de coexpresión de un único conjunto de datos, lo que supone una gran limitación, ya que se debe contar con datos de cada ómica para cada sujeto. Además, ninguna de estas herramientas es capaz de analizar el comportamiento funcional de la enfermedad o fenotipo; y mucho menos analizar multiples cohortes (poblaciones). Si bien una herramienta ampliamente utilizada llamada PARADIGM <span class="citation">(<span class="citeproc-not-found" data-reference-id="vaske2010inference"><strong>???</strong></span>)</span> ha sido desarrollada para analizar los aspectos funcionales de múltiples fuentes ómicas, sólo puede proporcionar información a nivel de sujetos individuales, y por lo tanto, omite el análisis de grupos de interés, fenotipos, conjuntos de datos o tecnologías ómicas.</p>
+
+<p>El análisis de grandes fuentes de datos ómicas resulta particularmente útil para el estudio de enfermedades heterogéneas, como el Cáncer de Mama (CM) <span class="citation">(<span class="citeproc-not-found" data-reference-id="korkola2007identification"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="reis2011gene"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="kwa2017clinical"><strong>???</strong></span>)</span>. En este sentido, Perou et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="perou2000molecular"><strong>???</strong></span>)</span> definió cuatro subtipos intrínsecos de CM -introducidos en la Sección <a href="2-cap-ngs.html#sec:bcSubt">2.3.1</a>- que presentan diferentes perfiles. Estos subtipos han sido ampliamente evaluados a través del análisis independiente de diferentes fuentes de datos incluyendo genes, expresión de microARN, variación del número de copias, y proteínas <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>. Aunque estos análisis condujeron a la validación del esquema de clasificación de Perou et al., también han dado lugar a más preguntas sobre los propios subtipos. Por ejemplo, se ha descubierto que los sujetos con CM están agrupados en aún más grupos de subtipos <span class="citation">(<span class="citeproc-not-found" data-reference-id="curtis2012genomic"><strong>???</strong></span>)</span>. Más aún, se han identificado nuevos grupos de CM dentro de los subtipos previamente definidos <span class="citation">(<span class="citeproc-not-found" data-reference-id="aure2017integrative"><strong>???</strong></span>)</span>. Asimismo, algunos sujetos con CM no pudieron ser asignados a ningún subtipo existente <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2016novel"><strong>???</strong></span>)</span>. Por lo tanto, el éxito de la medicina traslacional en CM aún se ve limitado por la capacidad de las herramientas de análisis integradoras y masivas para descifrar los procesos biológicos aún desconocidos que subyacen a cada uno de estos subtipos de CM. Para lograr este éxito, resulta fundamental una herramienta que permita al investigador comparar bases de datos tanto de diversas fuentes ómicas como de diversas poblaciones o incluso enfermedades.</p>
+</div>
+<div id="sec:voom" class="section level2">
+<h2><span class="header-section-number">4.2</span> Adaptación del IFA a otras fuentes de datos</h2>
+
+<p>Como se mencionó en la Sección <a href="3-cap-ifa.html#sec:ifa">3.5.6</a>, el pipeline del IFA lleva a cabo sus análisis utilizando los métodos dE_F_none y mGSZ. Para llevar a cabo dichos análisis, la lista de genes Diferencialmente Expresados (DE) y el rankeo son calculados mediante un modelo lineal obtenido por la función <code>eBayes</code> de la librería <code>limma</code> de R. La obtención de los genes DE se lleva a cabo como un paso anterior a utilizar dE_F_none, sin embargo, para el caso de mGSZ, el rankeo de los genes se realiza internamente por dicha librería.</p>
+
+<p>El ajuste del modelo lineal de <code>eBayes</code> asume que los datos de entrada siguen una distribución <em>Normal</em>, lo cual, como se vió en la Sección <a href="2-cap-ngs.html#sec:technols">2.1</a>, se cumple para datos provenientes de microarreglos de ADN y de iTRAQ. Sin embargo, este supuesto no se cumple para datos de Secuenciación de ARN, donde vimos que, al ser datos de conteos, se asemejan a una distribución de <em>Poisson</em> o <em>Binomial Negativa</em>.</p>
+
+<p>Dado el interés de desarrollar una herramienta que permita comparar, desde un punto de vista funcional, una cantidad masiva de bases de datos, tanto de diversas poblaciones como de una variedad de fuentes ómicas. Es por esto que resultó necesario adaptar el pipeline previo del IFA de modo que permita llevar a cabo el análisis a partir de datos de conteos. En particular, se debió inspeccionar el paquete R <code>mGSZ</code> y realizarle las modificaciones pertinentes sobre la metodología de rankeo de genes.</p>
+
+<p>El IFA utiliza una misma herramienta (y modelo estadístico), tanto para el ASR como para el análisis de PFC, para lograr un análisis unificado. La adaptación del IFA a datos de conteos se realizó manteniendo esta idea de unificación. En este sentido, tanto para la obtención de los genes DE como para rankearlos, se implementó una modificación del pipeline IFA que dependiendo del tipo de datos de entrada utiliza la función <code>eBayes</code> (para datos <em>Normales</em>) ó <code>voom</code> (para conteos). La función <code>voom</code> también se encuentra desarrollada en la librería <code>limma</code>, y se desarrolló principalmente con el fin de detectar genes DE para datos de conteos, la idea de esta propuesta es poder modelar los datos como si fueran <em>Normales</em> mediante mínimos cuadrados generalizados <span class="citation">(<span class="citeproc-not-found" data-reference-id="law2014voom"><strong>???</strong></span>)</span>. Para ello se realiza una transformación sobre los datos de conteos de manera de poder corregir la relación media-varianza de los datos, a partir de un ajuste <em>loess</em>. De esta manera, a partir de la matriz de conteos se obtiene una matriz de pesos asociada a la corrección necesaria y por consiguiente poder ajustar el modelo lineal mediante mínimos cuadrados generalizados. Como resultado de esta reimplementación, se obtuvo una alternativa del IFA que, de un modo transparente al usuario, permite llevar a cabo el análisis a partir tanto de datos <em>Normales</em> como de conteos.</p>
+</div>
+<div id="herramienta-desarrollada" class="section level2">
+<h2><span class="header-section-number">4.3</span> Herramienta desarrollada</h2>
+
+<p>En el presente capítulo se introduce la librería R desarrollada: MIGSA -del inglés <em>Massive and Integrative Gene Set Analysis</em>-. MIGSA tiene como objetivo identificar la presencia de patrones funcionales comunes o distintivos de diversos fenotipos. Para el análisis, los términos biológicos, clínicos, o definidos por el usuario (de interés específico) se definen mediante CG. MIGSA permite a los usuarios realizar un análisis comparativo integrador de los datasets combinando diferentes experimentos de diferentes plataformas ómicas. Nuestra librería supera la pérdida de información producida por la fusión de diferentes fuentes de datos, explota la complementariedad de los diferentes niveles ómicos y permite realizar consultas directas y supervisadas basadas en cada fenotipo.</p>
+
+<p>Como se explica esquemáticamente en la Figura <a href="4-cap-migsa.html#fig:migsa1">4.1</a>, MIGSA toma como entrada una lista de matrices de expresión (<span class="math inline">\(L=\{M_d\}; d \in \{1,\ldots,D\}\)</span>). Cada matriz contiene datos del <span class="math inline">\(d\)</span>-ésimo dataset, con <span class="math inline">\(S_d\)</span> sujetos medidos a través de cualquier tecnología ómica (por ejemplo, genes, proteínas, etc.) que pueda ser anotada con identificadores <em>Entrez</em>. Para el <span class="math inline">\(d\)</span>-ésimo conjunto de datos, MIGSA requiere la identificación del fenotipo de cada sujeto <span class="math inline">\(F_d=[f_{d1},...,f_{dS_d}]\)</span>, con <span class="math inline">\(f_{di} \in \{a,b,...\}\)</span> <span class="math inline">\((i\in \{1,...,S_d\})\)</span>, para identificar cada experimento <span class="math inline">\(E_{d}^{a,b}\)</span> que resulta de la matriz de expresión <span class="math inline">\(M_d\)</span> y el contraste de fenotipo <em>a vs. b</em>. Luego, en paralelo, MIGSA aplica individualmente a cada experimento el Análisis Funcional Integrador (IFA) descrito en el Cápitulo <a href="3-cap-ifa.html#cap:ifa">3</a>. Vale la pena mencionar que el IFA aplicado por MIGSA presenta dos novedades respecto a su publicación original <span class="citation">(<span class="citeproc-not-found" data-reference-id="rodriguez2016improving"><strong>???</strong></span>)</span>: ahora permite analizar datos de conteos (como los de secuenciación de ARN), microarreglos de ADN, y proteómicos de iTRAQ; e identifica los genes específicos que contribuyeron al enriquecimiento de cada CG.</p>
+<div class="figure" style="text-align: center"><span id="fig:migsa1"></span>
+<img src="images/MIGSA_FIG1_es.pdf" alt="Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión \(L=\{M_1,....,M_D\}\), cada matriz con la identificación del fenotipo (por ejemplo \(a\), \(b\), \(c\), \(d\)) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo \(E_{1}^{a,b}\) contrasta los fenotipos \(a\) y \(b\) para la matriz de expresión \(M_1\)). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función \(f\) diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE)." width="100%" />
+<p class="caption">
+Figure 4.1: Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión <span class="math inline">\(L=\{M_1,....,M_D\}\)</span>, cada matriz con la identificación del fenotipo (por ejemplo <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(d\)</span>) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo <span class="math inline">\(E_{1}^{a,b}\)</span> contrasta los fenotipos <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> para la matriz de expresión <span class="math inline">\(M_1\)</span>). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función <span class="math inline">\(f\)</span> diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE).
+</p>
+</div>
+
+
+<p>Los resultados de MIGSA se resumen en un cubo de datos tridimensional, <span class="math inline">\(Q^{Es,CGE,GIE}\)</span>, con tres ejes o niveles de abstracción: Experimentos (Es; es decir, contrastes de fenotipos), Conjuntos de Genes Enriquecidos (CGE; CG estadísticamente desregulados para un umbral de significancia), y la lista de Genes Importantes para el Enriquecimiento (GIE; es decir, para cada CG, los genes que fueron los principales responsables de su desregulación en un experimento específico). Así, para el experimento <span class="math inline">\(E_{d}^{a,b}\)</span>, MIGSA proporciona la lista de conjuntos de genes enriquecidos <span class="math inline">\(CGE_{d}^{a,b}\)</span>, y la lista de genes importantes de enriquecimiento <span class="math inline">\(GIE_{d}^{a,b}\)</span> (ver Figura <a href="4-cap-migsa.html#fig:migsa1">4.1</a>). Nótese que en el cubo <span class="math inline">\(Q\)</span> los ejes son: <span class="math inline">\(Es=\cup_d\cup_{a,b}E_{d}^{a,b}\)</span>, <span class="math inline">\(CGE=\cup_d\cup_{a,b}CGE_{d}^{a,b}\)</span>, y <span class="math inline">\(GIE=\cup_d\cup_{a,b}GIE_{d}^{a,b}\)</span>.</p>
+
+<p>Un gen <span class="math inline">\(G\)</span> será considerado un GIE para un determinado conjunto de genes <span class="math inline">\(CG\)</span> y experimento <span class="math inline">\(E_{d}^{a,b}\)</span>, si <span class="math inline">\(G \in CG\)</span>, y al menos uno de:</p>
+<ul>
+<li><span class="math inline">\(CG\)</span> fue enriquecido por el análisis de sobre-representación, y el gen <span class="math inline">\(G\)</span> se encontró diferencialmente expresado en <span class="math inline">\(E_{d}^{a,b}\)</span>.</li>
+<li><span class="math inline">\(CG\)</span> fue enriquecido por puntuación funcional de clase, y el gen <span class="math inline">\(G\)</span> conformó el <em>leading-edge</em> <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span> de <span class="math inline">\(CG\)</span>, es decir, la posición de <span class="math inline">\(G\)</span>, en el rankeo, se encuentra a la izquierda/derecha de la gráfica positiva/negativa del <em>Enrichment Score</em> de <span class="math inline">\(CG\)</span>.</li>
+</ul>
+
+<p>MIGSA proporciona varias herramientas gráficas, que permiten a los usuarios explorar y visualizar fácilmente los resultados de sus datos. Por ejemplo, el primer eje del cubo MIGSA (<span class="math inline">\(Q^{CGE,Es}\)</span>) puede representarse fácilmente mediante un <em>heatmap</em>. En este caso, los CG se distribuyen en filas y los experimentos en columnas. En particular, las filas y columnas se encuentran ubicadas de acuerdo a un ordenamiento dado por la distancia Jaccard y enlace promedio. El <em>heatmap</em> de MIGSA resume eficazmente los resultados de múltiples IFA y ofrece a los usuarios la capacidad de visualizar patrones de enriquecimiento funcional relacionados con contrastes, fenotipos o incluso con fuentes de datos específicas. El <em>heatmap</em> incluye un dendrograma superior que muestra los grupos formados por los resultados de todos los experimentos. Este dendrograma permite una rápida identificación de clusters y sub-clusters de experimentos, y su asociación con los fenotipos estudiados.</p>
+</div>
+<div id="validación-de-la-herramienta" class="section level2">
+<h2><span class="header-section-number">4.4</span> Validación de la herramienta</h2>
+
+<p>Para demostrar la utilidad de MIGSA como herramienta de descubrimiento, se utilizó con el fin de lograr una caracterización funcional de cada subtipo molecular PAM50 de CM. Se aplicó MIGSA para analizar una gran cantidad de bases de datos de CM donde se evaluaron todas las combinaciones posibles de pares de subtipos. La eficiencia de MIGSA se vería reflajada en encontrar genes y patrones funcionales que caractericen los diversos fenotipos analizados. En este sentido, dado que se analizaron experimentos pertenecientes a una misma enfermedad, será esperable encontrar patrones en común compartidos entre todos los contrastes. Pero también, y quizás de mayor interés biológico, resultará fundamental detectar patrones específicos que caractericen cada contraste, y más particularmente, cada subtipo.</p>
+</div>
+<div id="datos-de-entrada-1" class="section level2">
+<h2><span class="header-section-number">4.5</span> Datos de entrada</h2>
+<div id="matrices-de-expresión-1" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Matrices de expresión</h3>
+
+<p>Se analizaron veinticinco conjuntos de datos de expresión génica de cáncer de mama basados en microarreglos de ADN (4.145 sujetos) previamente reportados por Haibe-Kains et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="haibe2012three"><strong>???</strong></span>)</span> e identificados como <em>microarreglos comerciales</em> por Fresno et al. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2016novel"><strong>???</strong></span>)</span>, estos conjuntos de datos son los de CM presentes en la Tabla <a href="#tab:databases"><strong>??</strong></a>, excepto por los de TCGA. Para cada sujeto de los datasets de Haibe-Kains (HKds), se tomó la clasificación PAM50 basada en el algoritmo <code>pbcmc</code>, según se detalla en Fresno et al. El algoritmo <code>pbcmc</code> devuelve un nivel de confianza de que un sujeto efectivamente pertenezca a un subtipo o no, de este modo se evita analizar sujetos que posiblemente estén mal asignados por <code>genefu</code>, y que por ende, provoquen un sesgo en los resultados. Se conservaron aquellos sujetos clasificados efectivamente como Basal, Luminal A, Luminal B y Her2+, mientras que los sujetos clasificados como Normal o No Asignados fueron descartados, lo que resultó en un total de 2.756 sujetos analizados.</p>
+
+<p>Además de los HKds, se analizó una población de 97 sujetos que cuentan tanto con datos transcriptómicos (secuenciación de ARN y microarreglos de ADN) y proteómicos (iTRAQ) de TCGA; se seleccionaron los mismos sujetos para cada una de las bases de datos para evitar posibles sesgos. La clasificación PAM50 para estos sujetos se obtuvo a través de la librería <code>pbcmc</code> utilizando los datos de microarreglos y la opción de estandarización de escala. Mediante <code>pbcmc</code> se obtuvieron 25, 25, 12, 20, 0, y 15 sujetos identificados como Basal, Her2+, Luminal A, Luminal B, Normal, y No Asignados, respectivamente.</p>
+
+<p>Para cada conjunto de datos, se promediaron los genes con múltiples sondas o detecciones. Para cada contraste de dos subtipos, sólo se incluyeron los genes detectados en al menos el 70% de los sujetos de cada subtipo. Además, para los datos del secuenciación de ARN, sólo se incluyeron los genes con más de 10 conteos en promedio por subtipo. Para un conjunto de datos dado y para cada subtipo dado, si había menos de ocho sujetos presentes, entonces estos sujetos fueron descartados para evitar tener una población no representativa, y en consecuencia no se analizaron los contrastes con ese subtipo para ese conjunto de datos.</p>
+
+<p>Luego de los filtros mencionados, se obtuvieron 118 experimentos que contrastan los subtipos de CM para los HKds y 18 para TCGA. Para el análisis de sobre-representación del IFA de MIGSA, se eligieron parámetros de selección de expresión diferencial que incluyan entre el 4 y 6% de los genes como diferencialmente expresados.</p>
+</div>
+<div id="conjuntos-de-genes-1" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Conjuntos de genes</h3>
+
+<p>MIGSA permite realizar el IFA analizando más de 130 bases de datos disponibles de CG conocidos <span class="citation">(<span class="citeproc-not-found" data-reference-id="kuleshov2016enrichr"><strong>???</strong></span>)</span>, como así también utilizar cualquier colección de CG especificada por el usuario. En este trabajo se obtuvieron (<code>org.Hs.eg.db</code> <em>v3.5.0</em>) y analizaron las tres categorías de CG de GO <span class="citation">(<span class="citeproc-not-found" data-reference-id="gene2016expansion"><strong>???</strong></span>)</span>, alcanzando 15,796, 1,902, y 4,604 CG de las ontologías de Procesos Biológicos (PB), Componentes Celulares (CC), y Funciones Moleculares (FM), respectivamente. Un CG se consideró CGE si obtuvo un p-valor <span class="math inline">\(\le 0,01\)</span> por el IFA.</p>
+</div>
+</div>
+<div id="estrategias-para-el-análisis-de-eficiencia" class="section level2">
+<h2><span class="header-section-number">4.6</span> Estrategias para el análisis de eficiencia</h2>
+
+<p>Como primer instancia, se aplicó MIGSA sobre los experimentos de los HKds. Con el cubo resultante de MIGSA, se combinaron los resultados para definir los conceptos:</p>
+<ul>
+<li><strong>Términos Enriquecidos en Consenso por Contraste</strong> (<strong>TECC</strong>): Para cada contraste, esos CG (y GIE) enriquecidos en al menos <em>K</em>% de los experimentos del contraste (donde <em>K</em> es un nivel definido por el usuario, aquí usamos <span class="math inline">\(K=50\)</span>), es decir, <span class="math inline">\(\boldsymbol{TECC}^{a,b}=\{CG:\sum_{j=1}^D I(CG \in CGE_j^{a,b}) \ge \frac{K}{100}N^{a,b}\}\)</span> donde <em>I</em> es la función indicadora, <em>D</em> es el número de datasets (aquí <span class="math inline">\(D=25\)</span> HKds), y <span class="math inline">\(N^{a,b}\)</span> el es el número de experimentos que contrastan el subtipo <em>a</em> con <em>b</em>.</li>
+<li><strong>Perfil Transcriptómico Funcional</strong> (<strong>PTF</strong>): Para cada subtipo, aquellos <strong>TECC</strong> (y sus respectivos GIE) presentes en común al contrastar un subtipo contra cada uno de los restantes, es decir, <span class="math inline">\(\boldsymbol{PTF}_a=\cap_{b \neq a} \boldsymbol{TECC}^{a,b}\)</span>.</li>
+</ul>
+
+<p>Luego, se analizaron los <strong>TECC</strong> para obtener un perfil funcional para cada contraste de los subtipos de CM. Adicionalmente, se obtuvieron los <strong>PTF</strong> basados en los experimentos de los HKds y se exploraron conjuntamente con los GIE correspondientes, para obtener una caracterización funcional de cada subtipo de CM.</p>
+
+<p>Posteriormente, para demostrar la capacidad del paquete MIGSA de integrar múltiples conjuntos de datos ómicos, se aplicó MIGSA a los conjuntos de datos de TCGA de CM, y los resultados se compararon con los <strong>TECC</strong> definidos con los experimentos de los HKds. Para evaluar la concordancia entre los resultados de MIGSA sobre los conjuntos de datos de transcriptómica y proteómica del TCGA, se analizaron los CGE (y los GIE) para definir:</p>
+<ul>
+<li><strong>Términos Enriquecidos por Transcriptómica</strong> (<strong>TET</strong>): Para cada subtipo, aquellos CG enriquecidos consistentemente en experimentos transcriptómicos. Para identificar los <strong>TET</strong>, primero, para cada contraste, se obtuvo la intersección de CGE tanto en los datos de secuenciación de ARN como en los de microarreglos de TCGA. Luego, para cada subtipo, el conjunto de términos presentes en los tres contrastes del subtipo dado se denominó Términos Enriquecidos por Transcriptómica.</li>
+<li><strong>Términos Enriquecidos por Proteómica</strong> (<strong>TEP</strong>): Para cada subtipo, aquellos CG enriquecidos consistentemente en experimentos proteómicos. Para obtener los <strong>TEP</strong>, primero, se identificaron los CGE encontrados en los experimentos de iTRAQ del TCGA para cada contraste. Luego, se seleccionó el conjunto de términos presentes en todos los contrastes de un subtipo dado.</li>
+</ul>
+
+<p>Finalmente, para cada subtipo, se evaluó la concordancia en la detección de CGE a través de diferentes plataformas y conjuntos de datos ómicos comparando los <strong>TET</strong> y <strong>TEP</strong> del TCGA, con los <strong>PTF</strong> encontrados analizando los experimentos de los HKds. Utilizando MIGSA, se llevo a cabo una inspección de los árboles de GO para encontrar intersecciones entre <strong>PTF</strong>, <strong>TET</strong> y <strong>TEP</strong> para las categorías de PB, FM y CC de cada subtipo.</p>
+</div>
+<div id="resultados-1" class="section level2">
+<h2><span class="header-section-number">4.7</span> Resultados</h2>
+<div id="migsa-sobre-datasets-de-microarreglos" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> MIGSA sobre datasets de microarreglos</h3>
+
+<p>Se analizaron, con MIGSA, los 118 experimentos de HKds. En la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a> se observa el <em>heatmap</em> que ilustra el primer eje del cubo de resultados (<span class="math inline">\(Q^{CGE,Es}\)</span>), donde el dendrograma superior revela los clusters formados por los resultados de todos los experimentos que contrastan los subtipos de CM. Al analizar los dendrogramas se nota la conformación de clusters generados principalmente por los subtipos contrastados (no se encontró efecto de lote o plataforma). En particular, el cluster más grande contiene todos los experimentos que contrastan el subtipo Luminal A (marca LA en la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a>; 63 experimentos/columnas). Dentro de este cluster, se identificaron dos sub-cluster distintos. Uno de estos sub-clusters consiste en 23 de un total de 25 (92%) experimentos evaluando Luminal A contra Basal (marca LA-Ba). El otro sub-cluster incluyó 18 de 20 (90%) experimentos contrastando los dos subtipos Luminales (marca LA-LB). Los experimentos que comparan Luminal A contra Her2+ (LA-H) fueron agrupados principalmente en dos clusters que contienen seis y nueve de 18 (83%) experimentos respectivamente.</p>
+
+<p>El segundo gran cluster divisable en la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a> incluye todos los experimentos que contrastan los subtipos Basal con Luminal B ó Her2+ (marca Ba). En este cluster, se identificaron dos sub-clusters, uno con 15 de 20 (75%) experimentos contrastando Basal con Luminal B (marca Ba-LB), y otro con 12 de 18 (67%) experimentos contrastando Basal con Her2+ (marca Ba-H). Además de estos dos grandes sub-clusters, se diferencia uno con experimentos que contrastan Luminal B con Her2+ (marca LB-H), con 14 de 17 (82%) experimentos. En particular, este último cluster tiene la menor cantidad de términos enriquecidos, lo que sugiere una gran similitud entre estos dos subtipos.</p>
+<div class="figure" style="text-align: center"><span id="fig:migsa2"></span>
+<img src="images/MIGSA_FIG2.pdf" alt="Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste." width="100%" />
+<p class="caption">
+Figure 4.2: Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste.
+</p>
+</div>
+
+
+<p>El <em>heatmap</em> de la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a> también reveló patrones de enriquecimiento comunes específicos de subtipos para todos los subtipos contrastados. Por ejemplo, las cajas S1 muestran CGE que se encuentran comúnmente en los contrastes con el subtipo Basal, mientras que la caja S2 indica patrones de enriquecimiento de Luminal A. Además, también se observan patrones de enriquecimiento específicos de contrastes, es decir, conjuntos de términos que denotan diferencias entre dos subtipos determinados. Por ejemplo, la caja C1 contiene aquellos CG que diferencian Luminal A de Luminal B, la caja C2 para Luminal A vs. Her2+, C3 para Basal vs. Luminal B, y C4 para Luminal B vs. Her2+.</p>
+
+<p>Las capacidades exploratorias de MIGSA se utilizaron para sub-dividir el <em>heatmap</em> mostrado en la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a> en <em>sub-heatmaps</em> específicos de cada subtipo (es decir, Basal vs. todos los demás, Her2+ vs. todos los demás, Luminal B vs. todos los demás, y Luminal A vs. todos los demás). Estos <em>sub-heatmap</em> proporcionaron una visión detallada de los patrones de enriquecimiento de cada subtipo, y pueden observarse en <span class="citation">(<span class="citeproc-not-found" data-reference-id="rodriguez2019massive"><strong>???</strong></span>)</span>. En particular, los dendrogramas de estas figuras mostraron una mejor agrupación por contrastes, es decir, clusters para cada contraste que agruparon más experimentos que en la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a>.</p>
+
+<p>El número de <strong>TECC</strong> y de términos en <strong>PTF</strong> encontrados se presenta en la Tabla <a href="#tab:migsa1"><strong>??</strong></a>. Como puede observarse, el número más bajo de <strong>TECC</strong> (184) se encuentra para el contraste Luminal B vs. Her2+, mientras que el contraste Luminal A vs. Luminal B muestra el valor más alto, con 983 CG enriquecidos. En términos de los <strong>PTF</strong>, Luminal B y Her2+ fueron los que presentaron el menor número de términos, mientras que Luminal A alcanzó el mayor número de CG en su <strong>PTF</strong>, seguido por el subtipo Basal.</p>
+<p>Cabe señalar que los <strong>PTF</strong> no son mutuamente excluyentes, lo cuál era de esperar ya que todos los fenotipos contrastados son subtipos de la misma enfermedad. Veintisiete CG se encontraron presentes, en común, en los <strong>PTF</strong> de los cuatro subtipos de CM, mientras que 506 CG fueron únicos (exclusivos) para un solo subtipo. El número de CG exclusivos observados para cada <strong>PTF</strong> fue de 103 para Basal, uno para Luminal B, siete para Her2+ y 395 para Luminal A. Además, se encontraron 33 CG en común entre dos <strong>PTF</strong> diferentes: diez en <span class="math inline">\(\boldsymbol{PTF}_{Basal} \cap \boldsymbol{PTF}_{Her2+}\)</span>, ocho en <span class="math inline">\(\boldsymbol{PTF}_{Basal} \cap \boldsymbol{PTF}_{Luminal B}\)</span>, siete en <span class="math inline">\(\boldsymbol{PTF}_{Basal} \cap \boldsymbol{PTF}_{Luminal A}\)</span>, y ocho en <span class="math inline">\(\boldsymbol{PTF}_{Luminal B} \cap \boldsymbol{PTF}_{Luminal A}\)</span>.</p>
+<table>
+<caption>Conjuntos de genes en consenso. Número de Términos Enriquecidos en Consenso por Contraste (<strong>TECC</strong>), definidos como aquellos conjuntos de genes enriquecidos en al menos el 50% de los experimentos evaluados para cada contraste (fila vs. columna). La columna “Intersección” indica el número de conjuntos de genes encontrados en todos los <strong>TECC</strong> de cada subtipo dado, lo cual define el Perfil Transcriptómico Funcional (<strong>PTF</strong>) de cada subtipo de cáncer de mama.</caption>
+<thead>
+<tr class="header">
+<th>Contraste</th>
+<th align="center">Basal</th>
+<th align="center">Luminal B</th>
+<th align="center">Her2+</th>
+<th align="center">Luminal A</th>
+<th align="center">Intersección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Basal</td>
+<td align="center">-</td>
+<td align="center">488</td>
+<td align="center">437</td>
+<td align="center">768</td>
+<td align="center">155</td>
+</tr>
+<tr class="even">
+<td>Luminal B</td>
+<td align="center"></td>
+<td align="center">-</td>
+<td align="center">184</td>
+<td align="center">983</td>
+<td align="center">44</td>
+</tr>
+<tr class="odd">
+<td>Her2+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">-</td>
+<td align="center">707</td>
+<td align="center">44</td>
+</tr>
+<tr class="even">
+<td>Luminal A</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">-</td>
+<td align="center">437</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="exploración-de-los-ptf-de-los-subtipos-de-cáncer-de-mama" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> Exploración de los PTF de los subtipos de cáncer de mama</h3>
+
+<p>La exploración de los <strong>PTF</strong> reveló varios CG de GO previamente relacionados con los subtipos de CM. La visualización basada en árboles de la estructura GO, proporcionada por MIGSA, se utilizó para visualizar el <strong>PTF</strong> de cada subtipo en las categorías PB, CC y FM de GO. Los árboles de GO de los <strong>PTF</strong> de cada subtipo pueden encontrarse en <span class="citation">(<span class="citeproc-not-found" data-reference-id="rodriguez2019massive"><strong>???</strong></span>)</span>, donde cada término fue codificado por colores de acuerdo al <strong>PTF</strong> al que pertenece. La visualización en árbol nos permitió explorar más a fondo las relaciones entre los <strong>PTF</strong> de cada subtipo. La exploración de los árboles reveló que los términos no estaban dispersos al azar, sino que se encontraban conformando ramas a diversas profundidades, dominadas principalmente por subtipos particulares. Además, los CG presentes en común en los <strong>PTF</strong> de todos los subtipos fueron encontrados ubicados en nodos poco profundos que involucran términos generales y comúnmente encontrados, tales como citoplasma, desarrollo de sistemas, muerte y proliferación celular.</p>
+
+<p>El análisis del árbol de PB reveló que las ramas que involucran términos relacionados con la regulación de la vía de señalización de los receptores de estrógeno sólo aparecieron en el <strong>PTF</strong> del subtipo Basal. Esto está motivado por el hecho de que, genes implicados en estos CG, incluyendo <em>ESR1</em>, se han encontrado previamente sobre-expresados en los subtipos Luminales y en algunos tumores Her2+ <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>, y sub-expresados en los sujetos Basal <span class="citation">(<span class="citeproc-not-found" data-reference-id="valentin2012molecular"><strong>???</strong></span>)</span>. Por esta razon, estos términos no se encontraron entre los <strong>TECC</strong> de los contrastes que involucran a los subtipos Luminales y HER2+ y, en consecuencia, no estaban presentes en el <strong>PTF</strong> de estos subtipos. Además, los términos asociados con el filamento de actina, la transición epitelio-mesénquima y el estrés del retículo endoplásmico aparecieron en el árbol de PB como <strong>PTF</strong> de Basal. Estas ramas son procesos bien conocidos relacionados con los tumores Basales, que los diferencian de otros subtipos <span class="citation">(<span class="citeproc-not-found" data-reference-id="guen2017emt"><strong>???</strong></span>)</span>. Los genes <em>MLPH</em> y <em>FOXC1</em> se encontraron entre los GIE presentes en estas ramas, y fueron consistentemente sub y sobre-expresados, respectivamente, en todos los experimentos en los que se contrastó Basal. Cabe mencionar que estos dos genes están involucrados en una firma molecular recientemente desarrollada para cánceres de mama triple negativos, altamente relacionados con tumores Basales <span class="citation">(<span class="citeproc-not-found" data-reference-id="santuario2017new"><strong>???</strong></span>)</span>. Además, los GIE presentes en términos relacionados con la diferenciación celular, como <em>GATA3</em> y <em>FOXA1</em>, se encontraron desregulados en el subtipo Basal para todos los contrastes evaluados, en concordancia con los hallazgos del “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>. A su vez, <em>ERBB4</em>, un oncogén drogable (un gen cuya expresión puede afectarse con drogas), se encontró desregulado en el 95% de los contrastes con Basal evaluados, lo que sugiere que los sujetos Basales no se verían afectados por los fármacos que ataquen el gen <em>ERBB4</em>.</p>
+
+<p>El subtipo Luminal A resultó ser muy diferente de los demás en lo que se refiere a los procesos de regulación del ciclo celular y replicación del ADN, en donde los términos como la transición G1/S del ciclo celular y la unión del origen de la replicación del ADN aparecieron como su <strong>PTF</strong>. Es bien sabido que los procesos de progresión a través del ciclo celular y la replicación del ADN están profundamente involucrados en la proliferación <span class="citation">(<span class="citeproc-not-found" data-reference-id="hanahan2000hallmarks"><strong>???</strong></span>)</span>, que es la principal diferencia entre Luminal A y los subtipos más agresivos como Luminal B, Her2+, y Basal <span class="citation">(<span class="citeproc-not-found" data-reference-id="prat2011deconstructing"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="yersal2014biological"><strong>???</strong></span>)</span>. En particular, estos términos muestran la principal diferencia entre los dos subtipos Luminales, ya que los tumores Luminal B expresan clásicamente niveles más altos de Ki67 <span class="citation">(<span class="citeproc-not-found" data-reference-id="cheang2009ki67"><strong>???</strong></span>)</span>. Adicionalmente, se encontró que los GIE que provocan la proliferación celular, tales como <em>AURKA</em>, <em>PCNA</em>, <em>CHEK2</em>, y <em>RAD51</em>, estaban sub-expresados en Luminal A con respecto a los otros subtipos. Mientras que, genes como <em>ERBB2</em>, <em>GRB7</em>, y <em>FGFR4</em> fueron encontrados sobre-expresados en todos los experimentos en los que Her2+ fue contrastado, en concordancia con lo informado por el “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>.</p>
+</div>
+<div id="integración-de-resultados-de-migsa-de-tcga-y-haibe-kains" class="section level3">
+<h3><span class="header-section-number">4.7.3</span> Integración de resultados de MIGSA de TCGA y Haibe-Kains</h3>
+
+<p>Los resultados de MIGSA para cada tecnología de expresión del TCGA se combinaron con los resultados de los HKds. La Figura <a href="4-cap-migsa.html#fig:migsa3">4.3</a> muestra el <em>heatmap</em> del eje <span class="math inline">\(Q^{CGE,Es}\)</span> del cubo de resultados de MIGSA. El análisis del dendrograma superior mostró que los contrastes evaluados a partir de los datos del TCGA se asemejan a los respectivos resultados de HKds.</p>
+
+<p>Como en la Figura <a href="4-cap-migsa.html#fig:migsa2">4.2</a>, al analizar la Figura <a href="4-cap-migsa.html#fig:migsa3">4.3</a> se encontró un gran cluster con 11 de 12 experimentos contrastando Luminal A (marca LA), y otro cluster incluyendo los ocho experimentos contrastando el subtipo Basal con Luminal B ó Her2+ (marca Ba). Curiosamente, ambos clusters identificados contienen un cluster más específico, que agrupa únicamente experimentos transcriptómicos (marcas LA<span class="math inline">\(^T\)</span> y Ba<span class="math inline">\(^T\)</span>). Además, para cada contraste, se encontró un cluster que agrupaba solamente datos transcriptómicos, es decir, de microarreglos y secuenciación de ARN del TCGA, junto con los <strong>TECC</strong> de HKds (marcas T). Este resultado se encuentra en acuerdo con lo reportado por el “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span> para un subgrupo de sujetos Luminal B y Her2+. En concordancia con los resultados del “Grupo del Atlas del Genoma del Cáncer” para arrays de proteínas en fase inversa <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>, los experimentos proteómicos que contrastan Basal con Luminal B ó Her2+ se agruparon cerca de sus contrapartes transcriptómicas. Por otro lado, para los demás contrastes, la expresión de proteínas parece proporcionar información funcional complementaria a su contraparte transcriptómica.</p>
+
+<p>Para cada subtipo, se obtuvieron los <strong>TET</strong> y los <strong>TEP</strong>, y los correspondientes GIE, y se analizaron en conjunto con los correspondientes <strong>PTF</strong> encontrados previamente. En la Tabla <a href="#tab:migsa2"><strong>??</strong></a>, para cada subtipo, se presenta el número de términos que se encuentran exclusivamente en <strong>PTF</strong>, <strong>TET</strong> y <strong>TEP</strong>, y los que se encuentran exclusivamente en cada intersección. Analizando estos los resultados, encontramos que la concordancia entre los <strong>PTF</strong> y su contraparte del TCGA es notable. Por ejemplo, de los 680 términos que pertenecen a los <strong>PTF</strong> (suma de celdas de la fila Total para columnas que involucran los <strong>PTF</strong>), el 38% también se encontró en <strong>TEP</strong> o <strong>TET</strong> de los datos del TCGA. En particular, los subtipos Basal y Luminal A fueron los únicos que exhibieron términos en común entre transcriptómica (<strong>PTF</strong> y <strong>TET</strong>) y proteómica (<strong>TEP</strong>). También se encontró que casi el 80% de esos términos en los <strong>TET</strong> también se encontraron en los <strong>PTF</strong>, evidenciando la alta consistencia de MIGSA para analizar los conjuntos de datos de transcriptómica de los HKds y TCGA. Por el contrario, y para todos los subtipos de CM, esos términos enriquecidos con datos proteómicos no se encontraron frecuentemente entre los <strong>TET</strong>. Este hallazgo sugiere que los <strong>TEP</strong> proporcionan información complementaria a la contraparte transcriptómica, como se reportó previamente <span class="citation">(<span class="citeproc-not-found" data-reference-id="meng2014multivariate"><strong>???</strong></span>)</span>. Sin embargo, será necesaria una investigación más profunda que incluya un mayor número de datasets proteómicos para poder definir un Perfil <strong>Proteómico</strong> Funcional.</p>
+<div class="figure" style="text-align: center"><span id="fig:migsa3"></span>
+<img src="images/MIGSA_FIG3.pdf" alt="Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es “términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains”, en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba\(^T\)) y de Luminal A (LA\(^T\)), y para experimentos transcriptómicos específicos por contraste (T)." width="100%" />
+<p class="caption">
+Figure 4.3: Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es “términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains”, en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba<span class="math inline">\(^T\)</span>) y de Luminal A (LA<span class="math inline">\(^T\)</span>), y para experimentos transcriptómicos específicos por contraste (T).
+</p>
+</div>
+
+
+</div>
+<div id="exploración-de-los-resultados-de-tcga-en-conjunto-con-los-ptf" class="section level3">
+<h3><span class="header-section-number">4.7.4</span> Exploración de los resultados de TCGA en conjunto con los PTF</h3>
+
+<p>Para cada subtipo, se analizaron los árboles de GO incluyendo los términos enriquecidos por cada categoría presente en las columnas de la Tabla <a href="#tab:migsa2"><strong>??</strong></a>. Como se señaló anteriormente, los términos enriquecidos únicamente en datos proteómicos se encontraron principalmente en los subtipos Basal y Her2+. Por otra parte, para Luminal A y Luminal B los árboles están dominados principalmente por ramas enriquecidas en transcriptómica.</p>
+
+<p>Un hallazgo interesante al analizar los <strong>TEP</strong> fue la identificación del gen <em>INPP4B</em> como un GIE al contrastar los subtipos Basal y Her2+ con los Luminales. En particular, la sobre-expresión de <em>INPP4B</em> detectada en los tumores Luminales es consistente con su perfil de expresión reportado por el “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span> para datos de arrays de proteínas en fase inversa.</p>
+
+<p>Para los sujetos Basales, los GIE tales como <em>DHRS3</em>, <em>LDHB</em>, <em>HSD17B8</em>, <em>CBR4</em>, <em>CYB5A</em>, y <em>PHGDH</em> fueron encontrados en ramas relacionadas con la actividad de la oxidoreductasa. De estos, los GIE de deshidrogenasa, <em>DHRS3</em>, <em>LDHB</em>, y el <em>PHGDH</em> fueron encontrados sobre-expresados en experimentos proteómicos en los cuales el subtipo Basal fue contrastado. Apoyando este hallazgo, la sobre-expresión de la proteína <em>PHGDH</em> ha sido previamente relacionada con tumores Basales <span class="citation">(<span class="citeproc-not-found" data-reference-id="gromova2015high"><strong>???</strong></span>)</span>. Además, este gen se ha asociado con la proliferación celular, la migración y los procesos de invasión, y recientemente se ha identificado como un biomarcador inmunohistoquímico de cáncer <span class="citation">(<span class="citeproc-not-found" data-reference-id="song2018phgdh"><strong>???</strong></span>)</span>.</p>
+
+<p>El análisis de los árboles de Luminal B incluye una rama de <strong>TEP</strong> relacionada con la secreción hormonal. En esta rama, se encontraron genes tales como <em>GATA3</em>, <em>IRS1</em>, <em>BAD</em>, <em>SYTL4</em>, <em>NDUFAF2</em>, <em>GPLD1</em>, <em>EGFR</em>, <em>FGB</em>, <em>FGG</em>, y <em>LYN</em>. En particular, para el contraste proteómico Luminal B vs. Her2+, <em>EGFR</em> se encontró des-regulado para Luminal B, mientras que <em>GATA3</em> estaba sobre-expresado, tal como se informa para arrays de proteínas en fase inversa por el “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>. Otra rama, relacionada con los ribosomas, fue encontrada para Luminal B, en la cual varios genes ribosómicos mitocondriales fueron encontrados como GIE: <em>MRPL18</em>, <em>MRPL28</em>, <em>MRPL37</em>, <em>MRPL45</em>, <em>MRPL48</em>, <em>MRPL50</em>, <em>MRPL53</em>, y <em>MRPL54</em>; todos ellos fueron encontrados sobre-expresados en Luminal B contrastándolo con Luminal A.</p>
+
+<p>Como se muestra en la Tabla <a href="#tab:migsa2"><strong>??</strong></a>, 29 términos previamente identificados en los <strong>PTF</strong> de los subtipos de CM también fueron detectados en los respectivos <strong>TEP</strong> y <strong>TET</strong>. Entre estos, se encontraron términos que diferencian el subtipo Basal, como el término de FM de unión al distroglicano; y el de PB de regulación positiva de la vía de señalización del receptor de estrógeno intracelular. Para el subtipo Luminal A, se detectó una rama de CC relacionada con el cromosoma condensado, y términos de PB asociados a ciclos celulares mitóticos y meióticos. Veintidós GIE fueron encontrados contribuyendo al enriquecimiento de términos para <strong>PTF</strong>, <strong>TEP</strong> y <strong>TET</strong>. De ellos, 11 fueron identificados para el subtipo Basal (por ejemplo, <em>AR</em>, <em>GATA3</em>, <em>FOXA1</em>, <em>NFIB</em>, <em>AGR2</em>, <em>CA12</em>, y <em>DSC2</em>) y 11 para los tumores Luminal A (por ejemplo, <em>TOP2A</em>, <em>CCNB1</em>, <em>CDC20</em>, <em>UBE2C</em>, <em>TTK</em>, y <em>KIF2C</em>). Cabe destacar que todos estos genes se comportaron de acuerdo con las observaciones realizadas por el “Grupo del Atlas del Genoma del Cáncer” <span class="citation">(<span class="citeproc-not-found" data-reference-id="cancer2012comprehensive"><strong>???</strong></span>)</span>.</p>
+</div>
+</div>
+<div id="conclusiones-1" class="section level2">
+<h2><span class="header-section-number">4.8</span> Conclusiones</h2>
+
+<p>En este capítulo se presentó el paquete R <code>MIGSA</code> para el Análisis Masivo e Integrador de Conjuntos de Genes. Esta herramienta realiza un análisis funcional completo/integrador, masivamente sobre varias matrices de expresión de diferentes repositorios y fuentes ómicas. <code>MIGSA</code> facilita la búsqueda de patrones funcionales -que son denotados por conjuntos de genes y que explican fenotipos particulares- por medio de herramientas exploratorias y gráficas. MIGSA también permite a los usuarios indagar en conjuntos de genes particulares para buscar los genes específicos responsables del enriquecimiento funcional. Las capacidades analíticas y exploratorias de <code>MIGSA</code> como herramienta de análisis funcional masivo, en conjunto con el hecho de que a nuestro entender, es la única herramienta existente que permite la comparación de múltiples experimentos desde un punto de vista funcional, la convierten en un enfoque novedoso.</p>
+
+<p>La utilidad de <code>MIGSA</code> quedó demostrada debido a la caracterización funcional de los subtipos de Cáncer de Mama (CM) definidos por Perou et al. La aplicación de <code>MIGSA</code> sobre 118 experimentos de microarreglos de CM resultó en la identificación de Perfiles Transcriptómicos Funcionales (<strong>PTF</strong>) y Genes Importantes de Enriquecimiento (GIE) para cada subtipo. La fiabilidad de nuestros hallazgos fue confirmada usando resultados previamente reportados en la literatura. La identificación de GIE con un comportamiento de expresión consistente a través de conjuntos de datos resulta útil para el descubrimiento de genes provocadores de enfermedades, y por ende, buenos blancos a atacar por drogas.</p>
+
+<p>La capacidad de <code>MIGSA</code> de integrar múltiples conjuntos de datos ómicos se demostró aplicándolo a los datasets de CM del TCGA compuestos tanto de datos transcriptómicos (secuenciación de ARN y microarreglos) como proteómicos (iTRAQ). Los resultados obtenidos se utilizaron para identificar, para cada subtipo, el conjunto de Términos Enriquecidos por Transcriptómica (<strong>TET</strong>) y de Términos Enriquecidos por Proteómica (<strong>TEP</strong>). Al integrar y comparar estos resultados con los <strong>PTF</strong> encontrados previamente, se descubrió una alta consistencia de patrones funcionales entre los términos enriquecidos en datos de TCGA y en los <strong>PTF</strong>. Dado que <code>MIGSA</code> es una herramienta tan flexible, el procedimiento presentado puede ser replicado tanto en otros subtipos de CM como en otras enfermedades con el fin de explorar perfiles funcionales. El paquete <code>MIGSA</code> se encuentra libremente disponible -bajo una licencia GPLv2- en el repositorio Bioconductor <a href="https://bioconductor.org/packages/MIGSA/">https://bioconductor.org/packages/MIGSA/</a>, y cuenta con más de 3.000 descargas según las estadísticas del repositorio <a href="https://bioconductor.org/packages/stats/bioc/MIGSA/">https://bioconductor.org/packages/stats/bioc/MIGSA/</a> desde su primera versión, en Marzo de 2017.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="3-cap-ifa.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="5-cap-desafios.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["RodriguezJC_tesis_doctoral.pdf", "PDF"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
