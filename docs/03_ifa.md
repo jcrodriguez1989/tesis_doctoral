@@ -165,7 +165,7 @@ Primera columna: Los Nombres de las bases de datos, con el umbral de valor absol
 
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG1_es.PDF" alt="(ref:captionIfa1)" width="100%" />
-<p class="caption">(\#fig:ifa1)(ref:captionIfa1)</p>
+<p class="caption">(ref:captionIfa1)</p>
 </div>
 (ref:captionIfa1) Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección \@ref(sec:algosComparados). Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos.
 
@@ -187,7 +187,7 @@ Primera columna: Los Nombres de las bases de datos, con el umbral de valor absol
 
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG2_es.PDF" alt="(ref:captionIfa2)" width="100%" />
-<p class="caption">(\#fig:ifa2)(ref:captionIfa2)</p>
+<p class="caption">(ref:captionIfa2)</p>
 </div>
 (ref:captionIfa2) Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE_F_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos.
 
@@ -210,7 +210,7 @@ donde $m$ = {$1,\ldots,M$} combinación de método/parámetros; $t$ = {$1,\ldots
 
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG3.PDF" alt="(ref:captionIfa3)" width="90%" />
-<p class="caption">(\#fig:ifa3)(ref:captionIfa3)</p>
+<p class="caption">(ref:captionIfa3)</p>
 </div>
 (ref:captionIfa3) Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (**A**), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; **E**). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz.
 
@@ -263,7 +263,7 @@ GOstats & & 1 (0) & & & 1 (0) \\
 
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG4_es.pdf" alt="(ref:captionIfa4)" width="100%" />
-<p class="caption">(\#fig:ifa4)(ref:captionIfa4)</p>
+<p class="caption">(ref:captionIfa4)</p>
 </div>
 (ref:captionIfa4) Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC.
 
@@ -275,7 +275,7 @@ GOstats & & 1 (0) & & & 1 (0) \\
 
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG5.PDF" alt="(ref:captionIfa5)" width="100%" />
-<p class="caption">(\#fig:ifa5)(ref:captionIfa5)</p>
+<p class="caption">(ref:captionIfa5)</p>
 </div>
 (ref:captionIfa5) Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (**A**) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (**E**).
 
@@ -288,7 +288,7 @@ GOstats & & 1 (0) & & & 1 (0) \\
 \newpage
 <div class="figure" style="text-align: center">
 <img src="images/IFA_FIG6.PDF" alt="(ref:captionIfa6)" width="100%" />
-<p class="caption">(\#fig:ifa6)(ref:captionIfa6)</p>
+<p class="caption">(ref:captionIfa6)</p>
 </div>
 (ref:captionIfa6) Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (**A**) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (**E**).
 

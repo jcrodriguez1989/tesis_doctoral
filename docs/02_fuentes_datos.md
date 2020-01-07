@@ -7,7 +7,7 @@ Las células eucariotas están compuestas por diversos orgánulos como la membra
 
 <div class="figure" style="text-align: center">
 <img src="images/celula.png" alt="(ref:cell)" width="70%" />
-<p class="caption">(\#fig:cell)(ref:cell)</p>
+<p class="caption">(ref:cell)</p>
 </div>
 (ref:cell) Diagrama simplificado de una célula eucariota. Imagen extraída de [https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/](https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/).
 
@@ -15,7 +15,7 @@ La información biológica contenida en un organismo está codificada en su secu
 
 <div class="figure" style="text-align: center">
 <img src="images/ADN_ARN.png" alt="(ref:adn)" width="70%" />
-<p class="caption">(\#fig:adn)(ref:adn)</p>
+<p class="caption">(ref:adn)</p>
 </div>
 (ref:adn) Diagrama de la estructura del ADN y ARN. Imagen extraída de [https://diferencias-entre.org/diferencias-entre-adn-y-arn/](https://diferencias-entre.org/diferencias-entre-adn-y-arn/).
 
@@ -46,20 +46,20 @@ Un microarreglo es una superficie sólida donde pequeños fragmentos de ADN (son
 \newpage
 
 ```
-        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
-DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
-SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
-RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
-IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
-ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
+##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+## ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
+## DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
+## SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
+## RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
+## IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
+## ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
 ```
 
 Dado que los valores de expresión provienen de niveles de intensidad de luz, los datos son valores continuos. Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución $Normal$, como se observa en la Figura \@ref(fig:maDens).
 
 <div class="figure" style="text-align: center">
 <img src="02_fuentes_datos_files/figure-html/maDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN." width="70%" />
-<p class="caption">(\#fig:maDens)Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.</p>
+<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.</p>
 </div>
 
 ### iTRAQ
@@ -70,20 +70,20 @@ El método iTRAQ se basa en el marcado químico, con etiquetas de masa variable,
 
 
 ```
-      A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
-RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
-ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
-BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
-PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
-PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
-PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
+##       A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
+## RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
+## ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
+## BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
+## PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
+## PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
+## PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
 ```
 
 Dado que los valores de expresión provienen de niveles de señales, los datos son valores continuos. Por ende, es de esperar que la distribución se asemeje a una distribución $Normal$, como se observa en la Figura \@ref(fig:protDens). Vale la pena aclarar que ya que esta matriz sigue una distribución similar a la obtenida mendiante Microarreglos de ADN, es común que se utilicen los mismos métodos de análisis para ambas fuentes de datos.
 
 <div class="figure" style="text-align: center">
 <img src="02_fuentes_datos_files/figure-html/protDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ." width="70%" />
-<p class="caption">(\#fig:protDens)Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.</p>
+<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.</p>
 </div>
 
 ### Secuenciación de ARN
@@ -103,20 +103,20 @@ La primer línea es un identificador de la secuencia, la segunda es la que conti
 
 
 ```
-        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-ZBTB16           89          31         126         449          81
-DNAJB13          11          11          44          31          43
-SFRP5             1           2           0           0           0
-RRAGC          2797        1453        1680        4573        2631
-IAPP            162          78         167         151         195
-ELMO1          1740         677         540        1758        4204
+##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+## ZBTB16           89          31         126         449          81
+## DNAJB13          11          11          44          31          43
+## SFRP5             1           2           0           0           0
+## RRAGC          2797        1453        1680        4573        2631
+## IAPP            162          78         167         151         195
+## ELMO1          1740         677         540        1758        4204
 ```
 
 Dado que los valores de expresión se desprenden de la cantidad de fragmentos mapeados, los datos son valores de conteos (no continuos). Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución de $Poisson$ o $Binomial Negativa$, como se observa en la Figura \@ref(fig:rnaDens).
 
 <div class="figure" style="text-align: center">
 <img src="02_fuentes_datos_files/figure-html/rnaDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN." width="70%" />
-<p class="caption">(\#fig:rnaDens)Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.</p>
+<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.</p>
 </div>
 
 \par La era de la transcriptómica tuvo su máximo desarrollo con la evolución de las tecnologías de secuenciación de alto rendimiento. La exploración de todo el transcriptoma simultáneamente y a profundidades sin precedentes ha sido posible a partir de estas tecnologías. Esta terminología se refiere a alto rendimiento, en el sentido del paralelismo en la secuenciación, lo que permite investigar millones de fragmentos de ADN en una sola ejecución. Su rápida expansión se justifica por su versatilidad, que ha permitido el estudio de experimentos complejos a escalas hasta ahora inalcanzables e incluso en organismos nunca antes estudiados.

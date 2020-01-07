@@ -32,7 +32,7 @@ dim(expresion) # #genes y #sujetos
 ```
 
 ```
-[1] 16207   237
+## [1] 16207   237
 ```
 
 ```r
@@ -40,9 +40,9 @@ table(subtipos) # #sujetos de cada subtipo
 ```
 
 ```
-subtipos
-Basal  LumA 
-   95   142 
+## subtipos
+## Basal  LumA 
+##    95   142
 ```
 
 
@@ -92,8 +92,8 @@ c(
 ```
 
 ```
-     mGSZ MIGSAmGSZ   Speedup 
- 2.461000  1.553534  1.584130 
+##      mGSZ MIGSAmGSZ   Speedup 
+##  2.461000  1.553534  1.584130
 ```
 
 Como se observa, la versión optimizada, `MIGSAmGSZ`, presenta un _speedup_ de 1,6X sobre el algoritmo original -de demorar 2,46 horas, la nueva versión pasó a demorar 1,55 horas-.
@@ -141,10 +141,10 @@ round(metricas, 2)
 ```
 
 ```
-                  1     2     4     8    10    12    14
-Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
-Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
-Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37
+##                   1     2     4     8    10    12    14
+## Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
+## Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
+## Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37
 ```
 
 \par Como puede observarse en la tabla superior, sin importar el número de núcleos en los que se haya corrido `MIGSAmGSZ`, su rendimiento fue superior al de `mGSZ`. Ejecutándose en un núcleo muestra un _speedup_ de 1,6X, alcanzando un máximo de 10,8X con diez núcleos. Gracias a la optimización desarrollada, es posible obtener en 14 minutos los mismos resultados que se obtenían en 2,46 horas de ejecución con el `mGSZ` original. Extrapolando a 118 experimentos, pasaríamos de una demora de 12,09 días, a tan solo 27,53 horas.
