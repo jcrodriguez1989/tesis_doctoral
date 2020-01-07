@@ -366,18 +366,23 @@ En resumen, en GO se tiene la información de qué genes participan en un PB o F
 \end{Highlighting}
 \end{Shaded}
 \begin{verbatim}
-## $`apoptosis (GO:0006915)`
-##  [1] "ZBTB16"   "DNAJB13"  "SFRP5"    "RRAGC"    "IAPP"     "ELMO1"   
-##  [7] "BAX"      "PDCD4"    "TNFSF9"   "PDCD2"    "PDCD1"    "PTPN6"   
-## [13] "RAF1"     "CYFIP2"   "PPP1R15A" "GPR65"    "AHR"      "TNF"     
-## [19] "CIB1"     "FOXO3"    "KIAA1967" "E2F1"     "AKT1"     "CSE1L"   
-## [25] "NLRP1"    "PHLDA2"   "FIS1"     "SIAH1"    "YARS"     "SEMA6A"  
-## [31] "DAXX"     "GML"      "GADD45B"  "GADD45A"  "LY86"     "..."
+$`apoptosis (GO:0006915)`
+ [1] "ZBTB16"   "DNAJB13"  "SFRP5"    "RRAGC"    "IAPP"     "ELMO1"   
+ [7] "BAX"      "PDCD4"    "TNFSF9"   "PDCD2"    "PDCD1"    "PTPN6"   
+[13] "RAF1"     "CYFIP2"   "PPP1R15A" "GPR65"    "AHR"      "TNF"     
+[19] "CIB1"     "FOXO3"    "KIAA1967" "E2F1"     "AKT1"     "CSE1L"   
+[25] "NLRP1"    "PHLDA2"   "FIS1"     "SIAH1"    "YARS"     "SEMA6A"  
+[31] "DAXX"     "GML"      "GADD45B"  "GADD45A"  "LY86"     "..."     
 \end{verbatim}
 Vale la pena aclarar que un gen particular puede participar en más de un término y categoría particular. Cada una de las tres categorías de GO está estructurada como un grafo acíclico dirigido (árbol), donde cada término tiene relaciones definidas con uno o más términos del mismo dominio. Cada nodo del grafo tiene asociados los genes que participan en dicho término. Cada grafo se encuentra organizado de una manera jerárquica, donde a mayor profundidad, se representa un concepto biológico más específico, y por ende, disminuye la cantidad de genes en cada término. En este sentido, un gen que se encuentra anotado en un nodo dado, también se encuentra anotado en sus nodos ancestros. En la Figura \ref{fig:goApopttree} se puede observar el subárbol con el PB ``apoptosis'' y sus términos ancestros.
+\begin{figure}
 
-Subárbol de Gene Ontology, donde se presenta el término ``apoptosis'' (apoptotic process) y sus términos ancestros. Imagen extraída de \url{https://www.ebi.ac.uk/QuickGO/term/GO:0006915}.
+{\centering \includegraphics[width=4.42in]{images/go_apoptosis_tree} 
 
+}
+
+\caption{Subárbol de Gene Ontology, donde se presenta el término ``apoptosis'' (apoptotic process) y sus términos ancestros. Imagen extraída de \url{https://www.ebi.ac.uk/QuickGO/term/GO:0006915}.}\label{fig:goApopttree}
+\end{figure}
 
 
 El vocabulario de GO está diseñado para ser agnóstico a las especies, e incluye términos aplicables a procariotas, eucariotas, organismos unicelulares y multicelulares. Las revisiones continuas de la ontología están a cargo de un equipo de editores de ontología con amplia experiencia en biología y representación de conocimientos computacionales.
@@ -395,9 +400,14 @@ La ontología provista por el KEGG (Kanehisa \& Goto, 2000) contiene, para cada 
 \par
 
 Ejemplos de términos presentes en esta ontología son ``apoptosis'' o ``ciclo celular'' (Figura \ref{fig:keggCellCyclePathw}). En estos diagramas se identifican tres tipos de elementos: cajas rectangulares para representar productos de genes, flechas para el flujo de las reacciones, y cajas con bordes redondeados para vincular a otras vías involucradas en el proceso. A su vez, esta base de datos se complementa con un conjunto de tablas de grupos ortólogos, donde se encuentra la información de subvías conservadas, que son especialmente útiles para la predicción de funciones de genes.
+\begin{figure}
 
-Diagrama de KEGG del ``ciclo celular'' (cell cycle). Imagen extraída de \url{www.genome.jp/kegg-bin/show_pathway?hsa04110}.
+{\centering \includegraphics[width=1\linewidth]{images/kegg_cell_cycle_pathway} 
 
+}
+
+\caption{Diagrama de KEGG del ``ciclo celular'' (cell cycle). Imagen extraída de \url{www.genome.jp/kegg-bin/show_pathway?hsa04110}.}\label{fig:keggCellCyclePathw}
+\end{figure}
 
 
 \par
@@ -408,9 +418,14 @@ Según los desarrolladores, es una ``representación informática'' del sistema 
 \subsubsection{BioCarta}\label{biocarta}}
 
 BioCarta (Nishimura, 2001) fue creado por un grupo de científicos e ingenieros que reconocieron las limitaciones y obsolescencia de la literatura científica de la época. Es muy similar a la ontología del KEGG en el sentido que cada conjunto de genes viene acompañado de un diagrama de las interacciones. Sin embargo, en esta ontología, los diagramas presentan un mayor detalle gráfico como se puede observar en la Figura \ref{fig:biocartaCorticosPathw}, donde se presenta el diagrama del término ``corticosteroides y cardioprotección''.
+\begin{figure}
 
-Diagrama de BioCarta del término ``corticosteroides y cardioprotección''. Imagen extraída de \url{https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection\&termId=30000124}.
+{\centering \includegraphics[width=1\linewidth]{images/biocarta_corticosteroids_pathway} 
 
+}
+
+\caption{Diagrama de BioCarta del término ``corticosteroides y cardioprotección''. Imagen extraída de \url{https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection\&termId=30000124}.}\label{fig:biocartaCorticosPathw}
+\end{figure}
 
 
 \par
@@ -425,9 +440,14 @@ Reactome: una base de datos de reacciones, vías y procesos biológicos. Reactom
 \par
 
 La unidad central del modelo de datos de Reactome es la reacción. Las entidades (genes, proteínas, complejos y pequeñas moléculas) que participan en las reacciones forman una red de interacciones biológicas y se agrupan en vías. Ejemplos de vías biológicas en Reactome incluyen la ``función inmune innata y adquirida'', la ``regulación transcripcional'', y como se detalla en la Figura \ref{fig:reactomeApoptPathw}, la ``apoptosis''.
+\begin{figure}
 
-Diagrama de Reactome del término ``apoptosis''. Imagen extraída de \url{https://www.reactome.org/content/detail/R-HSA-109581}.
+{\centering \includegraphics[width=1\linewidth]{images/reactome_apoptosis} 
 
+}
+
+\caption{Diagrama de Reactome del término ``apoptosis''. Imagen extraída de \url{https://www.reactome.org/content/detail/R-HSA-109581}.}\label{fig:reactomeApoptPathw}
+\end{figure}
 
 
 \par
@@ -476,9 +496,14 @@ Esta metodología requiere definir la lista de genes de interés o \textbf{candi
 En la Figura \ref{fig:diagramaORA} se puede apreciar un diagrama de lo que sería el proceso completo para llevar a cabo un ASR. De este diagrama se desprenden varios aspectos que resultan variables. Diversos autores han propuesto diferentes test de hipótesis (Falcon \& Gentleman, 2006; Fang \& Gough, 2014; Fresno \& Fernández, 2013; D. W. Huang et al., 2008b), y principalmente de allí es que surgen grandes cantidades de alternativas de ASR. Más aún, la elección de la lista de referencia no queda del todo clara, y se desprenden dos sugerencias con gran validez estadística: utilizar todos los genes del experimento (como en la Figura \ref{fig:diagramaORA}), o utilizar todo el genoma de la especie en cuestión (Fresno et al., 2012).
 
 \newpage
+\begin{figure}
 
-Diagrama clásico del proceso completo de Análisis de Sobre-Representación (ASR). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de condición de cada muestra (C1 y C2). Mediante un algoritmo de Detección de Genes Diferenciales (DGD) se obtiene para cada gen un p-valor asociado (p-vals). Aplicando un nivel de corte \(\alpha\) a estos p-valores (\(< \alpha\)), se obtiene cuáles son Genes Diferenciales (GD) y cuáles no. Aquí es donde efectivamente comienza el ASR, los algoritmos de ASR requieren de dos listas: la de genes candidatos (usualmente los GD), y la Lista de Referencia (LR; usualmente todos los genes detectados en el experimento). A partir de estas listas de genes, para cada Conjunto de Genes (CG\(_i\)) se genera una tabla de contingencia, a la cual se le aplica un Test de Hipótesis (TH) del cual resulta un p-valor asociado al CG\(_i\) (p-val\(_i\)).
+{\centering \includegraphics[width=1\linewidth]{images/diagrama_ORA} 
 
+}
+
+\caption{Diagrama clásico del proceso completo de Análisis de Sobre-Representación (ASR). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de condición de cada muestra (C1 y C2). Mediante un algoritmo de Detección de Genes Diferenciales (DGD) se obtiene para cada gen un p-valor asociado (p-vals). Aplicando un nivel de corte \(\alpha\) a estos p-valores (\(< \alpha\)), se obtiene cuáles son Genes Diferenciales (GD) y cuáles no. Aquí es donde efectivamente comienza el ASR, los algoritmos de ASR requieren de dos listas: la de genes candidatos (usualmente los GD), y la Lista de Referencia (LR; usualmente todos los genes detectados en el experimento). A partir de estas listas de genes, para cada Conjunto de Genes (CG\(_i\)) se genera una tabla de contingencia, a la cual se le aplica un Test de Hipótesis (TH) del cual resulta un p-valor asociado al CG\(_i\) (p-val\(_i\)).}\label{fig:diagramaORA}
+\end{figure}
 
 
 \hypertarget{puntuaciuxf3n-funcional-de-clase-pfc}{%
@@ -489,9 +514,14 @@ Esta metodología construye un ordenamiento de los genes a partir de la totalida
 \par
 
 En la Figura \ref{fig:diagramaFCS} se observa el diagrama de lo que sería un proceso completo de PFC. De este diagrama, diversos aspectos difieren dependiendo del algoritmo de PFC a utilizar. Por ejemplo, ciertos algoritmos sugieren hacer permutación en las etiquetas de los genes, otros en las etiquetas de las muestras, y finalmente otros, en las etiquetas de genes del ordenamiento generado. Más aún, la principal diferencia entre uno y otro algoritmo de PFC reside en la función de ES, si bien la idea por detrás resulta similar, las ponderaciones de cada gen varían. Finalmente, vale la pena mencionar que ciertos algoritmos fijan diferentes filtros de los conjuntos de genes a analizar ya que suponen que fuera de esos límites el algoritmo pierde potencia estadística.
+\begin{figure}
 
-Diagrama clásico del proceso completo de Puntuación Funcional de Clase (PFC). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de de condición de cada muestra (C1 y C2). Mediante alguna función particular (f) se obtiene un ordenamiento real (o\(^r\)) para los genes, es decir, para cada gen un valor numérico que le asigna una posición de orden. Luego, mediante una función llamada Enrichment Score (ES), partiendo de un conjunto de genes particular (CG\(_i\)) y el ordenamiento, se obtiene un valor de enriquecimiento real para el conjunto de genes (ES\(^r_i\)). Esta función ES es diferente dependiendo del algoritmo de PFC utilizado. Luego, mediante permutaciones sobre las condiciones, las etiquetas de los genes, ó del ordenamiento, se generan nuevos vectores de ordenamiento (o\(^*_1\), o\(^*_2\), \ldots{}, o\(^*_n\)). Con cada uno de estos ordenamientos permutados, se genera un valor de enriquecimiento permutado para el conjunto de genes (ES\(^{*1}_i\), ES\(^{*2}_i\), \ldots{}, ES\(^{*n}_i\)). Dado que se cuenta con n muestras permutadas de valores de enriquecimiento, se procede a realizar una distribución nula, con la cual se compara contra el valor de enriquecimiento real ES\(^r_i\), y por ende se obtiene un p-valor asociado al conjunto de genes dado (p-val\(_i\)).
+{\centering \includegraphics[width=1\linewidth]{images/diagrama_FCS} 
 
+}
+
+\caption{Diagrama clásico del proceso completo de Puntuación Funcional de Clase (PFC). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de de condición de cada muestra (C1 y C2). Mediante alguna función particular (f) se obtiene un ordenamiento real (o\(^r\)) para los genes, es decir, para cada gen un valor numérico que le asigna una posición de orden. Luego, mediante una función llamada Enrichment Score (ES), partiendo de un conjunto de genes particular (CG\(_i\)) y el ordenamiento, se obtiene un valor de enriquecimiento real para el conjunto de genes (ES\(^r_i\)). Esta función ES es diferente dependiendo del algoritmo de PFC utilizado. Luego, mediante permutaciones sobre las condiciones, las etiquetas de los genes, ó del ordenamiento, se generan nuevos vectores de ordenamiento (o\(^*_1\), o\(^*_2\), \ldots{}, o\(^*_n\)). Con cada uno de estos ordenamientos permutados, se genera un valor de enriquecimiento permutado para el conjunto de genes (ES\(^{*1}_i\), ES\(^{*2}_i\), \ldots{}, ES\(^{*n}_i\)). Dado que se cuenta con n muestras permutadas de valores de enriquecimiento, se procede a realizar una distribución nula, con la cual se compara contra el valor de enriquecimiento real ES\(^r_i\), y por ende se obtiene un p-valor asociado al conjunto de genes dado (p-val\(_i\)).}\label{fig:diagramaFCS}
+\end{figure}
 
 
 \hypertarget{anuxe1lisis-de-enriquecimiento-modular}{%
@@ -514,15 +544,25 @@ Si bien, existen principalmente dos metodologías para realizar el AF, tanto par
 La célula es la unidad estructural, funcional y biológica básica de todos los organismos vivos conocidos. Los organismos pueden clasificarse como unicelulares (compuestos de una sola célula, incluidas las bacterias) ó multicelulares (incluidas las plantas y los animales). Existen dos tipos de células, las eucariotas, que contienen núcleo celular, y las procariotas, que no lo contienen.
 
 Las células eucariotas están compuestas por diversos orgánulos como la membrana, el citoplasma y el núcleo (Figura \ref{fig:cell}). La membrana envuelve y protege a la célula, y regula lo que entra y sale (selectivamente permeable). Dentro de la membrana, el citoplasma ocupa la mayor parte del volumen de la célula, y la separa del núcleo celular. El más prominente de los orgánulos es el núcleo celular, el cual aloja el material genético de la célula. El material genético se presenta como Acido DesoxirriboNucleico (ADN), el cual está organizado en una o más moléculas, llamadas cromosomas.
+\begin{figure}
 
-Diagrama simplificado de una célula eucariota. Imagen extraída de \url{https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/}.
+{\centering \includegraphics[width=0.7\linewidth]{images/celula} 
 
+}
+
+\caption{Diagrama simplificado de una célula eucariota. Imagen extraída de \url{https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/}.}\label{fig:cell}
+\end{figure}
 
 
 La información biológica contenida en un organismo está codificada en su secuencia de ADN. El ácido desoxirribonucleico esta organizado en dos cadenas que se enrollan una alrededor de la otra para formar una doble hélice (Figura \ref{fig:adn}) que lleva las instrucciones genéticas utilizadas en el crecimiento, desarrollo, funcionamiento y reproducción de todos los organismos conocidos. El ADN esta conformado por unidades más pequeñas conocidas como nucleótidos. Cada nucleótido está compuesto por un azúcar llamado desoxirribosa, un grupo de fosfatos, y por una de cuatro bases nitrogenadas que son la citosina (C), guanina (G), adenina (A) ó timina (T). Los nucleótidos están unidos entre sí en una cadena por enlaces covalentes entre el azúcar de un nucleótido y el fosfato del siguiente. Las bases nitrogenadas de las dos cadenas de nucleótidos separadas se unen, según las reglas de emparejamiento de bases (A con T y C con G). Ambas cadenas de ADN almacenan la misma información biológica. Las regiones relevantes del ADN se encuentran localizadas en los cromosomas y se denominan genes. Si bien la cadena de ADN contiene millones de nucleótidos, solo un pequeño porcentaje de ella codifica proteínas (alrededor del 2\% para los humanos).
+\begin{figure}
 
-Diagrama de la estructura del ADN y ARN. Imagen extraída de \url{https://diferencias-entre.org/diferencias-entre-adn-y-arn/}.
+{\centering \includegraphics[width=0.7\linewidth]{images/ADN_ARN} 
 
+}
+
+\caption{Diagrama de la estructura del ADN y ARN. Imagen extraída de \url{https://diferencias-entre.org/diferencias-entre-adn-y-arn/}.}\label{fig:adn}
+\end{figure}
 
 
 Las células utilizan el ADN para el almacenamiento de información a largo plazo. Por otra parte, para las demás tareas en que sea necesaria la información genética, las células utilizan el Ácido RiboNucleico (ARN). El ARN se obtiene a partir del ADN para llevar a cabo tareas celulares como la síntesis de proteínas, las cuales son cadenas de aminoácidos que tienen funcionalidades básicas tanto para el metabolismo como para la fisiología celular y, en consecuencia, del organismo. La decodificación del material genético comienza dentro del núcleo celular, donde las hebras de ARN se crean utilizando el ADN como plantilla en un proceso llamado transcripción. Al igual que el ADN, el ARN se ensambla como una cadena de nucleótidos, pero a diferencia del ADN, se encuentra como una única hebra (Figura \ref{fig:adn}), donde las bases timina son reemplazadas por uracilo (U).
@@ -553,18 +593,23 @@ Luego de procesar los archivos resultantes de microarreglos, y repetir el proced
 
 \newpage
 \begin{verbatim}
-##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-## ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
-## DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
-## SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
-## RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
-## IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
-## ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
+        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
+DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
+SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
+RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
+IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
+ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
 \end{verbatim}
 Dado que los valores de expresión provienen de niveles de intensidad de luz, los datos son valores continuos. Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución \(Normal\), como se observa en la Figura \ref{fig:maDens}.
+\begin{figure}
 
-Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/maDens-1} 
 
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.}\label{fig:maDens}
+\end{figure}
 \hypertarget{itraq}{%
 \subsection{iTRAQ}\label{itraq}}
 
@@ -574,18 +619,23 @@ El método iTRAQ se basa en el marcado químico, con etiquetas de masa variable,
 
 A nivel peptídico, las señales de los iones indicadores de cada espectro permiten calcular la abundancia relativa (ratio) de los péptidos identificados por este espectro. Las proporciones combinadas de los péptidos de una proteína representan la cuantificación relativa de esa proteína. De esta manera se obtiene una matriz resultante de proteínas \(\times\) sujetos, con valores del ratio de la expresión de una proteína para un sujeto dado. Si bien la matriz esta indexada a nivel de proteínas, resulta de mayor interés estudiarla a nivel de genes, por ello, consultando bases de datos de anotación, se traduce cada proteína al gen que la produce. Luego de una normalización adecuada se obtiene una matriz como la que se presenta:
 \begin{verbatim}
-##       A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
-## RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
-## ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
-## BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
-## PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
-## PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
-## PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
+      A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
+RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
+ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
+BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
+PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
+PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
+PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
 \end{verbatim}
 Dado que los valores de expresión provienen de niveles de señales, los datos son valores continuos. Por ende, es de esperar que la distribución se asemeje a una distribución \(Normal\), como se observa en la Figura \ref{fig:protDens}. Vale la pena aclarar que ya que esta matriz sigue una distribución similar a la obtenida mendiante Microarreglos de ADN, es común que se utilicen los mismos métodos de análisis para ambas fuentes de datos.
+\begin{figure}
 
-Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/protDens-1} 
 
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.}\label{fig:protDens}
+\end{figure}
 \hypertarget{secuenciaciuxf3n-de-arn}{%
 \subsection{Secuenciación de ARN}\label{secuenciaciuxf3n-de-arn}}
 
@@ -610,18 +660,23 @@ Una vez que se cuenta con el archivo resultante de la secuenciación, comienza e
 
 Al momento inicial, cuando se obtiene el ARN de la muestra biológica, un gen más activo se encontrará más expresado que el resto, y por consiguiente, el gen presentará mayor cantidad de fragmentos asociados. Para obtener el nivel de expresión de cada gen ó transcripto particular, simplemente se puede tomar la cantidad de fragmentos que fueron mapeados al mismo. De este modo, mediante secuenciación de ARN se permite obtener una matriz de genes \(\times\) sujetos, con un conteo para cada gen y sujeto, como se puede apreciar a continuación:
 \begin{verbatim}
-##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-## ZBTB16           89          31         126         449          81
-## DNAJB13          11          11          44          31          43
-## SFRP5             1           2           0           0           0
-## RRAGC          2797        1453        1680        4573        2631
-## IAPP            162          78         167         151         195
-## ELMO1          1740         677         540        1758        4204
+        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+ZBTB16           89          31         126         449          81
+DNAJB13          11          11          44          31          43
+SFRP5             1           2           0           0           0
+RRAGC          2797        1453        1680        4573        2631
+IAPP            162          78         167         151         195
+ELMO1          1740         677         540        1758        4204
 \end{verbatim}
 Dado que los valores de expresión se desprenden de la cantidad de fragmentos mapeados, los datos son valores de conteos (no continuos). Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución de \(Poisson\) o \(Binomial Negativa\), como se observa en la Figura \ref{fig:rnaDens}.
+\begin{figure}
 
-Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/rnaDens-1} 
 
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.}\label{fig:rnaDens}
+\end{figure}
 \par
 
 La era de la transcriptómica tuvo su máximo desarrollo con la evolución de las tecnologías de secuenciación de alto rendimiento. La exploración de todo el transcriptoma simultáneamente y a profundidades sin precedentes ha sido posible a partir de estas tecnologías. Esta terminología se refiere a alto rendimiento, en el sentido del paralelismo en la secuenciación, lo que permite investigar millones de fragmentos de ADN en una sola ejecución. Su rápida expansión se justifica por su versatilidad, que ha permitido el estudio de experimentos complejos a escalas hasta ahora inalcanzables e incluso en organismos nunca antes estudiados.
@@ -909,9 +964,14 @@ Para evaluar la estabilidad de detección de CG enriquecidos a través de las di
 \par
 
 Como se puede observar en los boxplot de la Figura \ref{fig:ifa1}, se aprecia una alta variabilidad tanto entre los métodos como para las diversas parametrizaciones de un mismo método. Teniendo en cuenta solo aquellos datasets que presentaron almenos un término enriquecido, se encontró una mediana de 284 términos enriquecidos. El SM parece ser muy sensible a diferentes parametrizaciones, así como a la forma en que se le proveen los datos, es decir, a través de la matriz de expresión de genes o mediante una lista pre-rankeada. Curiosamente, para SMpr cualquier valor del factor de ponderación \(w\) devolvió casi cero términos enriquecidos. Además, para SMgp y SMpp, la selección de \(w\) podría producir enriquecimientos muy diferentes, que van desde cero términos en SMpp0 para Nki o 59 términos en SMgp2 para Vdx hasta valores extremos como 1.019 en SMpp2 para Nki o 474 términos en SMgp0 para Vdx. En particular, el método SMpp presenta comportamientos muy diferentes dependiendo del valor \(w\). Por ejemplo, no se encontró enriquecimiento para \(w=0\), gran variabilidad resultó con \(w=1\) con un Rango InterCuartil (RIC) de 257,57, y se obtuvieron resultados concordantes con \(w=2\), es decir, pequeña dispersión sobre bases de datos (con un RIC de 83,25). Sin embargo, SMpp2 mostró un número extremo de enriquecimientos para una base de datos (1.019 para Nki) y un número muy bajo para otro (101 para Mainz), resultando en dos valores atípicos. Esto podría plantear un problema cuando se analiza un único dataset. Para el SMgp, el enriquecimiento es bastante estable en todos los datasets, con RICs de 105, 91,25 y 98,5 para SMgp0, SMgp1 y SMgp2, respectivamente, pero se obtuvo un número decreciente de enriquecimientos a medida que \(w\) aumentaba de 0 a 2, lo que arroja una mediana de 611,5, 293 y 121, respectivamente. Para \(w=1\) el número de términos enriquecidos es similar a la mediana general (284 términos enriquecidos) de los diferentes métodos, lo que sugiere que el SMgp1 se podría considerar una configuración más apropiada.
+\begin{figure}
 
-Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección \ref{sec:algosComparados}. Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos.
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG1_es} 
 
+}
+
+\caption{Boxplot del número de términos enriquecidos por cada método para las diferentes bases de datos. Las siglas de los métodos se describen en la Sección \ref{sec:algosComparados}. Notar que las alternativas de SMpr enriquecen casi ningún conjunto de genes, mientras que la mediana de términos enriquecidos es de 284 para los métodos restantes (línea negra horizontal). El método SMpp1 obtuvo el número más variable de términos enriquecidos. A excepción de dEnricher con prueba de Fisher, todas las demás combinaciones de método/parámetro de dEnricher devolvieron valores extremos.}\label{fig:ifa1}
+\end{figure}
 
 
 \par
@@ -944,9 +1004,14 @@ El porcentaje de términos enriquecidos agrupados por profundidad para cada mét
 \par
 
 Para cada método de ASR, excepto dEnricher, BRI enriqueció un número mayor de términos que BRIII. Sin embargo, como se mencionó anteriormente, tanto en WD, RD - como en GOstats - la mayoría de los términos enriquecidos por BRIII también fueron enriquecidos por BRI. Como se discutió en Fresno et al., usar BRIII, estadísticamente, tiene más sentido que usar BRI; por lo tanto, su uso se sugiere y se usa de aquí en adelante.
+\begin{figure}
 
-Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE\_F\_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos.
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG2_es} 
 
+}
+
+\caption{Profundidad de enriquecimiento de Gene Ontology (GO) para cada método. Los colores más oscuros representan términos más profundos de la jerarquía del árbol GO. Note que todos los métodos tienden a enriquecer las profundidades en su mayoría entre tres y seis. Los métodos WD y RD enriquecieron los términos más superficiales de la estructura de árbol de GO. Por otro lado, mGSZ, dE\_F\_none, SMpp2 y GOstats BRIII enriquecieron los términos más profundos.}\label{fig:ifa2}
+\end{figure}
 
 
 \hypertarget{sec:consensusSection}{%
@@ -972,9 +1037,14 @@ Aquellos términos que no fueron enriquecidos en ningún conjunto de datos fuero
 \par
 
 Dado que todos los experimentos comparan los mismos fenotipos de cáncer de mama, se esperaba encontrar resultados concordantes entre los conjuntos de datos para cada combinación de método/parámetros. Así, el número de términos enriquecidos en casi todos los conjuntos de datos (Frecuencia de Consenso en Enriquecimiento; \(FCE\)), así como los términos que no se enriquecieron en casi todos los conjuntos de datos (Frecuencia de Consenso en No Enriquecimiento; \(FCNE\)), se utilizaron como indicador de la estabilidad del método. Basado en este supuesto, definimos las métricas de comparación listadas en la Tabla \ref{tab:comparisonMetrics}. La concordancia entre los conjuntos de datos para cada método mostró que mGSZ supera con un 45\% de términos enriquecidos concordantes (\(FCE\)), seguido de dE\_F\_none, RD y WD con un 39\%, SMgp1 con un 36\%, SMpp2 con un 30\%, y GOstats con un 29\%. La concordancia entre los términos no enriquecidos (\(FCNE\)) obtuvo 91\% para dE\_F\_none, RD y GOstats, 89\% para WD, 85\% para mGSZ, 83\% para SMgp1, y 82\% para SMpp2. Por lo tanto, todos los métodos parecen tener un alto consenso para los términos no enriquecidos y un bajo consenso para los enriquecidos. Ambos conceptos son importantes a la hora de enfrentarse al AF, ya que no debe perderse ningún término biológicamente significativo, ni debe haber términos enriquecidos incorrectamente. De aquí se desprende que el análisis de PFC utilizando mGSZ demostró ser el método más consensuado, mientras que dE\_F\_none y RD para la contraparte de ASR.
+\begin{figure}
 
-Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (\textbf{A}), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; \textbf{E}). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz.
+{\centering \includegraphics[width=0.9\linewidth]{images/IFA_FIG3} 
 
+}
+
+\caption{Heatmap de enriquecimiento. En columnas, cada combinación de método/parámetros por base de datos; en filas, esos conjuntos de genes (términos) enriquecidos en al menos una base de datos. Notar que los métodos de PFC y ASR se agrupan por separado en el dendrograma. Celdas rojas indican enriquecimiento, naranjas indican que no hay enriquecimiento, y blancas muestran términos que no fueron analizados. Se observan subconjuntos de términos que resultaron enriquecidos por casi todos los métodos analizados (\textbf{A}), y subconjuntos de términos enriquecidos exclusivamente por una sola combinación de método/parámetros (para todas las bases de datos; \textbf{E}). El color de la etiqueta de cada columna representa el algoritmo utilizado, y la letra representa la letra inicial del conjunto de datos: V Vdx; N Nki; T Transbig; U Upp; u Unt; M Mainz.}\label{fig:ifa3}
+\end{figure}
 
 \begin{longtable}[]{@{}lc@{}}
 \caption{Métricas de comparación.\label{tab:comparisonMetrics}
@@ -1071,9 +1141,14 @@ GOstats & & 1 (0) & & & 1 (0) \\
 \par
 
 Como resultado de este estudio exhaustivo (Rodriguez, González, Fresno, \& Fernández, 2015; Rodriguez et al., 2016a, 2016b; Rodriguez, Prato, Llera, \& Fernández, 2017), en la Figura \ref{fig:ifa4} se presenta el pipeline del análisis funcional integrador (IFA; del inglés \emph{Integrative Functional Analysis}). El IFA proporciona como una herramienta de software, cuyo código R se encuentra en el repositorio \url{https://github.com/jcrodriguez1989/IFA}. Para utilizar la función principal del IFA, el usuario debe proporcionar la matriz de expresión, y la especificación de los fenotipos de cada sujeto. En caso que no se proporcionen los CG, IFA utilizará los CG de GO más actualizados provistos por la librería R \texttt{org.Hs.eg.db}. La lista de genes DE y su rankeo son calculados por la herramienta IFA mediante un modelo lineal utilizando la librería de R \texttt{limma}, con los cuales se llevan a cabo los análisis mGSZ y de dE\_F\_none. De este modo, IFA proporciona un enfoque sencillo, unificado y global para el AF.
+\begin{figure}
 
-Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC.
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG4_es} 
 
+}
+
+\caption{Flujo de trabajo del Análisis Funcional Integrador (IFA). El usuario proporciona la matriz de expresión y las correspondientes etiquetas de fenotipo como entrada. El IFA utiliza librerías auxiliares de R para obtener los genes expresados diferencialmente, rankearlos y realizar análisis de PFC y ASR. Finalmente, los resultados de enriquecimiento obtenidos por el IFA integran tanto los resultados del ASR como los de la PFC.}\label{fig:ifa4}
+\end{figure}
 
 
 \hypertarget{ifa-sobre-tcga}{%
@@ -1086,9 +1161,14 @@ Para demostrar la utilidad del pipeline del IFA, se obtuvo el dataset provenient
 \par
 
 Los términos relacionados con la hormona y el receptor de estrógeno, la transición G1/S del ciclo celular mitótico, la replicación del ADN, la organización del huso mitótico, el desenrollado dual del ADN, la actividad de la histona cinasa, la actividad de la helicasa de hibridación, entre otros, se encontraron enriquecidos, en común, en todos los conjuntos de datos (marca \textbf{A} en la Figura \ref{fig:ifa5}), lo que respalda las diferencias de proliferación entre los subtipos de cáncer de mama de tipo Basal y Luminal A. Además, términos como la actividad de la proteína de señalización del receptor tirosina cinasa, la diferenciación de células madre y otros relacionados con la diferenciación celular, sólo se encontraron en los conjuntos de datos de TCGA (marca \textbf{E\(^*\)} en la Figura \ref{fig:ifa5}).
+\begin{figure}
 
-Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (\textbf{A}) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (\textbf{E}).
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG5} 
 
+}
+
+\caption{Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de mama (incluyendo TCGA). Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (\textbf{A}) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (\textbf{E}).}\label{fig:ifa5}
+\end{figure}
 
 
 \hypertarget{ifa-sobre-datasets-de-cuxe1ncer-de-pruxf3stata}{%
@@ -1103,9 +1183,14 @@ Con el fin de verificar que los resultados del IFA no dependen de la patología 
 La matriz de consenso resultante se muestra en la Figura \ref{fig:ifa5}, en la que 163 términos fueron enriquecidos en al menos el 80\% de los conjuntos de datos, de los cuales 99 (61\%) están relacionados con el cáncer de próstata según la BDTC. En particular, la proporción media de términos exclusivamente enriquecidos presentes en la BDTC en cada conjunto de datos fue del 44\%, con Taylor primero con 448 términos exclusivos (194 en la BDTC) y Varambally último con 212 términos (98 en la BDTC).
 
 \newpage
+\begin{figure}
 
-Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (\textbf{A}) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (\textbf{E}).
+{\centering \includegraphics[width=1\linewidth]{images/IFA_FIG6} 
 
+}
+
+\caption{Heatmap de enriquecimiento del Análisis Funcional Integrador en cáncer de próstata. Los datasets se ubican en columnas; y los conjuntos de genes (términos), enriquecidos en al menos un dataset, se presentan en filas. Celdas rojas indican enriquecimiento, y las anaranjadas indican que no hay enriquecimiento. Se observan subconjuntos concordantes de términos enriquecidos entre cada conjunto de datos (\textbf{A}) y subconjuntos de términos enriquecidos exclusivamente en un solo conjunto de datos (\textbf{E}).}\label{fig:ifa6}
+\end{figure}
 
 
 \hypertarget{conclusiones}{%
@@ -1192,9 +1277,14 @@ En el presente capítulo se introduce la librería R desarrollada: MIGSA -del in
 \par
 
 Como se explica esquemáticamente en la Figura \ref{fig:migsa1}, MIGSA toma como entrada una lista de matrices de expresión (\(L=\{M_d\}; d \in \{1,\ldots,D\}\)). Cada matriz contiene datos del \(d\)-ésimo dataset, con \(S_d\) sujetos medidos a través de cualquier tecnología ómica (por ejemplo, genes, proteínas, etc.) que pueda ser anotada con identificadores \emph{Entrez}. Para el \(d\)-ésimo conjunto de datos, MIGSA requiere la identificación del fenotipo de cada sujeto \(F_d=[f_{d1},...,f_{dS_d}]\), con \(f_{di} \in \{a,b,...\}\) \((i\in \{1,...,S_d\})\), para identificar cada experimento \(E_{d}^{a,b}\) que resulta de la matriz de expresión \(M_d\) y el contraste de fenotipo \emph{a vs.~b}. Luego, en paralelo, MIGSA aplica individualmente a cada experimento el Análisis Funcional Integrador (IFA) descrito en el Cápitulo \protect\hyperlink{cap:ifa}{3}. Vale la pena mencionar que el IFA aplicado por MIGSA presenta dos novedades respecto a su publicación original (Rodriguez et al., 2016a): ahora permite analizar datos de conteos (como los de secuenciación de ARN), microarreglos de ADN, y proteómicos de iTRAQ; e identifica los genes específicos que contribuyeron al enriquecimiento de cada CG.
+\begin{figure}
 
-Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión \(L=\{M_1,....,M_D\}\), cada matriz con la identificación del fenotipo (por ejemplo \(a\), \(b\), \(c\), \(d\)) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo \(E_{1}^{a,b}\) contrasta los fenotipos \(a\) y \(b\) para la matriz de expresión \(M_1\)). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función \(f\) diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE).
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG1_es} 
 
+}
+
+\caption{Flujo de trabajo del Análisis Masivo e Integrador de Conjuntos de Genes (MIGSA). De una lista de matrices de expresión \(L=\{M_1,....,M_D\}\), cada matriz con la identificación del fenotipo (por ejemplo \(a\), \(b\), \(c\), \(d\)) para cada muestra, se realiza la lista de experimentos (Es), donde cada experimento compara un par de fenotipos de una matriz (por ejemplo \(E_{1}^{a,b}\) contrasta los fenotipos \(a\) y \(b\) para la matriz de expresión \(M_1\)). MIGSA toma como entrada esta lista de Es y aplica, individualmente a cada experimento, una versión mejorada del IFA previamente presentado, de manera paralela. Esta versión mejorada del IFA toma una matriz de expresión y, de acuerdo con su tipo de datos, utiliza una función \(f\) diferente para obtener tanto la expresión diferencial como el rankeo de los genes, y luego realiza ambos Análisis de Sobre-Representación (ASR) y de Puntuación Funcional de Clase (FCS). Para este paso, se puede utilizar una colección generada por el usuario de conjuntos de genes ó seleccionar entre más de 130 colecciones proporcionadas por MIGSA. Los resultados de cada experimento se almacenan en un cubo de datos Q. Como salida, MIGSA proporciona diferentes alternativas de exploración y visualización, permitiendo identificar fácilmente los Conjuntos de Genes Enriquecidos (CGE) para cada experimento y, para cada conjunto de genes, los Genes Importantes para su Enriquecimiento (GIE).}\label{fig:migsa1}
+\end{figure}
 
 
 \par
@@ -1295,9 +1385,14 @@ Se analizaron, con MIGSA, los 118 experimentos de HKds. En la Figura \ref{fig:mi
 \par
 
 El segundo gran cluster divisable en la Figura \ref{fig:migsa2} incluye todos los experimentos que contrastan los subtipos Basal con Luminal B ó Her2+ (marca Ba). En este cluster, se identificaron dos sub-clusters, uno con 15 de 20 (75\%) experimentos contrastando Basal con Luminal B (marca Ba-LB), y otro con 12 de 18 (67\%) experimentos contrastando Basal con Her2+ (marca Ba-H). Además de estos dos grandes sub-clusters, se diferencia uno con experimentos que contrastan Luminal B con Her2+ (marca LB-H), con 14 de 17 (82\%) experimentos. En particular, este último cluster tiene la menor cantidad de términos enriquecidos, lo que sugiere una gran similitud entre estos dos subtipos.
+\begin{figure}
 
-Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste.
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG2} 
 
+}
+
+\caption{Conjuntos de genes enriquecidos por análisis funcional para cada experimento. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Las casillas S1 y S2 contienen conjuntos de genes enriquecidos en común para subtipos, y las casillas C1, C2, C3 y C4 para contrastes (comparación entre pares de subtipos). Barras de columnas (de arriba abajo): datasets (cada color representa uno de los 25 datasets analizados); contraste; subtipo1 y subtipo2, salmón es Luminal A (LA), turquesa es Basal (Ba), púrpura es Her2+ (H), y el verde es Luminal B (LB). Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), y uno por cada contraste.}\label{fig:migsa2}
+\end{figure}
 
 
 \par
@@ -1358,9 +1453,14 @@ Como en la Figura \ref{fig:migsa2}, al analizar la Figura \ref{fig:migsa3} se en
 \par
 
 Para cada subtipo, se obtuvieron los \textbf{TET} y los \textbf{TEP}, y los correspondientes GIE, y se analizaron en conjunto con los correspondientes \textbf{PTF} encontrados previamente. En la Tabla \ref{tab:migsa2}, para cada subtipo, se presenta el número de términos que se encuentran exclusivamente en \textbf{PTF}, \textbf{TET} y \textbf{TEP}, y los que se encuentran exclusivamente en cada intersección. Analizando estos los resultados, encontramos que la concordancia entre los \textbf{PTF} y su contraparte del TCGA es notable. Por ejemplo, de los 680 términos que pertenecen a los \textbf{PTF} (suma de celdas de la fila Total para columnas que involucran los \textbf{PTF}), el 38\% también se encontró en \textbf{TEP} o \textbf{TET} de los datos del TCGA. En particular, los subtipos Basal y Luminal A fueron los únicos que exhibieron términos en común entre transcriptómica (\textbf{PTF} y \textbf{TET}) y proteómica (\textbf{TEP}). También se encontró que casi el 80\% de esos términos en los \textbf{TET} también se encontraron en los \textbf{PTF}, evidenciando la alta consistencia de MIGSA para analizar los conjuntos de datos de transcriptómica de los HKds y TCGA. Por el contrario, y para todos los subtipos de CM, esos términos enriquecidos con datos proteómicos no se encontraron frecuentemente entre los \textbf{TET}. Este hallazgo sugiere que los \textbf{TEP} proporcionan información complementaria a la contraparte transcriptómica, como se reportó previamente (Meng et al., 2014). Sin embargo, será necesaria una investigación más profunda que incluya un mayor número de datasets proteómicos para poder definir un Perfil \textbf{Proteómico} Funcional.
+\begin{figure}
 
-Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es ``términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains'', en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba\(^T\)) y de Luminal A (LA\(^T\)), y para experimentos transcriptómicos específicos por contraste (T).
+{\centering \includegraphics[width=1\linewidth]{images/MIGSA_FIG3} 
 
+}
+
+\caption{Conjuntos de genes enriquecidos por análisis funcional para TCGA. Heatmap: conjuntos de genes en filas, experimentos en columnas; ordenados por distancia Jaccard y enlace promedio. Conjuntos de genes enriquecidos en rojo. Barras de columnas (de arriba abajo): salmón es ``términos enriquecidos por consenso para los conjuntos de datos de Haibe-Kains'', en turquesa datos de TCGA; azul datos de secuenciación de ARN, verde de microarreglos, en salmón de iTRAQ; contraste (comparación entre pares de subtipos); subtipo1 y subtipo2, salmón es Luminal A, turquesa es Basal, púrpura es Her2+, y el verde es Luminal B. Clusters de dendrogramas: Se demarcan para los subtipos Basal (Ba) y Luminal A (LA), para experimentos transcriptómicos de Basal (Ba\(^T\)) y de Luminal A (LA\(^T\)), y para experimentos transcriptómicos específicos por contraste (T).}\label{fig:migsa3}
+\end{figure}
 
 \begin{table}[!h]
   \caption{Número de términos enriquecidos compartidos entre plataformas y múltiples ómicas para cada subtipo.}
@@ -1465,7 +1565,7 @@ Dicha comparación se puede replicar mediante el siguiente código:
 \end{Highlighting}
 \end{Shaded}
 \begin{verbatim}
-## [1] 16207   237
+[1] 16207   237
 \end{verbatim}
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1473,9 +1573,9 @@ Dicha comparación se puede replicar mediante el siguiente código:
 \end{Highlighting}
 \end{Shaded}
 \begin{verbatim}
-## subtipos
-## Basal  LumA 
-##    95   142
+subtipos
+Basal  LumA 
+   95   142 
 \end{verbatim}
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1522,8 +1622,8 @@ Dicha comparación se puede replicar mediante el siguiente código:
 \end{Highlighting}
 \end{Shaded}
 \begin{verbatim}
-##      mGSZ MIGSAmGSZ   Speedup 
-##  2.461000  1.553534  1.584130
+     mGSZ MIGSAmGSZ   Speedup 
+ 2.461000  1.553534  1.584130 
 \end{verbatim}
 Como se observa, la versión optimizada, \texttt{MIGSAmGSZ}, presenta un \emph{speedup} de 1,6X sobre el algoritmo original -de demorar 2,46 horas, la nueva versión pasó a demorar 1,55 horas-.
 
@@ -1573,10 +1673,10 @@ Como segunda fase de la reimplementación de \texttt{mGSZ}, detectamos cuáles p
 \end{Highlighting}
 \end{Shaded}
 \begin{verbatim}
-##                   1     2     4     8    10    12    14
-## Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
-## Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
-## Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37
+                  1     2     4     8    10    12    14
+Demora (mins) 93.21 46.50 24.98 15.63 13.67 14.79 28.43
+Speedup        1.58  3.18  5.91  9.45 10.81  9.98  5.19
+Eficiencia     1.58  1.59  1.48  1.18  1.08  0.83  0.37
 \end{verbatim}
 \par
 

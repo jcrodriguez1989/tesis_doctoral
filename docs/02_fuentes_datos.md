@@ -5,18 +5,26 @@ La célula es la unidad estructural, funcional y biológica básica de todos los
 
 Las células eucariotas están compuestas por diversos orgánulos como la membrana, el citoplasma y el núcleo (Figura \@ref(fig:cell)). La membrana envuelve y protege a la célula, y regula lo que entra y sale (selectivamente permeable). Dentro de la membrana, el citoplasma ocupa la mayor parte del volumen de la célula, y la separa del núcleo celular. El más prominente de los orgánulos es el núcleo celular, el cual aloja el material genético de la célula. El material genético se presenta como Acido DesoxirriboNucleico (ADN), el cual está organizado en una o más moléculas, llamadas cromosomas. 
 
-<div class="figure" style="text-align: center">
-<img src="images/celula.png" alt="(ref:cell)" width="70%" />
-<p class="caption">(ref:cell)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{images/celula} 
+
+}
+
+\caption{(ref:cell)}(\#fig:cell)
+\end{figure}
 (ref:cell) Diagrama simplificado de una célula eucariota. Imagen extraída de [https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/](https://biologiarubenurjc.wordpress.com/2012/03/19/membrana-nucleo-y-citoplasma/).
 
 La información biológica contenida en un organismo está codificada en su secuencia de ADN. El ácido desoxirribonucleico esta organizado en dos cadenas que se enrollan una alrededor de la otra para formar una doble hélice (Figura \@ref(fig:adn)) que lleva las instrucciones genéticas utilizadas en el crecimiento, desarrollo, funcionamiento y reproducción de todos los organismos conocidos. El ADN esta conformado por unidades más pequeñas conocidas como nucleótidos. Cada nucleótido está compuesto por un azúcar llamado desoxirribosa, un grupo de fosfatos, y por una de cuatro bases nitrogenadas que son la citosina (C), guanina (G), adenina (A) ó timina (T). Los nucleótidos están unidos entre sí en una cadena por enlaces covalentes entre el azúcar de un nucleótido y el fosfato del siguiente. Las bases nitrogenadas de las dos cadenas de nucleótidos separadas se unen, según las reglas de emparejamiento de bases (A con T y C con G). Ambas cadenas de ADN almacenan la misma información biológica. Las regiones relevantes del ADN se encuentran localizadas en los cromosomas y se denominan genes. Si bien la cadena de ADN contiene millones de nucleótidos, solo un pequeño porcentaje de ella codifica proteínas (alrededor del 2% para los humanos).
 
-<div class="figure" style="text-align: center">
-<img src="images/ADN_ARN.png" alt="(ref:adn)" width="70%" />
-<p class="caption">(ref:adn)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{images/ADN_ARN} 
+
+}
+
+\caption{(ref:adn)}(\#fig:adn)
+\end{figure}
 (ref:adn) Diagrama de la estructura del ADN y ARN. Imagen extraída de [https://diferencias-entre.org/diferencias-entre-adn-y-arn/](https://diferencias-entre.org/diferencias-entre-adn-y-arn/).
 
 Las células utilizan el ADN para el almacenamiento de información a largo plazo. Por otra parte, para las demás tareas en que sea necesaria la información genética, las células utilizan el Ácido RiboNucleico (ARN). El ARN se obtiene a partir del ADN para llevar a cabo tareas celulares como la síntesis de proteínas, las cuales son cadenas de aminoácidos que tienen funcionalidades básicas tanto para el metabolismo como para la fisiología celular y, en consecuencia, del organismo. La decodificación del material genético comienza dentro del núcleo celular, donde las hebras de ARN se crean utilizando el ADN como plantilla en un proceso llamado transcripción. Al igual que el ADN, el ARN se ensambla como una cadena de nucleótidos, pero a diferencia del ADN, se encuentra como una única hebra (Figura \@ref(fig:adn)), donde las bases timina son reemplazadas por uracilo (U).
@@ -46,21 +54,25 @@ Un microarreglo es una superficie sólida donde pequeños fragmentos de ADN (son
 \newpage
 
 ```
-##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-## ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
-## DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
-## SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
-## RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
-## IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
-## ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
+        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+ZBTB16  -0.12125000     0.00425    -0.98975  3.31300000   0.5387500
+DNAJB13 -0.48200000    -0.53250    -0.60450 -0.61750000  -0.2670000
+SFRP5   -0.02033333     0.22900     0.28440 -0.03216667  -0.3128333
+RRAGC    1.23525000     0.68625     0.89750  1.71275000   0.9832500
+IAPP     0.11500000     0.06250     1.26450  0.43500000   1.0490000
+ELMO1    0.19487500    -0.35275    -0.66825  0.36437500   0.6860000
 ```
 
 Dado que los valores de expresión provienen de niveles de intensidad de luz, los datos son valores continuos. Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución $Normal$, como se observa en la Figura \@ref(fig:maDens).
 
-<div class="figure" style="text-align: center">
-<img src="02_fuentes_datos_files/figure-html/maDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN." width="70%" />
-<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/maDens-1} 
+
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Microarreglos de ADN.}(\#fig:maDens)
+\end{figure}
 
 ### iTRAQ
 
@@ -70,21 +82,25 @@ El método iTRAQ se basa en el marcado químico, con etiquetas de masa variable,
 
 
 ```
-##       A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
-## RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
-## ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
-## BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
-## PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
-## PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
-## PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
+      A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A  A2-A0D2-01A A2-A0EQ-01A
+RRAGC  0.17794796  0.27751403 -0.13956920  0.098823426  -0.1745463
+ELMO1  0.39888804  0.30589111 -0.09178467 -0.126851824   0.7252130
+BAX    0.35139262  0.08414816  0.23821506 -0.118018092  -0.1782356
+PDCD4  0.04627689  0.02277544  0.65416083 -0.353588366  -0.3033616
+PDCD2 -0.19497549  0.55829865 -0.15272404 -0.024984301   0.6028903
+PTPN6  0.17697246  0.19056327 -0.38121552 -0.002048376   0.8563106
 ```
 
 Dado que los valores de expresión provienen de niveles de señales, los datos son valores continuos. Por ende, es de esperar que la distribución se asemeje a una distribución $Normal$, como se observa en la Figura \@ref(fig:protDens). Vale la pena aclarar que ya que esta matriz sigue una distribución similar a la obtenida mendiante Microarreglos de ADN, es común que se utilicen los mismos métodos de análisis para ambas fuentes de datos.
 
-<div class="figure" style="text-align: center">
-<img src="02_fuentes_datos_files/figure-html/protDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ." width="70%" />
-<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/protDens-1} 
+
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante iTRAQ.}(\#fig:protDens)
+\end{figure}
 
 ### Secuenciación de ARN
 
@@ -103,21 +119,25 @@ La primer línea es un identificador de la secuencia, la segunda es la que conti
 
 
 ```
-##         A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
-## ZBTB16           89          31         126         449          81
-## DNAJB13          11          11          44          31          43
-## SFRP5             1           2           0           0           0
-## RRAGC          2797        1453        1680        4573        2631
-## IAPP            162          78         167         151         195
-## ELMO1          1740         677         540        1758        4204
+        A2-A0CM-01A A2-A0D0-01A A2-A0D1-01A A2-A0D2-01A A2-A0EQ-01A
+ZBTB16           89          31         126         449          81
+DNAJB13          11          11          44          31          43
+SFRP5             1           2           0           0           0
+RRAGC          2797        1453        1680        4573        2631
+IAPP            162          78         167         151         195
+ELMO1          1740         677         540        1758        4204
 ```
 
 Dado que los valores de expresión se desprenden de la cantidad de fragmentos mapeados, los datos son valores de conteos (no continuos). Por ende, es de esperar que la distribución de los genes, para cada sujeto, se asemeje a una distribución de $Poisson$ o $Binomial Negativa$, como se observa en la Figura \@ref(fig:rnaDens).
 
-<div class="figure" style="text-align: center">
-<img src="02_fuentes_datos_files/figure-html/rnaDens-1.png" alt="Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN." width="70%" />
-<p class="caption">Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{02_fuentes_datos_files/figure-latex/rnaDens-1} 
+
+}
+
+\caption{Densidad de los valores de expresión de los genes de un sujeto, para datos obtenidos mediante Secuenciación de ARN.}(\#fig:rnaDens)
+\end{figure}
 
 \par La era de la transcriptómica tuvo su máximo desarrollo con la evolución de las tecnologías de secuenciación de alto rendimiento. La exploración de todo el transcriptoma simultáneamente y a profundidades sin precedentes ha sido posible a partir de estas tecnologías. Esta terminología se refiere a alto rendimiento, en el sentido del paralelismo en la secuenciación, lo que permite investigar millones de fragmentos de ADN en una sola ejecución. Su rápida expansión se justifica por su versatilidad, que ha permitido el estudio de experimentos complejos a escalas hasta ahora inalcanzables e incluso en organismos nunca antes estudiados.
 \par Con el desarrollo de este tipo de tecnología no solo se logró obtener información de expresión a nivel de **genes**, sino que al tener las cadenas de nucleótidos, es posible extraer información de expresión a niveles biológicos menores que genes, como ser **transcriptos**, **exones**, **isoformas**, etc.
