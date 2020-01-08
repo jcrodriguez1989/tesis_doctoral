@@ -10,17 +10,17 @@ title: 'Análisis e integración de información de datos biológicos mediante a
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  # thesisdown::thesis_pdf: default
-  thesisdown::thesis_gitbook: default
+  thesisdown::thesis_pdf: default
+  # thesisdown::thesis_gitbook: default
   # thesisdown::thesis_word: default
   # thesisdown::thesis_epub: default
 
 #### Important!
 #### When compiling gitbook, comment following 4 lines to get references
-#resumen: |
-#  `r if(knitr:::is_latex_output()) paste(readLines("resumen.Rmd"), collapse = '\n  ')`
-#acknowledgements: |
-#  `r if(knitr:::is_latex_output()) paste(readLines("agradecimientos.Rmd"), collapse = '\n  ')`
+resumen: |
+  `r if(knitr:::is_latex_output()) paste(readLines("resumen.Rmd"), collapse = '\n  ')`
+acknowledgements: |
+  `r if(knitr:::is_latex_output()) paste(readLines("agradecimientos.Rmd"), collapse = '\n  ')`
 dedication: |
   _Va Castro, va Castro, va Castro, sacó el centro pasado, Riggio, ..._
   
