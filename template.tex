@@ -137,6 +137,10 @@ $endif$
 $acknowledgements$
 }
 
+\Resumen{
+$resumen$
+}
+
 \Dedication{
 $dedication$
 }
@@ -178,6 +182,12 @@ $if(acknowledgements)$
   \begin{acknowledgements}
     $acknowledgements$
   \end{acknowledgements}
+$endif$
+
+$if(resumen)$
+  \begin{resumen}
+    $resumen$
+  \end{resumen}
 $endif$
 
 $if(abstract)$

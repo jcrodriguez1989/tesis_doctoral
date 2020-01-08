@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | _main.utf8</title>
-  <meta name="description" content="" />
+  <title>Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | Análisis e integración de información de datos biológicos mediante análisis funcional</title>
+  <meta name="description" content="Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | _main.utf8" />
+  <meta property="og:title" content="Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   <meta property="og:type" content="book" />
   
   
@@ -16,11 +16,12 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | _main.utf8" />
+  <meta name="twitter:title" content="Capítulo 5 Desafíos que surgieron durante el trabajo de tesis | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   
   
   
 
+<meta name="author" content="Juan Cruz Rodriguez" />
 
 
 
@@ -127,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
 <li class="chapter" data-level="1" data-path="1-cap-af.html"><a href="1-cap-af.html"><i class="fa fa-check"></i><b>1</b> Análisis funcional</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:ontologias"><i class="fa fa-check"></i><b>1.1</b> Ontologías</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#gene-ontology"><i class="fa fa-check"></i><b>1.1.1</b> Gene Ontology</a></li>
@@ -215,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis e integración de información de datos biológicos mediante análisis funcional</a>
           </h1>
         </div>
 
@@ -236,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p>Para disminuir el tiempo de ejecución de <code>mGSZ</code>, en primer instancia se debió analizar el código del paquete <code>mGSZ</code> de manera de encontrar porciones de código críticas. Mediante los paquetes <code>profvis</code> y <code>microbenchmark</code> se detectaron tanto aquellas porciones de código de más lenta ejecución, como aquellas que más frecuentemente se ejecutaban. Como resultado de este análisis, se obtuvieron unos pocos fragmentos de código que fueron <strong>objetivos críticos</strong> a optimizar.</p>
 
-<p>La optimización de estos objetivos críticos se llevo a cabo aplicando diversas estrategias de optimización generales <span class="citation">(<span class="citeproc-not-found" data-reference-id="wolfe1996high"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="cooper2011engineering"><strong>???</strong></span>)</span> como también algunas específicas del lenguaje R <span class="citation">(<span class="citeproc-not-found" data-reference-id="wickham2014advanced"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="gillespie2016efficient"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="burns2011r"><strong>???</strong></span>)</span>. Esta versión optimizada de la función <code>mGSZ</code> se implementó en el paquete <code>MIGSA</code>, y puede utilizarse, independientemente de <code>MIGSA</code>, llamando a la función <code>MIGSAmGSZ</code>.</p>
+<p>La optimización de estos objetivos críticos se llevo a cabo aplicando diversas estrategias de optimización generales <span class="citation">(Cooper &amp; Torczon, 2011; Wolfe, 1996)</span> como también algunas específicas del lenguaje R <span class="citation">(Burns, 2011; Gillespie &amp; Lovelace, 2016; Wickham, 2014)</span>. Esta versión optimizada de la función <code>mGSZ</code> se implementó en el paquete <code>MIGSA</code>, y puede utilizarse, independientemente de <code>MIGSA</code>, llamando a la función <code>MIGSAmGSZ</code>.</p>
 
 <p>Con el fin de evaluar las mejoras en tiempo de ejecución de <code>MIGSAmGSZ</code> con respecto a <code>mGSZ</code>, se analizaron ambas funciones dándoles como entrada los mismos input: la matriz de expresión de microarreglos de ADN de cáncer de mama del TCGA (16.207 genes <span class="math inline">\(\times\)</span> 237 sujetos), donde se contrastaron los subtipos Basal vs. Luminal A, analizando los conjuntos de genes del Gene Ontology y KEGG (20.425 conjuntos de genes). El análisis se llevó a cabo utilizando un procesador Intel(R) Xeon(R) E5-2620 v3 @ 2.40GHz (24 núcleos), y 128GB de memoria RAM.</p>
 

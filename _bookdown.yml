@@ -6,7 +6,7 @@ output_dir: "docs"
 rmd_files:
   [
     "index.Rmd",
-    "prefacio.Rmd",
+    # "prefacio.Rmd",
     "01_af.Rmd",
     "02_fuentes_datos.Rmd",
     "03_ifa.Rmd",

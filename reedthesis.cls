@@ -242,6 +242,16 @@
   \fontsize{12}{14}\selectfont
 }
 
+\newenvironment{resumen}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter*{Resumen}
+  \fontsize{12}{14}\selectfont
+}
+
 \newenvironment{preface}{%
   \if@twocolumn
     \@restonecoltrue\onecolumn
@@ -365,6 +375,7 @@
 %\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 %\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
+\newcommand{\Resumen}[1]{\def\@Resumen{#1}}
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
 % End of CII add

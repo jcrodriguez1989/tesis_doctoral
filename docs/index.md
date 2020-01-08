@@ -10,34 +10,17 @@ title: 'Análisis e integración de información de datos biológicos mediante a
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  thesisdown::thesis_pdf: default
-  # thesisdown::thesis_gitbook: default
+  # thesisdown::thesis_pdf: default
+  thesisdown::thesis_gitbook: default
   # thesisdown::thesis_word: default
   # thesisdown::thesis_epub: default
-abstract: |
-  \par El análisis funcional refiere a un conjunto de técnicas que tienen como fin detectar aquellas funciones o procesos que se encuentran desregulados en un experimento biológico. Con el continuo avance en las tecnologías de obtención de expresión de muestras biológicas, la cantidad de bases de datos de libre disponibilidad aumenta constantemente. Las técnicas de análisis funcional se basan en el estudio de un único experimento, en la era del _Big Data_ resulta natural notar la necesidad de explotar esta gran cantidad de bases de datos para su integración, y así, generar nuevas fuentes de información.
-  
-  \par Esta tesis propone, como objetivo principal, brindar una metodología que permita integrar grandes cantidades de bases de datos de expresión biológica. Integrando información de diversas poblaciones, fenotipos, enfermedades, entre otros, se podrá detectar patrones que caractericen cada grupo. Como primer instancia de tesis, se realizó una comparación exhaustiva de diversas alternativas para llevar a cabo el análisis funcional. Con tantas alternativas existentes, que siguen diversos supuestos e ideas, esta evaluación nos llevó a la creación del pipeline de _Análisis Funcional Integrador_: `IFA` (del inglés _Integrative Functional Analysis_). El `IFA` realiza su análisis tomando alternativas que otorgaron los mejores resultados desde un punto de vista biológico y estadístico.
-  
-  \par Para cumplir con el objetivo principal de esta tesis, presentamos la herramienta `MIGSA` (del inglés _Massive and Integrative Gene Set Analysis_). Gracias a esta herramienta, es ahora posible llevar a cabo un análisis funcional masivo e integrador de grandes cantidades de bases de datos biológicas que provienen tanto de distintas poblaciones como de distintas fuentes biológicas (genes, proteínas, etc.). Además, `MIGSA` proveé diversas herramientas que permiten explorar y visualizar fácilmente los resultados, y de esta manera, validar y generar nuevas hipótesis de estudio. La utilidad de nuestra herramienta fue comprobada ya que permitió, para sub-grupos de cáncer de mama -con pronósticos bien distintivos-, detectar genes y procesos biológicos que los caracterizan. `MIGSA` representa una herramienta que permite detectar efectivamente aspectos biológicos que podrían ser blancos de drogas, y así contrarrestar la condición bajo estudio.
-  
-  **Clasificación (ACM CCS 2012):**
-  
-    * _Applied computing ~> Life and medical sciences ~> Computational biology_
-    * _Applied computing ~> Life and medical sciences ~> Bioinformatics_
-  
-  **Palabras claves:** _Minería de datos - Ciencia de datos - Integración de información - Bioinformática_
-  
-acknowledgements: |
-  \par Llega el tan ansiado día de defender mi tesis doctoral, luego de más de 5 años de investigación sin duda hay miles de agradecimientos que mencionar. Antes que nada, me siento bendecido y afortunado de haber nacido en la República Argentina. Le agradezco a mi país no solo por haberme brindado educación gratuita de excelencia, si no que además la beca con la cual pude preocuparme exclusivamente en mi investigación durante estos años de estudios doctorales.
-  
-  \par En segundo lugar, creo que el mayor agradecimiento se lo debo al Dr. Elmer A. Fernández, mi director, quien me inició, guió y formó en el universo de la investigación científica. Con todas las concordancias y discusiones que haya pasado con él, todo aprendizaje resulta positivo para la vida. Asimismo agradezco a mis compañeros de trabajo de la UCC, sus comentarios y sugerencias fueron un pilar fundamental para la calidad de este trabajo de tesis -sin contar el gran aporte de amistad y cerveceadas-.
-  
-  \par Obviamente, este trabajo no hubiera sido posible sin momentos de esparcimiento de quien escribe. Aquí es donde debo principalmente agradecer a toda mi familia: má, pá, sin saber mucho de ciencia o investigación, siempre me apoyaron en lo que me hiciera feliz. A mi abuelito, que cada vez que me preguntaba sobre la facu, me daba ánimos a seguir más y más. Por otra parte mis grupos de amigos, los del barrio, los de la facu, los de la cancha, grupos bien distintos, pero que siempre brindaron toneladas de cariño ~~y asados y escabio~~. Y si a esparcimiento me refiero, no puedo no incluir al Instituto Atlético Central Córdoba, fuente de gran parte de mis alegrías.
-  
-  \par Finalmente, imposible cerrar esta sección sin agradecer al Whisky, no, no soy alcohólico, me refiero a mi amigo de cuatro patas. El ser más cariñoso que conozco, el que mayor parte de tiempo estuvo presente durante mi doctorado -ahora mismo está acá mirándome con cara de ir a pasear-. Esas pausas de 15 minutos que me exigía, fueron fundamentales para despejar el cerebro y remontar con mejores ideas.
-  
-  \par Gracias, gracias a todos, les dedico este trabajo, y esta parte de mi vida.
+
+#### Important!
+#### When compiling gitbook, comment following 4 lines to get references
+#resumen: |
+#  
+#acknowledgements: |
+#  
 dedication: |
   _Va Castro, va Castro, va Castro, sacó el centro pasado, Riggio, ..._
   
@@ -53,3 +36,36 @@ lof: false
 ---
 
 
+
+# Prefacio {.unnumbered}
+
+<!-- en un exp transcriptomico se buscan genes DE, pero mejor aun hacer AF -->
+\par Actualmente enfermedades como el cáncer, han sido abordadas mediante el análisis de genes individuales. Si bien a través de los años se han desarrollado terapias específicas contra oncogenes determinados, que han disminuido su mortalidad a corto plazo, la enfermedad encuentra caminos alternativos para volver a manifestarse con diferente intensidad y a diferentes tiempos. Por otro lado, hay evidencias que diversas firmas moleculares con muy pocos genes en común son capaces de estratificar, de manera similar, la misma población en términos del desarrollo de la enfermedad. Si bien los genes detectados o presentes en las diversas firmas moleculares no coinciden, sí lo hacen las vías de acción implicadas en el desarrollo de la enfermedad. Por esta razón, los estudios genómicos ya no se enfocan en la identificación de listas minimalistas de genes, sino más bien en la aplicación de complejas metodologías bioinformáticas que relacionan información existente, tanto experimental como de bases de datos, para identificar cuáles son las funciones biológicas, moleculares y lugares donde éstos están actuando. Este conjunto de metodologías que permite identificar esas funcionalidades se conoce como Análisis Funcional (AF). La identificación de estas funciones biológicas, moleculares y metabólicas que están activas o deprimidas en un determinado contexto patológico o experimental, no solo permite un abordaje sistémico de la misma, sino que es fundamental para el descubrimiento de información y verificación de hipótesis.
+
+<!-- breve resumen de lo que es el AF: SEA y GSEA -->
+\par El AF permite identificar, estadísticamente, los mecanismos biológicos desregulados en un experimento. Los métodos de AF se basan en la evaluación, no de genes individuales, sino de grupos de genes, bajo el supuesto de que su acción coordinada impacta un mismo término biológico. Esta tarea se lleva a cabo consultando grandes bases de datos donde grupos de genes están asociados a cada mecanismo biológico. Las estrategias más comunmente utilizadas para el AF son el Análisis de Sobre-Representación y Puntuación Funcional de Clase (ASR y PFC, respectivamente). La principal diferencia entre ambos enfoques es que el primero utiliza una lista de genes de interés como entrada, que suele ser la lista de genes diferencialmente expresados, mientras que los métodos de PFC utilizan todos los genes disponibles en el experimento así como sus valores de expresión.
+
+<!-- problema solucionado en IFA -->
+\par Tanto para el ASR como PFC se han desarrollado varios algoritmos con sus propios supuestos y parámetros de entrada, para los que cada autor pretende demostrar o enfatizar la superioridad de su algoritmo sobre los demás. Sin embargo, todas las comparaciones disponibles se basan en la evaluación en términos de adecuación de los supuestos de la distribución, estimación del p-valor, eficiencia computacional, entre otros, en lugar de evaluarlos desde un punto de vista de la información biológica obtenida. Por lo tanto, seleccionar el algoritmo apropiado y el ajuste de sus parámetros no es una decisión trivial para los investigadores. Más aún, no queda claro si un método es completamente superior al resto o si los resultados de cada algoritmo son independientes, complementarios, o igualmente útiles.
+
+<!-- problema solucionado en MIGSA -->
+<!-- hay grandes cantidades de base de datos, y de diversas fuentes omicas -->
+\par Por otra parte, el surgimiento y rápido avance de las tecnologías de obtención de niveles de expresión biológica, han llevado a la disponibilidad de miles de experimentos en repositorios públicos, no solo con información a nivel de genes si no que también a otros niveles moleculares como proteínas o transcriptos. La disponibilidad de estas grandes fuentes de información crearon oportunidades sin precedentes para estudiar enfermedades humanas. Integrando información funcional de diversos repositorios como de distintas fuentes moleculares es posible llegar a una caracterización de grupos de sujetos de interés. Atacando aspectos funcionales activos por uno u otro grupo de sujetos bajo estudio se logra el desarrollo de terapias personalizadas. Es por ello que resulta fundamental poder realizar una comparación y caracterización de multiples fuentes de datos a nivel funcional.
+
+<!-- objetivo de la tesis -->
+\par La presente tesis proporciona una metodología integradora que permite, desde el punto de vista funcional, comparar correctamente grandes cantidades de bases de datos de experimentos provenientes tanto de diversas fuentes ómicas como de distintos grupos de estudio. El primer desafío consistió en evaluar las ventajas y desventajas de los algoritmos existentes de AF. El segundo desafío fue adaptar los datos provenientes de diversas fuentes ómicas al _pipeline_ convencional de AF. Finalmente se desarrolló una herramienta, `MIGSA`, que permite una evaluación integradora de grandes colecciones de bases de datos biológicas.
+
+La organización del documento de tesis es como sigue:
+<!-- todo: referenciar los capitulos -->
+
+* **[Capítulo 1](#cap:af):** introduce al lector en el concepto del **análisis funcional** y las distintas metodologías para llevarlo a cabo. Se presenta el concepto de **ontologías** biológicas, y la información presente en ellas.
+
+* **[Capítulo 2](#cap:ngs):** expone las diversas **fuentes de datos** biológicas que resultan de interés para el presente trabajo de tesis. Como así también los diversos repositorios de bases de datos públicas utilizadas.
+
+* **[Capítulo 3](#cap:ifa):** muestra los aportes realizados en este trabajo de tesis en el contexto del **análisis funcional** integrador. Los aportes están dirigidos a la comparación, desde el punto de vista biológico, de diversos algoritmos junto a sus diferentes parámetros.
+
+* **[Capítulo 4](#cap:migsa):** presenta la **herramienta desarrollada** que permite llevar a cabo un **análisis funcional masivo** e integrador de múltiples bases de datos. Nuestra herramienta proporciona métodos de exploración y visualización que permiten responder preguntas, como así también desarrollar nuevas hipótesis.
+
+* **[Capítulo 5](#cap:desafios):** exhibe **desafíos que surgieron** durante el desarrollo del presente trabajo, y **como fueron afrontados**. Estos desafíos no estaban directamente relacionados con los objetivos bajo estudio, pero aportaron gratamente al resultado final de la tesis.
+
+* **[Capítulo 6](#cap:conclusiones):** muestra las **conclusiones y trabajos futuros** producto de la presente tesis. Se destacan los diferentes aportes realizados al estado del arte, así como también las posibles líneas que se pueden continuar a partir de lo realizado a lo largo del doctorado.

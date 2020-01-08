@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Análisis funcional | _main.utf8</title>
-  <meta name="description" content="" />
+  <title>Capítulo 1 Análisis funcional | Análisis e integración de información de datos biológicos mediante análisis funcional</title>
+  <meta name="description" content="Capítulo 1 Análisis funcional | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Análisis funcional | _main.utf8" />
+  <meta property="og:title" content="Capítulo 1 Análisis funcional | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   <meta property="og:type" content="book" />
   
   
@@ -16,11 +16,12 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Análisis funcional | _main.utf8" />
+  <meta name="twitter:title" content="Capítulo 1 Análisis funcional | Análisis e integración de información de datos biológicos mediante análisis funcional" />
   
   
   
 
+<meta name="author" content="Juan Cruz Rodriguez" />
 
 
 
@@ -29,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="prefacio.html"/>
+<link rel="prev" href="index.html"/>
 <link rel="next" href="2-cap-ngs.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -127,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
 <li class="chapter" data-level="1" data-path="1-cap-af.html"><a href="1-cap-af.html"><i class="fa fa-check"></i><b>1</b> Análisis funcional</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#sec:ontologias"><i class="fa fa-check"></i><b>1.1</b> Ontologías</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-cap-af.html"><a href="1-cap-af.html#gene-ontology"><i class="fa fa-check"></i><b>1.1.1</b> Gene Ontology</a></li>
@@ -215,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis e integración de información de datos biológicos mediante análisis funcional</a>
           </h1>
         </div>
 
@@ -229,13 +230,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p>Sin embargo, resulta de un gran interés biológico evaluar la interacción de todo el conjunto de genes sobre diversos mecanismos o funciones biológicas. Esta tarea se lleva a cabo consultando grandes bases de datos, conocidas como ontologías, las cuales almacenan información biológica funcional a nivel de genes. Cada ontología codifica dicha información en conjuntos de genes, cada uno, asociado a una función, localización, enfermedad particular. Cada conjunto de genes tiene un nombre o descripción del evento, y los genes específicos que se sabe interactúan para llevar a cabo ese evento.</p>
 
-<p>Una vez determinada la información ontológica a utilizar, se aplican técnicas estadísticas para evaluar si la relación que se observa en el experimento es un evento azaroso o no, al compararlo con un comportamiento de referencia <span class="citation">(<span class="citeproc-not-found" data-reference-id="rivals2006enrichment"><strong>???</strong></span>)</span>. De esta manera se obtiene para cada conjunto de genes, una probabilidad que determina si dicha función biológica está desregulada según la condición experimental bajo estudio. Este conjunto de métodos estadísticos permiten realizar el Análisis Funcional (AF) partiendo de la matriz, con niveles de expresión de cada gen (filas) para cada muestra (columnas), y la ontología a evaluar.</p>
+<p>Una vez determinada la información ontológica a utilizar, se aplican técnicas estadísticas para evaluar si la relación que se observa en el experimento es un evento azaroso o no, al compararlo con un comportamiento de referencia <span class="citation">(Rivals, Personnaz, Taing, &amp; Potier, 2006)</span>. De esta manera se obtiene para cada conjunto de genes, una probabilidad que determina si dicha función biológica está desregulada según la condición experimental bajo estudio. Este conjunto de métodos estadísticos permiten realizar el Análisis Funcional (AF) partiendo de la matriz, con niveles de expresión de cada gen (filas) para cada muestra (columnas), y la ontología a evaluar.</p>
 <div id="sec:ontologias" class="section level2">
 <h2><span class="header-section-number">1.1</span> Ontologías</h2>
 <p>En biología, las ontologías son grandes bases de datos de anotación, las cuales mediante vocabulario controlado permiten almacenar, de una manera estructurada, la información conocida. Por ejemplo, las ontologías utilizadas para el AF contienen información conocida sobre grupos de genes, que al interactuar desencadenan algún concepto o término biológico.</p>
 <div id="gene-ontology" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Gene Ontology</h3>
-<p>Existen grandes cantidades de ontologías, cada una con hasta decenas de miles de mecanismos biológicos descriptos. En la presente tesis se analizaron las categorías de una de las ontologías de mayor difusión en la comunidad científica: Gene Ontology (GO) <span class="citation">(<span class="citeproc-not-found" data-reference-id="ashburner2000gene"><strong>???</strong></span>)</span>. En esta ontología, la información se encuentra estructurada en tres categorías:</p>
+<p>Existen grandes cantidades de ontologías, cada una con hasta decenas de miles de mecanismos biológicos descriptos. En la presente tesis se analizaron las categorías de una de las ontologías de mayor difusión en la comunidad científica: Gene Ontology (GO) <span class="citation">(Ashburner et al., 2000)</span>. En esta ontología, la información se encuentra estructurada en tres categorías:</p>
 <ul>
 <li><p><strong>Funciones moleculares (FM)</strong> describen actividades que ocurren a nivel molecular. Sin especificar dónde, cuándo, o en qué contexto, tiene lugar la acción. Las FM pueden ser tan generales como “actividad catalítica”, “actividad del transportador” o “binding”; o específicas como “actividad de la adenilatociclasa”.</p></li>
 <li><p><strong>Procesos biológicos (PB)</strong> refieren a una serie de eventos realizados por uno o más conjuntos ordenados de FM. Un proceso biológico se lleva a cabo mediante un conjunto particular de FM, de una manera altamente regulada y en una secuencia temporal particular. Ejemplos de términos de PB generales son “apoptosis” o “transducción de señales”. Ejemplos más específicos son “proceso metabólico de la pirimidina” o “transporte de alfa-glucósidos”.</p></li>
@@ -265,7 +266,7 @@ Figure 1.1: Subárbol de Gene Ontology, donde se presenta el término “apoptos
 <p>Si bien en la presente tesis se analizó la ontología GO, existen cientos de otras ontologías que pueden ser indagadas mediante AF. Entre estas otras ontologías existentes, debido a su gran popularidad en la comunidad científica, vale la pena mencionar:</p>
 <div id="kegg" class="section level4">
 <h4><span class="header-section-number">1.1.2.1</span> KEGG</h4>
-<p>La ontología provista por el KEGG <span class="citation">(<span class="citeproc-not-found" data-reference-id="kanehisa2000kegg"><strong>???</strong></span>)</span> contiene, para cada término o vía metabólica, además de los genes que lo influencian, un diagrama visual que representa el conocimiento experimental sobre el mismo y varias otras funciones que interactúan. Cada diagrama contiene una red de interacciones y reacciones moleculares y está diseñado para vincular los genes del genoma con los productos génicos (principalmente proteínas) de la vía. Esto ha permitido examinar qué vías y funciones asociadas, es probable que estén codificadas en el genoma.</p>
+<p>La ontología provista por el KEGG <span class="citation">(Kanehisa &amp; Goto, 2000)</span> contiene, para cada término o vía metabólica, además de los genes que lo influencian, un diagrama visual que representa el conocimiento experimental sobre el mismo y varias otras funciones que interactúan. Cada diagrama contiene una red de interacciones y reacciones moleculares y está diseñado para vincular los genes del genoma con los productos génicos (principalmente proteínas) de la vía. Esto ha permitido examinar qué vías y funciones asociadas, es probable que estén codificadas en el genoma.</p>
 
 <p>Ejemplos de términos presentes en esta ontología son “apoptosis” o “ciclo celular” (Figura <a href="1-cap-af.html#fig:keggCellCyclePathw">1.2</a>). En estos diagramas se identifican tres tipos de elementos: cajas rectangulares para representar productos de genes, flechas para el flujo de las reacciones, y cajas con bordes redondeados para vincular a otras vías involucradas en el proceso. A su vez, esta base de datos se complementa con un conjunto de tablas de grupos ortólogos, donde se encuentra la información de subvías conservadas, que son especialmente útiles para la predicción de funciones de genes.</p>
 <div class="figure" style="text-align: center"><span id="fig:keggCellCyclePathw"></span>
@@ -280,7 +281,7 @@ Figure 1.2: Diagrama de KEGG del “ciclo celular” (cell cycle). Imagen extra�
 </div>
 <div id="biocarta" class="section level4">
 <h4><span class="header-section-number">1.1.2.2</span> BioCarta</h4>
-<p>BioCarta <span class="citation">(<span class="citeproc-not-found" data-reference-id="nishimura2001biocarta"><strong>???</strong></span>)</span> fue creado por un grupo de científicos e ingenieros que reconocieron las limitaciones y obsolescencia de la literatura científica de la época. Es muy similar a la ontología del KEGG en el sentido que cada conjunto de genes viene acompañado de un diagrama de las interacciones. Sin embargo, en esta ontología, los diagramas presentan un mayor detalle gráfico como se puede observar en la Figura <a href="1-cap-af.html#fig:biocartaCorticosPathw">1.3</a>, donde se presenta el diagrama del término “corticosteroides y cardioprotección”.</p>
+<p>BioCarta <span class="citation">(Nishimura, 2001)</span> fue creado por un grupo de científicos e ingenieros que reconocieron las limitaciones y obsolescencia de la literatura científica de la época. Es muy similar a la ontología del KEGG en el sentido que cada conjunto de genes viene acompañado de un diagrama de las interacciones. Sin embargo, en esta ontología, los diagramas presentan un mayor detalle gráfico como se puede observar en la Figura <a href="1-cap-af.html#fig:biocartaCorticosPathw">1.3</a>, donde se presenta el diagrama del término “corticosteroides y cardioprotección”.</p>
 <div class="figure" style="text-align: center"><span id="fig:biocartaCorticosPathw"></span>
 <img src="images/biocarta_corticosteroids_pathway.png" alt="Diagrama de BioCarta del término “corticosteroides y cardioprotección”. Imagen extraída de https://david.ncifcrf.gov/biocarta.jsp?path=h_gcrPathway$Corticosteroids+and+cardioprotection&amp;termId=30000124." width="100%" />
 <p class="caption">
@@ -293,7 +294,7 @@ Figure 1.3: Diagrama de BioCarta del término “corticosteroides y cardioprotec
 </div>
 <div id="reactome" class="section level4">
 <h4><span class="header-section-number">1.1.2.3</span> Reactome</h4>
-<p>Reactome: una base de datos de reacciones, vías y procesos biológicos. Reactome <span class="citation">(<span class="citeproc-not-found" data-reference-id="joshi2005reactome"><strong>???</strong></span>)</span> está desarrollado por biólogos expertos, en colaboración con un equipo editorial, todos ellos biólogos con nivel de doctorado. El contenido tiene referencias cruzadas a muchas bases de datos bioinformáticas. El objetivo principal de Reactome es representar visualmente las vías biológicas con todo detalle mecanicista, a la vez que se ponen a disposición los datos de la fuente en un formato computacionalmente accesible.</p>
+<p>Reactome: una base de datos de reacciones, vías y procesos biológicos. Reactome <span class="citation">(Joshi-Tope et al., 2005)</span> está desarrollado por biólogos expertos, en colaboración con un equipo editorial, todos ellos biólogos con nivel de doctorado. El contenido tiene referencias cruzadas a muchas bases de datos bioinformáticas. El objetivo principal de Reactome es representar visualmente las vías biológicas con todo detalle mecanicista, a la vez que se ponen a disposición los datos de la fuente en un formato computacionalmente accesible.</p>
 
 <p>La unidad central del modelo de datos de Reactome es la reacción. Las entidades (genes, proteínas, complejos y pequeñas moléculas) que participan en las reacciones forman una red de interacciones biológicas y se agrupan en vías. Ejemplos de vías biológicas en Reactome incluyen la “función inmune innata y adquirida”, la “regulación transcripcional”, y como se detalla en la Figura <a href="1-cap-af.html#fig:reactomeApoptPathw">1.4</a>, la “apoptosis”.</p>
 <div class="figure" style="text-align: center"><span id="fig:reactomeApoptPathw"></span>
@@ -308,7 +309,7 @@ Figure 1.4: Diagrama de Reactome del término “apoptosis”. Imagen extraída 
 </div>
 <div id="msigdb" class="section level4">
 <h4><span class="header-section-number">1.1.2.4</span> MSigDB</h4>
-<p>MSigDB <span class="citation">(<span class="citeproc-not-found" data-reference-id="liberzon2011molecular"><strong>???</strong></span>)</span> es la ontología desarrollada por el Broad Institute (<a href="https://www.broadinstitute.org/">https://www.broadinstitute.org/</a>), esta ontología es un compilado de ciertos conjuntos de genes provenientes de otras ontologías, entre ellas las descriptas previamente. MSigDB agrupa todos sus conjuntos de genes dentro de ocho categorías:</p>
+<p>MSigDB <span class="citation">(Liberzon et al., 2011)</span> es la ontología desarrollada por el Broad Institute (<a href="https://www.broadinstitute.org/">https://www.broadinstitute.org/</a>), esta ontología es un compilado de ciertos conjuntos de genes provenientes de otras ontologías, entre ellas las descriptas previamente. MSigDB agrupa todos sus conjuntos de genes dentro de ocho categorías:</p>
 <ul>
 <li><strong>Conjuntos de genes distintivos</strong>: resumen y representan estados o procesos biológicos específicos bien definidos. Estos conjuntos de genes fueron generados por una metodología computacional basada en la identificación de superposiciones entre conjuntos de genes en MSigDB y la retención de genes que muestran detalles de expresión coordinada.</li>
 <li><strong>Conjuntos de genes posicionales</strong>: correspondientes a cada cromosoma humano y a cada banda citogenética que tenga al menos un gen.</li>
@@ -326,12 +327,12 @@ Figure 1.4: Diagrama de Reactome del término “apoptosis”. Imagen extraída 
 <h2><span class="header-section-number">1.2</span> Metodologías de Análisis Funcional (AF)</h2>
 <p>El análisis funcional refiere a técnicas que permiten, dado un experimento, evaluar el impacto de la interacción de grupos de genes sobre características biológicas. Partiendo de una matriz de expresión de genes con muestras pertenecientes a una de dos condiciones, los algoritmos de AF buscan detectar aquellos términos biológicos que se encuentran desregulados entre ambas condiciones. Una vez determinada la base de datos ontológica de interés, el investigador debe seleccionar cuál técnica de AF utilizar.</p>
 
-<p>Se diferencian dos categorías de algoritmos para llevar a cabo el AF <span class="citation">(<span class="citeproc-not-found" data-reference-id="huang2008bioinformatics"><strong>???</strong></span>)</span>. La principal diferencia entre estas categorías es la estrategia que llevan a cabo para el análisis:</p>
+<p>Se diferencian dos categorías de algoritmos para llevar a cabo el AF <span class="citation">(D. W. Huang et al., 2008a)</span>. La principal diferencia entre estas categorías es la estrategia que llevan a cabo para el análisis:</p>
 <div id="sec:asr" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Análisis de Sobre-Representación (ASR)</h3>
 <p>Esta metodología requiere definir la lista de genes de interés o <strong>candidatos</strong>, generalmente aquellos que se encuentran diferencialmente expresados en el experimento, es decir, un vector con los nombres de los genes. Adicionalmente requiere de una segunda lista de genes, que utiliza para especificar lo que es esperable como comportamiento de <strong>referencia</strong> del modelo biológico, generalmente todos los genes presentes en el experimento. Luego, para cada término, realiza de forma independiente un test de hipótesis comparando las proporciones observadas sobre los candidatos con respecto a la referencia. De este modo, para cada término se obtiene un p-valor asociado que denota si existe evidencia de que las proporciones son diferentes.</p>
 
-<p>En la Figura <a href="1-cap-af.html#fig:diagramaORA">1.5</a> se puede apreciar un diagrama de lo que sería el proceso completo para llevar a cabo un ASR. De este diagrama se desprenden varios aspectos que resultan variables. Diversos autores han propuesto diferentes test de hipótesis <span class="citation">(<span class="citeproc-not-found" data-reference-id="huang2008systematic"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fang2014thednet"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="fresno2013rdavidwebservice"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="falcon2006using"><strong>???</strong></span>)</span>, y principalmente de allí es que surgen grandes cantidades de alternativas de ASR. Más aún, la elección de la lista de referencia no queda del todo clara, y se desprenden dos sugerencias con gran validez estadística: utilizar todos los genes del experimento (como en la Figura <a href="1-cap-af.html#fig:diagramaORA">1.5</a>), o utilizar todo el genoma de la especie en cuestión <span class="citation">(<span class="citeproc-not-found" data-reference-id="fresno2012multi"><strong>???</strong></span>)</span>.</p>
+<p>En la Figura <a href="1-cap-af.html#fig:diagramaORA">1.5</a> se puede apreciar un diagrama de lo que sería el proceso completo para llevar a cabo un ASR. De este diagrama se desprenden varios aspectos que resultan variables. Diversos autores han propuesto diferentes test de hipótesis <span class="citation">(Falcon &amp; Gentleman, 2006; Fang &amp; Gough, 2014; Fresno &amp; Fernández, 2013; D. W. Huang et al., 2008b)</span>, y principalmente de allí es que surgen grandes cantidades de alternativas de ASR. Más aún, la elección de la lista de referencia no queda del todo clara, y se desprenden dos sugerencias con gran validez estadística: utilizar todos los genes del experimento (como en la Figura <a href="1-cap-af.html#fig:diagramaORA">1.5</a>), o utilizar todo el genoma de la especie en cuestión <span class="citation">(Fresno et al., 2012)</span>.</p>
 <div style="page-break-after: always;"></div>
 <div class="figure" style="text-align: center"><span id="fig:diagramaORA"></span>
 <img src="images/diagrama_ORA.png" alt="Diagrama clásico del proceso completo de Análisis de Sobre-Representación (ASR). Este proceso parte de una Matriz de expresión, con Genes en filas y Muestras en columnas, y la etiqueta de condición de cada muestra (C1 y C2). Mediante un algoritmo de Detección de Genes Diferenciales (DGD) se obtiene para cada gen un p-valor asociado (p-vals). Aplicando un nivel de corte \(\alpha\) a estos p-valores (\(&lt; \alpha\)), se obtiene cuáles son Genes Diferenciales (GD) y cuáles no. Aquí es donde efectivamente comienza el ASR, los algoritmos de ASR requieren de dos listas: la de genes candidatos (usualmente los GD), y la Lista de Referencia (LR; usualmente todos los genes detectados en el experimento). A partir de estas listas de genes, para cada Conjunto de Genes (CG\(_i\)) se genera una tabla de contingencia, a la cual se le aplica un Test de Hipótesis (TH) del cual resulta un p-valor asociado al CG\(_i\) (p-val\(_i\))." width="100%" />
@@ -343,7 +344,7 @@ Figure 1.5: Diagrama clásico del proceso completo de Análisis de Sobre-Represe
 </div>
 <div id="puntuación-funcional-de-clase-pfc" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Puntuación Funcional de Clase (PFC)</h3>
-<p>Esta metodología construye un ordenamiento de los genes a partir de la totalidad del perfil de expresión. El objetivo es determinar si todos los miembros de una característica biológica de interés, están distribuidos aleatoriamente o no (en algún extremo) a lo largo del ordenamiento generado <span class="citation">(<span class="citeproc-not-found" data-reference-id="subramanian2005gene"><strong>???</strong></span>)</span>. Para ello, los genes se organizan mediante algún criterio de ordenamiento que refleje la diferencia entre ambas condiciones bajo estudio, por ejemplo, para cada gen obtener la diferencia de medias entre ambas condiciones. Luego, para un término biológico en particular, se recorre este ordenamiento para calcular el máximo del enriquecimiento inducido, lo cual se conoce como <strong>Enrichment Score</strong> (ES) del término. Para ello, a cada gen se le aplica una función de coste que aumenta (o disminuye) proporcionalmente a la correlación de su nivel de expresión con el fenotipo de las condiciones, cada vez que encuentra un gen que pertenece (o no) a la lista de miembros de la categoría de interés. Este ES se compara con la distribución nula generada por las permutaciones en las etiquetas de las condiciones, con el fin de evaluar si el ordenamiento original es esperable o generado por azar. En caso de que difiera del azar, existen diferentes criterios para definir, para el experimento dado, cuáles son los genes más influyentes en el término. Normalmente se utilizan los genes más cercanos al máximo del ES, o los genes pertenecientes al segmento más pequeño entre el coste máximo y el principio o el final de la lista ordenada.</p>
+<p>Esta metodología construye un ordenamiento de los genes a partir de la totalidad del perfil de expresión. El objetivo es determinar si todos los miembros de una característica biológica de interés, están distribuidos aleatoriamente o no (en algún extremo) a lo largo del ordenamiento generado <span class="citation">(Subramanian et al., 2005)</span>. Para ello, los genes se organizan mediante algún criterio de ordenamiento que refleje la diferencia entre ambas condiciones bajo estudio, por ejemplo, para cada gen obtener la diferencia de medias entre ambas condiciones. Luego, para un término biológico en particular, se recorre este ordenamiento para calcular el máximo del enriquecimiento inducido, lo cual se conoce como <strong>Enrichment Score</strong> (ES) del término. Para ello, a cada gen se le aplica una función de coste que aumenta (o disminuye) proporcionalmente a la correlación de su nivel de expresión con el fenotipo de las condiciones, cada vez que encuentra un gen que pertenece (o no) a la lista de miembros de la categoría de interés. Este ES se compara con la distribución nula generada por las permutaciones en las etiquetas de las condiciones, con el fin de evaluar si el ordenamiento original es esperable o generado por azar. En caso de que difiera del azar, existen diferentes criterios para definir, para el experimento dado, cuáles son los genes más influyentes en el término. Normalmente se utilizan los genes más cercanos al máximo del ES, o los genes pertenecientes al segmento más pequeño entre el coste máximo y el principio o el final de la lista ordenada.</p>
 
 <p>En la Figura <a href="1-cap-af.html#fig:diagramaFCS">1.6</a> se observa el diagrama de lo que sería un proceso completo de PFC. De este diagrama, diversos aspectos difieren dependiendo del algoritmo de PFC a utilizar. Por ejemplo, ciertos algoritmos sugieren hacer permutación en las etiquetas de los genes, otros en las etiquetas de las muestras, y finalmente otros, en las etiquetas de genes del ordenamiento generado. Más aún, la principal diferencia entre uno y otro algoritmo de PFC reside en la función de ES, si bien la idea por detrás resulta similar, las ponderaciones de cada gen varían. Finalmente, vale la pena mencionar que ciertos algoritmos fijan diferentes filtros de los conjuntos de genes a analizar ya que suponen que fuera de esos límites el algoritmo pierde potencia estadística.</p>
 <div class="figure" style="text-align: center"><span id="fig:diagramaFCS"></span>
@@ -373,7 +374,7 @@ Figure 1.6: Diagrama clásico del proceso completo de Puntuación Funcional de C
           </div>
         </div>
       </div>
-<a href="prefacio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="2-cap-ngs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
